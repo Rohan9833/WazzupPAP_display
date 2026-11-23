@@ -142,6 +142,22 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* Verified consent disclaimer moved directly below the hero content */}
+      <div className="container-x relative pb-6 sm:pb-10">
+        <div className="surface-night grain relative overflow-hidden rounded-[1.5rem] p-7 text-haze sm:p-8">
+          <div className="relative">
+            <span className="grid h-12 w-12 place-items-center rounded-2xl bg-leaf shadow-[0_12px_30px_-10px_rgb(0_156_109/0.8)]">
+              <ShieldCheck className="h-6 w-6 text-white" strokeWidth={1.8} aria-hidden />
+            </span>
+            <h3 className="mt-6 text-[1.15rem] font-semibold tracking-[-0.01em] !text-white">What “Verified” means</h3>
+            <p className="mt-2 max-w-[38em] text-[0.96rem] leading-relaxed">
+              Every WazzupPAP program runs with the participating doctor’s prior consent. “Verified” refers to that
+              consent. It is not a clinical verification of individual responses, a diagnosis or a screening outcome.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Soft fade into the next section */}
       <div aria-hidden className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
     </section>
