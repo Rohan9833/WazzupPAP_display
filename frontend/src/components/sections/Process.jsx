@@ -86,7 +86,7 @@ export default function Process() {
           <h2 id="how-title" className="display-lg text-sheen pb-1">
             Initiated to completed. All on WhatsApp.
           </h2>
-          <p className="lede max-w-[28em] lg:pb-2">
+          <p className="lede max-w-[24em] text-[0.94rem] leading-snug sm:text-inherit lg:pb-2">
             Six steps from sign-in to Head Office insight, without a separate app, a printer or a single device to ship.
           </p>
         </div>
@@ -107,7 +107,7 @@ export default function Process() {
                   tabIndex={selected ? 0 : -1}
                   onClick={() => setActive(i)}
                   onKeyDown={(e) => onKeyDown(e, i)}
-                  className={`group grid grid-cols-[auto_1fr] gap-x-5 rounded-2xl px-4 py-4 text-left transition-colors duration-300 sm:px-5 ${
+                  className={`group grid grid-cols-[auto_1fr] gap-x-3.5 rounded-xl px-3 py-2.5 text-left transition-colors duration-300 sm:gap-x-4 sm:px-4 sm:py-3 ${
                     selected ? 'bg-white/[0.07] ring-1 ring-inset ring-white/15' : 'hover:bg-white/[0.03]'
                   }`}
                 >
@@ -124,7 +124,7 @@ export default function Process() {
                     </span>
                     <span className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${selected ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                       <span className="overflow-hidden">
-                        <span className="block pt-1.5 text-[0.98rem] leading-relaxed">{s.body}</span>
+                        <span className="block pt-1 text-[0.92rem] leading-snug">{s.body}</span>
                       </span>
                     </span>
                   </span>
