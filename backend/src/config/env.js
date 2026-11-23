@@ -26,4 +26,13 @@ export const env = {
     windowMinutes: Number.parseInt(process.env.RATE_LIMIT_WINDOW_MINUTES || '15', 10),
     maxRequests: Number.parseInt(process.env.RATE_LIMIT_MAX || '5', 10),
   },
+  email: {
+    from: process.env.EMAIL_FROM || 'DocTalk <info@digilateral.com>',
+    host: process.env.EMAIL_HOST || '',
+    port: Number.parseInt(process.env.EMAIL_PORT || '587', 10),
+    secure: String(process.env.EMAIL_SECURE || 'false').toLowerCase() === 'true',
+    user: process.env.EMAIL_USER || '',
+    pass: process.env.EMAIL_PASS || '',
+    to: process.env.EMAIL_TO || process.env.EMAIL_USER || '',
+  },
 };
