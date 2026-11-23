@@ -44,7 +44,7 @@ export default function Hero() {
             Patient Assessment<br className="sm:hidden" /> Programs. Reimagined.
           </motion.h1>
 
-          <motion.p {...rise(0.16)} className="order-3 mt-2 font-display text-[clamp(0.7rem,3vw,0.82rem)] font-medium leading-tight tracking-[-0.015em] text-[#8ff0cc] whitespace-nowrap sm:mt-6 sm:text-[clamp(1.3rem,2.3vw,1.75rem)] sm:leading-snug lg:order-none">
+          <motion.p {...rise(0.16)} className="order-3 mt-2 max-w-full font-display text-[clamp(0.7rem,3vw,0.82rem)] font-medium leading-tight tracking-[-0.015em] text-[#8ff0cc] whitespace-normal sm:mt-6 sm:text-[clamp(1.3rem,2.3vw,1.75rem)] sm:leading-snug lg:whitespace-nowrap lg:order-none">
             The convenience of WhatsApp. The power of an application.
           </motion.p>
 
