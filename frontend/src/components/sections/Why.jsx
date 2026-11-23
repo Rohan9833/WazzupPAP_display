@@ -8,7 +8,7 @@ const pillars = [
 
 export default function Why() {
   return (
-    <section id="why" className="relative bg-white py-24 sm:py-32" aria-labelledby="why-title">
+    <section id="why" className="relative bg-white pt-2 pb-12 sm:py-32" aria-labelledby="why-title">
       <div aria-hidden className="absolute inset-x-0 top-0 h-[60%] bg-gradient-to-b from-paper to-white" />
       <div className="container-x relative">
         <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:gap-16">
