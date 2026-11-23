@@ -79,10 +79,10 @@ export default function Process() {
   };
 
   return (
-    <section id="how" className="surface-night grain relative overflow-hidden py-12 text-haze sm:py-16 lg:py-20" aria-labelledby="how-title">
+    <section id="how" className="surface-night grain relative overflow-hidden py-8 text-haze sm:py-12 lg:py-16" aria-labelledby="how-title">
       <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_60%_60%_at_75%_50%,black,transparent)]" />
       <div className="container-x relative">
-        <div className="grid gap-3 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-8">
+        <div className="grid gap-2 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-6">
           <h2 id="how-title" className="display-lg text-sheen pb-1">
             Initiated to completed. All on WhatsApp.
           </h2>
@@ -91,8 +91,8 @@ export default function Process() {
           </p>
         </div>
 
-        <div className="mt-8 grid items-start gap-3 lg:mt-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-center lg:gap-8">
-          <div role="tablist" aria-orientation="vertical" aria-label="WazzupPAP process" className="flex flex-col gap-2">
+        <div className="mt-5 grid items-start gap-2 lg:mt-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-center lg:gap-6">
+          <div role="tablist" aria-orientation="vertical" aria-label="WazzupPAP process" className="flex flex-col gap-1.5">
             {STEPS.map((s, i) => {
               const selected = i === active;
               return (
@@ -107,7 +107,7 @@ export default function Process() {
                   tabIndex={selected ? 0 : -1}
                   onClick={() => setActive(i)}
                   onKeyDown={(e) => onKeyDown(e, i)}
-                  className={`group grid grid-cols-[auto_1fr] gap-x-3.5 rounded-xl px-3 py-2.5 text-left transition-colors duration-300 sm:gap-x-4 sm:px-4 sm:py-3 ${
+                  className={`group grid grid-cols-[auto_1fr] gap-x-3 rounded-xl px-2.5 py-2 text-left transition-colors duration-300 sm:gap-x-3 sm:px-3 sm:py-2.5 ${
                     selected ? 'bg-white/[0.07] ring-1 ring-inset ring-white/15' : 'hover:bg-white/[0.03]'
                   }`}
                 >
