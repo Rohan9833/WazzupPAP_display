@@ -81,30 +81,30 @@ export default function DemoRequest() {
       <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_60%_70%_at_15%_30%,black,transparent)]" />
       <div className="container-x relative grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <div className="lg:pt-4">
-          <h2 id="demo-title" className="display-lg text-sheen pb-1">
+          <h2 id="demo-title" className="display-lg text-sheen pb-1 !text-[clamp(1.65rem,5.5vw,3rem)] leading-[1.05]">
             See WazzupPAP in a private demonstration
           </h2>
-          <p className="lede mt-6 max-w-[30em]">
+          <p className="lede mt-3 max-w-[30em] !text-[clamp(0.95rem,2.5vw,1.08rem)] leading-[1.4]">
             We’ll walk your team through the application experience, the branded reports and the Head Office portal,
             in the context of your therapy area.
           </p>
-          <ul className="mt-10 space-y-6">
+          <ul className="mt-6 space-y-3">
             {[
               { icon: Presentation, t: 'The full flow on WhatsApp, from sign-in to branded report' },
               { icon: Layers, t: 'An assessment tailored to your therapy area and brand' },
               { icon: LayoutDashboard, t: 'The real-time dashboard, plus month-to-month pricing' },
             ].map(({ icon: Icon, t }) => (
-              <li key={t} className="flex items-start gap-4">
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-white/[0.07] text-[#5fe0b4] ring-1 ring-inset ring-white/10">
+              <li key={t} className="flex items-center gap-3">
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white/[0.07] text-[#5fe0b4] ring-1 ring-inset ring-white/10">
                   <Icon className="h-[1.1rem] w-[1.1rem]" strokeWidth={1.8} aria-hidden />
                 </span>
-                <span className="pt-2 text-white/85">{t}</span>
+                <span className="text-[0.92rem] leading-snug text-white/85">{t}</span>
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="relative rounded-[2rem] bg-white p-6 text-slate shadow-[0_50px_100px_-30px_rgb(0_0_0/0.7),0_0_0_1px_rgb(255_255_255/0.1)] sm:p-10">
+        <div className="relative rounded-[1.35rem] bg-white p-4 text-slate shadow-[0_35px_70px_-35px_rgb(0_0_0/0.65),0_0_0_1px_rgb(255_255_255/0.1)] sm:p-6">
           <AnimatePresence mode="wait" initial={false}>
             {status === 'success' ? (
               <motion.div
@@ -140,10 +140,10 @@ export default function DemoRequest() {
                 transition={{ duration: 0.25 }}
                 aria-describedby="form-status"
               >
-                <h3 className="font-display text-[1.5rem] font-semibold tracking-[-0.015em]">Request demo</h3>
-                <p className="mt-1 text-[0.95rem]">All fields are required unless marked optional.</p>
+                <h3 className="font-display text-[1.3rem] font-semibold leading-tight tracking-[-0.015em]">Request demo</h3>
+                <p className="mt-0.5 text-[0.85rem] leading-snug">All fields are required unless marked optional.</p>
 
-                <div className="mt-8 grid gap-5 sm:grid-cols-2">
+                <div className="mt-5 grid gap-3 sm:grid-cols-2">
                   <Field {...fieldProps('fullName')} label="Full name" autoComplete="name" maxLength={LIMITS.fullName} />
                   <Field {...fieldProps('company')} label="Pharmaceutical company" autoComplete="organization" maxLength={LIMITS.company} />
                   <Field {...fieldProps('designation')} label="Designation" autoComplete="organization-title" maxLength={LIMITS.designation} placeholder="e.g. Brand Manager" />
@@ -169,14 +169,14 @@ export default function DemoRequest() {
 
                 <div id="form-status" aria-live="polite" className="min-h-0">
                   {status === 'error' && serverMessage && (
-                    <p className="mt-6 flex items-start gap-2 rounded-xl bg-[#fdecea] px-4 py-3 text-[0.92rem] font-medium text-[#8f2a1e]">
+                    <p className="mt-3 flex items-start gap-2 rounded-lg bg-[#fdecea] px-3 py-2.5 text-[0.85rem] font-medium text-[#8f2a1e]">
                       <AlertTriangle className="mt-[0.15em] h-4 w-4 shrink-0" aria-hidden />
                       {serverMessage}
                     </p>
                   )}
                 </div>
 
-                <div className="mt-8 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div className="mt-5 flex flex-col items-stretch gap-2.5 sm:flex-row sm:items-center sm:justify-between">
                   <p className="text-[0.82rem] leading-snug text-slate sm:max-w-[22em]">
                     We use these details only to arrange your demo. We don’t share them.
                   </p>
