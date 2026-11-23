@@ -164,8 +164,12 @@
     padding-block: 3.5rem !important;
   }
 
+  #top {
+    padding-top: 72px !important;
+  }
+
   #top > .container-x {
-    padding-top: 0.5rem !important;
+    padding-top: 0 !important;
     padding-bottom: 2.5rem !important;
   }
 
