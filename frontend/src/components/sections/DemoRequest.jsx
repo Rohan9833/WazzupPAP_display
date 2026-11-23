@@ -122,7 +122,7 @@ export default function DemoRequest() {
                 </h3>
                 <p className="mt-3 max-w-[28em]">
                   {serverMessage || 'Thank you. Your demo request has been received.'} The digiLATERAL team will contact you
-                  on your work email to arrange a convenient time.
+                  on your email address to arrange a convenient time.
                 </p>
                 <Button as="button" type="button" variant="ghost" className="mt-8" onClick={() => setStatus('idle')}>
                   Send another request
@@ -147,7 +147,7 @@ export default function DemoRequest() {
                   <Field {...fieldProps('fullName')} label="Full name" autoComplete="name" maxLength={LIMITS.fullName} />
                   <Field {...fieldProps('company')} label="Pharmaceutical company" autoComplete="organization" maxLength={LIMITS.company} />
                   <Field {...fieldProps('designation')} label="Designation" autoComplete="organization-title" maxLength={LIMITS.designation} placeholder="e.g. Brand Manager" />
-                  <Field {...fieldProps('email')} label="Work email" type="email" autoComplete="email" inputMode="email" maxLength={LIMITS.email} placeholder="name@company.com" />
+                  <Field {...fieldProps('email')} label="Email address" type="email" autoComplete="email" inputMode="email" maxLength={LIMITS.email} placeholder="name@example.com" />
                   <Field {...fieldProps('phone')} label="Contact number" type="tel" autoComplete="tel" inputMode="tel" maxLength={24} placeholder="+91 98XXX XXXXX" className="sm:col-span-2" />
                   <Field
                     {...fieldProps('message')}
