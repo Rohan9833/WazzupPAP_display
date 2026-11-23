@@ -1,5 +1,6 @@
 import { DemoRequest } from '../models/DemoRequest.js';
 import { validateDemoRequest } from '../validation/demoRequest.js';
+import { sendDemoRequestNotification } from '../services/emailService.js';
 
 const DUPLICATE_WINDOW_MS = 10 * 60 * 1000;
 
@@ -21,7 +22,7 @@ export async function createDemoRequest(req, res, next) {
       });
     }
 
-    // Absorb accidental double-submits without creating duplicate leads.
+    // Absorb accidental double-submits without creating duplicate leads or emails.
     const recent = await DemoRequest.findOne({
       email: data.email,
       createdAt: { $gte: new Date(Date.now() - DUPLICATE_WINDOW_MS) },
@@ -37,6 +38,13 @@ export async function createDemoRequest(req, res, next) {
           referrer: String(req.get('referer') || '').slice(0, 300),
         },
       });
+
+      // Email failure must not lose the saved lead or fail the form submission.
+      try {
+        await sendDemoRequestNotification(data);
+      } catch (emailError) {
+        console.error('[email] Failed to send demo request notification:', emailError.message);
+      }
     }
 
     // Deliberately return no record data: the lead database is never exposed via the API.
