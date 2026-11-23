@@ -164,6 +164,11 @@
     padding-block: 3.5rem !important;
   }
 
+  #why {
+    padding-top: 0.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
   #top {
     padding-top: 72px !important;
   }
