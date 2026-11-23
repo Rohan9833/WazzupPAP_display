@@ -131,10 +131,10 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.4, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <QrGlyph className="h-14 w-14 shrink-0 self-center rounded sm:h-16 sm:w-16" seed={5} />
+            <QrGlyph className="h-12 w-12 shrink-0 self-center rounded sm:h-14 sm:w-14" seed={5} />
             <span>
               <span className="flex items-center gap-1 text-[0.72rem] font-semibold leading-tight sm:text-[0.8rem]">
-                <FileText className="h-4 w-4 shrink-0 text-[#5fe0b4]" /> Branded report
+                <FileText className="h-5 w-5 shrink-0 text-[#5fe0b4]" /> Branded report
               </span>
               <span className="mt-0.5 block text-[0.66rem] leading-tight text-white/70 sm:text-[0.72rem]">By QR code or download link</span>
             </span>
