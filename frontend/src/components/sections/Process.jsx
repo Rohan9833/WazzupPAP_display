@@ -159,7 +159,7 @@ export default function Process() {
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
                 key={active}
-                className="relative w-full lg:max-h-[420px]"
+                className="relative w-full lg:mx-auto lg:w-fit lg:max-h-[420px]"
                 initial={{ opacity: 0, y: 16, scale: 0.98 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -10, scale: 0.98 }}
