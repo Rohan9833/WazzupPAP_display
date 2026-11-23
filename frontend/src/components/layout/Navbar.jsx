@@ -8,12 +8,27 @@ import { NAV_LINKS } from '../../content/navigation.js';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);\n  const [hideOnScrollDown, setHideOnScrollDown] = useState(false);\n  const [inHowSection, setInHowSection] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [hideOnScrollDown, setHideOnScrollDown] = useState(false);\n  const [inHowSection, setInHowSection] = useState(false);
   const toggleRef = useRef(null);
   const panelRef = useRef(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 12);
+      if (y < 80) setHideOnScrollDown(false);
+      else if (y > lastY + 4) setHideOnScrollDown(true);
+      else if (y < lastY - 4) setHideOnScrollDown(false);
+
+      const how = document.getElementById('how');
+      if (how) {
+        const rect = how.getBoundingClientRect();
+        setInHowSection(rect.top <= 100 && rect.bottom > 100);
+      }
+      lastY = y;
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
