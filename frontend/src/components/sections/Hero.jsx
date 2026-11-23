@@ -92,10 +92,10 @@ export default function Hero() {
         </div>
 
         {/* Product composition */}
-        <div className="relative order-4 mx-auto w-full max-w-[460px] lg:order-none lg:max-w-none">
+        <div className="relative order-4 mx-auto w-full max-w-[460px] lg:order-none lg:w-[115%] lg:max-w-none lg:-ml-[7.5%]">
           <div aria-hidden className="absolute left-1/2 top-1/2 aspect-square w-[105%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgb(0_156_109/0.42),transparent_60%)] blur-2xl" />
           <motion.div
-            className="relative mx-auto w-[46%] max-w-[200px] sm:w-[58%] sm:max-w-[300px] lg:ml-auto lg:mr-[8%]"
+            className="relative mx-auto w-[46%] max-w-[200px] sm:w-[58%] sm:max-w-[300px] lg:ml-auto lg:mr-[8%] lg:w-[48%] lg:max-w-[260px]"
             initial={reduce ? false : { opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
