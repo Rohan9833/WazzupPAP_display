@@ -24,10 +24,18 @@ test('requires every mandatory field', () => {
   assert.equal(errors.message, undefined);
 });
 
-test('accepts personal email addresses', () => {
-  const { data, errors } = validateDemoRequest({ ...valid, email: 'someone@gmail.com' });
-  assert.ok(data);
-  assert.deepEqual(errors, {});
+test('accepts personal email addresses (Gmail, Outlook, etc.)', () => {
+  for (const email of ['someone@gmail.com', 'user@outlook.com', 'person@yahoo.co.in']) {
+    const { data, errors } = validateDemoRequest({ ...valid, email });
+    assert.ok(data, email);
+    assert.deepEqual(errors, {});
+  }
+});
+
+test('rejects malformed email addresses', () => {
+  for (const email of ['invalid', 'name@', 'name@example', 'name example.com']) {
+    assert.ok(validateDemoRequest({ ...valid, email }).errors.email, email);
+  }
 });
 
 test('rejects malformed phone numbers', () => {
