@@ -126,17 +126,17 @@ export default function Hero() {
 
           <motion.div
             aria-hidden
-            className="absolute bottom-[5%] right-0 z-10 flex w-[46%] max-w-[225px] items-center gap-3 rounded-2xl bg-[#0a1f5c] p-3.5 text-white shadow-[0_30px_60px_-20px_rgb(0_0_0/0.7)] ring-1 ring-inset ring-white/15 sm:p-4"
+            className="absolute bottom-[5%] right-0 z-10 flex w-[46%] max-w-[225px] items-center gap-2.5 rounded-2xl bg-[#0a1f5c] p-3 text-white shadow-[0_30px_60px_-20px_rgb(0_0_0/0.7)] ring-1 ring-inset ring-white/15 sm:p-3.5"
             initial={reduce ? false : { opacity: 0, x: 16 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.4, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <QrGlyph className="h-11 w-11 shrink-0 rounded sm:h-12 sm:w-12" seed={5} />
+            <QrGlyph className="h-14 w-14 shrink-0 self-center rounded sm:h-16 sm:w-16" seed={5} />
             <span>
-              <span className="flex items-center gap-1.5 text-[0.8rem] font-semibold sm:text-[0.88rem]">
-                <FileText className="h-3.5 w-3.5 text-[#5fe0b4]" /> Branded report
+              <span className="flex items-center gap-1 text-[0.72rem] font-semibold leading-tight sm:text-[0.8rem]">
+                <FileText className="h-3 w-3 shrink-0 text-[#5fe0b4]" /> Branded report
               </span>
-              <span className="mt-1 block text-[0.72rem] leading-snug text-white/70 sm:text-[0.78rem]">By QR code or download link</span>
+              <span className="mt-0.5 block text-[0.66rem] leading-tight text-white/70 sm:text-[0.72rem]">By QR code or download link</span>
             </span>
           </motion.div>
         </div>
