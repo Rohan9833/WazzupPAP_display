@@ -153,7 +153,7 @@ export default function Process() {
             id={`${baseId}-panel`}
             role="tabpanel"
             aria-labelledby={`${baseId}-tab-${active}`}
-            className="hidden lg:relative lg:flex lg:min-h-[360px] lg:items-center lg:justify-center"
+            className="hidden lg:relative lg:-mt-20 lg:flex lg:min-h-[360px] lg:items-center lg:justify-center"
           >
             <div aria-hidden className="absolute inset-[5%] rounded-full bg-[radial-gradient(circle,rgb(0_156_109/0.32),transparent_62%)] blur-2xl" />
             <AnimatePresence mode="wait" initial={false}>
