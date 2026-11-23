@@ -41,7 +41,7 @@ const STEPS = [
 function Visual({ visual }) {
   if (visual.kind === 'phone') {
     return (
-      <div className="mx-auto w-[64%] max-w-[300px] sm:w-[50%] lg:w-[230px]">
+      <div className="mx-auto w-[64%] max-w-[300px] sm:w-[50%] lg:w-[190px]">
         <PhoneFrame className="!shadow-[0_60px_120px_-30px_rgb(0_0_0/0.75),0_0_0_1px_rgb(255_255_255/0.08)]" label="Sample WhatsApp screen for this step">
           <AppInChat sheet={visual.screen} />
         </PhoneFrame>
@@ -50,12 +50,12 @@ function Visual({ visual }) {
   }
   if (visual.kind === 'report') {
     return (
-      <div className="relative mx-auto w-[78%] max-w-[380px]">
+      <div className="relative mx-auto w-[78%] max-w-[380px] lg:w-[68%] lg:max-w-[300px]">
         <ReportDocument className="rotate-[-2deg] rounded-sm" />
       </div>
     );
   }
-  return <LaptopDashboard className="mx-auto w-full max-w-[640px]" />;
+  return <LaptopDashboard className="mx-auto w-full max-w-[640px] lg:max-w-[500px]" />;
 }
 
 export default function Process() {
@@ -82,8 +82,8 @@ export default function Process() {
     <section id="how" className="surface-night grain relative overflow-hidden py-8 text-haze sm:py-12 lg:py-6" aria-labelledby="how-title">
       <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_60%_60%_at_75%_50%,black,transparent)]" />
       <div className="container-x relative">
-        <div className="grid gap-2 lg:grid-cols-1 lg:items-center lg:gap-3">
-          <h2 id="how-title" className="display-lg text-sheen pb-1 lg:text-center">
+        <div className="grid gap-2 lg:mx-auto lg:max-w-[900px] lg:grid-cols-1 lg:items-center lg:gap-3">
+          <h2 id="how-title" className="display-lg text-sheen pb-1 lg:mx-auto lg:max-w-[900px] lg:text-center lg:text-[clamp(1.8rem,2.5vw,2.5rem)]">
             Initiated to completed. All on WhatsApp.
           </h2>
           <p className="lede max-w-[24em] text-[0.94rem] leading-snug sm:text-inherit lg:mx-auto lg:pb-2 lg:text-center">
@@ -91,8 +91,8 @@ export default function Process() {
           </p>
         </div>
 
-        <div className="mt-5 grid items-start gap-2 lg:mt-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center lg:gap-4">
-          <div role="tablist" aria-orientation="vertical" aria-label="WazzupPAP process" className="flex flex-col gap-1.5">
+        <div className="mt-5 grid items-start gap-2 lg:mx-auto lg:mt-5 lg:max-w-[900px] lg:grid-cols-[minmax(0,0.9fr)_minmax(0,0.7fr)] lg:items-center lg:gap-5">
+          <div role="tablist" aria-orientation="vertical" aria-label="WazzupPAP process" className="flex flex-col gap-1.5 lg:gap-1">
             {STEPS.map((s, i) => {
               const selected = i === active;
               return (
@@ -107,24 +107,24 @@ export default function Process() {
                   tabIndex={selected ? 0 : -1}
                   onClick={() => setActive(i)}
                   onKeyDown={(e) => onKeyDown(e, i)}
-                  className={`group grid grid-cols-[auto_1fr] gap-x-3 rounded-xl px-2.5 py-2 text-left transition-colors duration-300 sm:gap-x-3 sm:px-3 sm:py-2.5 ${
+                  className={`group grid grid-cols-[auto_1fr] gap-x-3 rounded-xl px-2.5 py-2 text-left transition-colors duration-300 sm:gap-x-3 sm:px-3 sm:py-2.5 lg:gap-x-2 lg:px-2 lg:py-1.5 ${
                     selected ? 'bg-white/[0.07] ring-1 ring-inset ring-white/15' : 'hover:bg-white/[0.03]'
                   }`}
                 >
                   <span
-                    className={`grid h-10 w-10 place-items-center rounded-full font-display text-[1rem] font-semibold transition-colors duration-300 ${
+                    className={`grid h-10 w-10 place-items-center rounded-full font-display text-[1rem] font-semibold transition-colors duration-300 lg:h-8 lg:w-8 lg:text-[0.85rem] ${
                       selected ? 'bg-leaf text-white shadow-[0_10px_24px_-8px_rgb(0_156_109/0.9)]' : 'bg-white/[0.06] text-white/60 ring-1 ring-inset ring-white/10'
                     }`}
                   >
                     {i + 1}
                   </span>
                   <span className="self-center">
-                    <span className={`block font-display text-[1.15rem] font-semibold leading-snug tracking-[-0.01em] sm:text-[1.25rem] ${selected ? 'text-white' : 'text-white/70'}`}>
+                    <span className={`block font-display text-[1.15rem] font-semibold leading-snug tracking-[-0.01em] sm:text-[1.25rem] lg:text-[1rem] ${selected ? 'text-white' : 'text-white/70'}`}>
                       {s.title}
                     </span>
                     <span className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${selected ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                       <span className="overflow-hidden">
-                        <span className="block pt-1 text-[0.92rem] leading-snug">{s.body}</span>
+                        <span className="block pt-1 text-[0.92rem] leading-snug lg:text-[0.78rem]">{s.body}</span>
                       </span>
                     </span>
                   </span>
@@ -153,13 +153,13 @@ export default function Process() {
             id={`${baseId}-panel`}
             role="tabpanel"
             aria-labelledby={`${baseId}-tab-${active}`}
-            className="hidden lg:relative lg:flex lg:w-full lg:min-h-[360px] lg:items-center lg:justify-center lg:justify-self-center"
+            className="hidden lg:relative lg:flex lg:w-full lg:min-h-[320px] lg:items-center lg:justify-center lg:justify-self-center"
           >
             <div aria-hidden className="absolute inset-[5%] rounded-full bg-[radial-gradient(circle,rgb(0_156_109/0.32),transparent_62%)] blur-2xl" />
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
                 key={active}
-                className="relative w-full lg:flex lg:items-center lg:justify-center lg:max-h-[420px]"
+                className="relative w-full lg:flex lg:items-center lg:justify-center lg:max-h-[360px]"
                 initial={{ opacity: 0, y: 16, scale: 0.98 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -10, scale: 0.98 }}
