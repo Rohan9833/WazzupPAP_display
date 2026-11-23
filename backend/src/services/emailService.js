@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-import { env } from '../config/env.js';
+import { env, isEmailConfigured } from '../config/env.js';
 
 function escapeHtml(value = '') {
   return String(value)
@@ -13,8 +13,8 @@ function escapeHtml(value = '') {
 let transporter;
 
 function getTransporter() {
-  if (!env.email.host || !env.email.user || !env.email.pass) {
-    return null;
+  if (!isEmailConfigured) {
+    throw new Error('SMTP is not configured. Set EMAIL_HOST, EMAIL_USER, EMAIL_PASS, and EMAIL_TO.');
   }
 
   if (!transporter) {
@@ -34,16 +34,12 @@ function getTransporter() {
 
 export async function sendDemoRequestNotification(data) {
   const transport = getTransporter();
-  if (!transport || !env.email.to) {
-    console.warn('[email] SMTP is not configured; demo notification was not sent.');
-    return false;
-  }
 
   const fields = [
     ['Full name', data.fullName],
     ['Pharmaceutical company', data.company],
     ['Designation', data.designation],
-    ['Work email', data.email],
+    ['Email address', data.email],
     ['Contact number', data.phone],
     ['Message', data.message || 'Not provided'],
   ];
@@ -64,16 +60,15 @@ export async function sendDemoRequestNotification(data) {
     from: env.email.from,
     to: env.email.to,
     replyTo: data.email,
-    subject: `New WazzupPAP demo request — ${data.company}`,
+    subject: `New WazzupPAP demo request — ${data.fullName}`,
     text,
     html: `
       <div style="font-family:Arial,sans-serif;max-width:640px;margin:auto;color:#0f172a;">
         <h2 style="margin:0 0 8px;color:#05245c;">New WazzupPAP demo request</h2>
-        <p style="margin:0 0 20px;color:#64748b;">Someone submitted the Request a demo form on your website.</p>
-        <table style="width:100%;border-collapse:collapse;border:1px solid #e5e7eb;border-radius:10px;">${rows}</table>
+        <p style="margin:0 0 20px;color:#64748b;">A visitor submitted the Request a demo form.</p>
+        <table style="width:100%;border-collapse:collapse;border:1px solid #e5e7eb;">${rows}</table>
       </div>`,
   });
 
   console.info('[email] Demo request notification sent.');
-  return true;
 }
