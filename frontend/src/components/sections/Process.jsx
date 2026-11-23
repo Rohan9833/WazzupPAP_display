@@ -79,7 +79,7 @@ export default function Process() {
   };
 
   return (
-    <section id="how" className="surface-night grain relative overflow-hidden py-8 text-haze sm:py-12 lg:py-16" aria-labelledby="how-title">
+    <section id="how" className="surface-night grain relative overflow-hidden py-8 text-haze sm:py-12 lg:py-8" aria-labelledby="how-title">
       <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_60%_60%_at_75%_50%,black,transparent)]" />
       <div className="container-x relative">
         <div className="grid gap-2 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-6">
@@ -91,7 +91,7 @@ export default function Process() {
           </p>
         </div>
 
-        <div className="mt-5 grid items-start gap-2 lg:mt-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-center lg:gap-6">
+        <div className="mt-5 grid items-start gap-2 lg:mt-3 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-center lg:gap-3">
           <div role="tablist" aria-orientation="vertical" aria-label="WazzupPAP process" className="flex flex-col gap-1.5">
             {STEPS.map((s, i) => {
               const selected = i === active;
