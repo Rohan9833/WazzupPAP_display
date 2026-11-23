@@ -10,9 +10,9 @@ export class ApiError extends Error {
 }
 
 export async function submitDemoRequest(payload, { signal } = {}) {
-  // Static design previews have no backend: say so plainly rather than pretending to save.
+  // Static design previews have no backend: say so plainly rather than pretending to send.
   if (import.meta.env.VITE_PREVIEW_MODE === 'true') {
-    throw new ApiError('This is a design preview, so requests are not sent from here. The live site saves them to the database.');
+    throw new ApiError('This is a design preview, so demo requests are not sent from here. The live site emails them to the WazzupPAP team.');
   }
   let response;
   try {
@@ -36,7 +36,7 @@ export async function submitDemoRequest(payload, { signal } = {}) {
 
   if (!response.ok || body.ok === false) {
     throw new ApiError(
-      body.message || 'The server could not save your request. Try again shortly.',
+      body.message || 'The server could not send your request. Try again shortly.',
       { status: response.status, errors: body.errors },
     );
   }
