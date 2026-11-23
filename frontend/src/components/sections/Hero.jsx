@@ -58,7 +58,24 @@ export default function Hero() {
             <Button href="#how" variant="ghostDark" className="!min-h-11 min-w-0 flex-1 !whitespace-normal !px-2 text-[0.82rem] leading-tight sm:flex-none sm:!min-h-12 sm:!whitespace-nowrap sm:!px-6 sm:text-[0.98rem]">See how it works</Button>
           </motion.div>
 
-          <motion.ul {...rise(0.38)} className="order-7 mt-8 grid gap-x-7 gap-y-2.5 border-t border-white/10 pt-6 text-[0.93rem] text-white/75 sm:mt-11 sm:flex sm:flex-wrap sm:pt-7 lg:order-none" aria-label="What you don't need">
+          {/* Compact mobile trust strip: replaces the tall list of pills */}
+          <motion.div {...rise(0.38)} className="order-7 mt-4 rounded-xl border border-white/10 bg-white/[0.035] px-3 py-2.5 sm:hidden">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[0.72rem] leading-tight text-white/75">
+              {freeOf.map((item) => (
+                <span key={item} className="inline-flex items-center gap-1.5 whitespace-nowrap">
+                  <Check className="h-3.5 w-3.5 shrink-0 text-[#5fe0b4]" strokeWidth={2.5} aria-hidden />
+                  {item}
+                </span>
+              ))}
+            </div>
+            <div className="mt-2 border-t border-white/10 pt-2 text-[0.68rem] leading-relaxed text-white/55">
+              <p>Official WhatsApp API · Doctor consent aligned</p>
+              <p>No patient numbers · Monthly subscription</p>
+            </div>
+          </motion.div>
+
+          {/* Existing larger-screen list is unchanged */}
+          <motion.ul {...rise(0.38)} className="order-7 hidden gap-x-7 gap-y-2.5 border-t border-white/10 pt-6 text-[0.93rem] text-white/75 sm:mt-11 sm:flex sm:flex-wrap sm:pt-7 lg:order-none" aria-label="What you don't need">
             {freeOf.map((item) => (
               <li key={item} className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-[#5fe0b4]" strokeWidth={2.4} aria-hidden />
@@ -67,7 +84,7 @@ export default function Hero() {
             ))}
           </motion.ul>
 
-          <motion.ul {...rise(0.44)} className="order-8 mt-5 flex flex-wrap gap-2 text-[0.8rem] text-white/70 sm:mt-6 lg:order-none" aria-label="Platform">
+          <motion.ul {...rise(0.44)} className="order-8 mt-5 hidden flex-wrap gap-2 text-[0.8rem] text-white/70 sm:mt-6 sm:flex lg:order-none" aria-label="Platform">
             {['Official WhatsApp Business API', 'UCPMP-aligned doctor consent', 'No patient mobile numbers', 'Month-to-month subscription'].map((t) => (
               <li key={t} className="rounded-full bg-white/[0.05] px-3 py-1 ring-1 ring-inset ring-white/10">{t}</li>
             ))}
