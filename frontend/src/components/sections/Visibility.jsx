@@ -15,7 +15,7 @@ export default function Visibility() {
     <section id="visibility" className="relative overflow-x-clip bg-white py-24 sm:py-32" aria-labelledby="vis-title">
       <div className="container-x">
         <div className="max-w-[46rem]">
-          <h2 id="vis-title" className="display-lg">
+          <h2 id="vis-title" className="display-lg !text-[clamp(1.55rem,5.5vw,2.25rem)] leading-[1.08]">
             Every assessment ends in a report. Every report adds to the picture.
           </h2>
         </div>
@@ -102,12 +102,14 @@ export default function Visibility() {
               { icon: Users, t: 'Every doctor', d: 'Consent sent, approved and pending, doctor by doctor.' },
               { icon: Map, t: 'Every MR and territory', d: 'Field-force activity by MR, HQ and region.' },
             ].map(({ icon: Icon, t, d }) => (
-              <li key={t} className="border-t border-white/15 pt-6">
-                <span className="grid h-10 w-10 place-items-center rounded-xl bg-white/[0.07] ring-1 ring-inset ring-white/15">
-                  <Icon className="h-5 w-5 text-[#7beac3]" strokeWidth={1.8} aria-hidden />
+              <li key={t} className="flex items-center gap-3 border-t border-white/15 pt-3 sm:block sm:pt-5">
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-white/[0.07] ring-1 ring-inset ring-white/15 sm:h-10 sm:w-10">
+                  <Icon className="h-[1.1rem] w-[1.1rem] text-[#7beac3] sm:h-5 sm:w-5" strokeWidth={1.8} aria-hidden />
                 </span>
-                <span className="mt-4 block font-semibold text-white">{t}</span>
-                <span className="mt-1 block text-[0.98rem]">{d}</span>
+                <span className="min-w-0">
+                  <span className="block font-semibold leading-tight text-white sm:mt-4">{t}</span>
+                  <span className="mt-0.5 block text-[0.92rem] leading-snug sm:mt-1 sm:text-[0.98rem]">{d}</span>
+                </span>
               </li>
             ))}
           </ul>
