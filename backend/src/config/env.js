@@ -1,20 +1,11 @@
 import 'dotenv/config';
 
-function required(name) {
-  const value = process.env[name];
-  if (!value || !value.trim()) {
-    throw new Error(`Missing required environment variable: ${name}. See .env.example.`);
-  }
-  return value.trim();
-}
-
 const nodeEnv = process.env.NODE_ENV || 'development';
 
 export const env = {
   nodeEnv,
   isProduction: nodeEnv === 'production',
   port: Number.parseInt(process.env.PORT || '5000', 10),
-  mongoUri: required('MONGODB_URI'),
   // Comma-separated list of origins allowed to call the API from a browser.
   corsOrigins: (process.env.CORS_ORIGINS || 'http://localhost:5173')
     .split(',')
@@ -27,12 +18,16 @@ export const env = {
     maxRequests: Number.parseInt(process.env.RATE_LIMIT_MAX || '5', 10),
   },
   email: {
-    from: process.env.EMAIL_FROM || 'DocTalk <info@digilateral.com>',
+    from: process.env.EMAIL_FROM || 'WazzupPAP <edetailer@digilateral.com>',
     host: process.env.EMAIL_HOST || '',
     port: Number.parseInt(process.env.EMAIL_PORT || '587', 10),
     secure: String(process.env.EMAIL_SECURE || 'false').toLowerCase() === 'true',
     user: process.env.EMAIL_USER || '',
     pass: process.env.EMAIL_PASS || '',
-    to: process.env.EMAIL_TO || process.env.EMAIL_USER || '',
+    to: process.env.EMAIL_TO || 'info@digilateral.com',
   },
 };
+
+export const isEmailConfigured = Boolean(
+  env.email.host && env.email.user && env.email.pass && env.email.to,
+);
