@@ -41,13 +41,13 @@ export default function Features() {
           {FEATURES.map(({ icon: Icon, t, d }) => (
             <li
               key={t}
-              className="edge-card group relative overflow-hidden rounded-[1.5rem] p-6 shadow-[0_24px_50px_-40px_rgb(1_21_73/0.45)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_34px_60px_-38px_rgb(1_21_73/0.55)] sm:p-7"
+              className="edge-card group relative overflow-hidden rounded-[1.25rem] p-3.5 shadow-[0_24px_50px_-40px_rgb(1_21_73/0.45)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_34px_60px_-38px_rgb(1_21_73/0.55)] sm:p-5"
             >
-              <span className="icon-gem grid h-12 w-12 place-items-center rounded-2xl">
-                <Icon className="h-6 w-6 text-[#7beac3]" strokeWidth={1.7} aria-hidden />
+              <span className="icon-gem grid h-10 w-10 place-items-center rounded-xl">
+                <Icon className="h-5 w-5 text-[#7beac3]" strokeWidth={1.7} aria-hidden />
               </span>
-              <h3 className="mt-6 text-[1.15rem] font-semibold leading-snug tracking-[-0.01em]">{t}</h3>
-              <p className="mt-2 text-[0.96rem] leading-relaxed">{d}</p>
+              <h3 className="mt-3 text-[1.05rem] font-semibold leading-snug tracking-[-0.01em]">{t}</h3>
+              <p className="mt-1.5 text-[0.9rem] leading-snug">{d}</p>
             </li>
           ))}
 
