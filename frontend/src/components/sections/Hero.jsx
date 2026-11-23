@@ -131,7 +131,7 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.4, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <QrGlyph className="h-14 w-14 shrink-0 self-center rounded sm:h-16 sm:w-16" seed={5} />
+            <QrGlyph className="h-16 w-16 shrink-0 self-center rounded" seed={5} />
             <span>
               <span className="flex items-center gap-1 text-[0.72rem] font-semibold leading-tight sm:text-[0.8rem]">
                 <FileText className="h-3 w-3 shrink-0 text-[#5fe0b4]" /> Branded report
