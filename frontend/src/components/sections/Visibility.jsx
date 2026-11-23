@@ -91,7 +91,7 @@ export default function Visibility() {
             ))}
           </div>
 
-          <div className="relative mt-5 sm:mt-6 lg:mt-3">
+          <div className="relative mt-5 sm:mt-6 lg:mt-2">
             <div aria-hidden className="absolute inset-x-[10%] bottom-[5%] top-[10%] rounded-full bg-[radial-gradient(ellipse_at_center,rgb(0_156_109/0.35),transparent_65%)] blur-2xl" />
             <LaptopDashboard className="relative mx-auto max-w-[980px]" view={view} />
           </div>
