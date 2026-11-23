@@ -12,7 +12,7 @@ const DASH_VIEWS = [
 export default function Visibility() {
   const [view, setView] = useState('overview');
   return (
-    <section id="visibility" className="relative overflow-x-clip bg-white py-24 sm:py-32" aria-labelledby="vis-title">
+    <section id="visibility" className="relative overflow-x-clip bg-white py-12 sm:py-16" aria-labelledby="vis-title">
       <div className="container-x">
         <div className="max-w-[46rem]">
           <h2 id="vis-title" className="display-lg !text-[clamp(1.55rem,5.5vw,2.25rem)] leading-[1.08]">
@@ -21,7 +21,7 @@ export default function Visibility() {
         </div>
 
         {/* Reports */}
-        <div className="mt-16 grid items-center gap-12 lg:mt-20 lg:grid-cols-2 lg:gap-20">
+        <div className="mt-8 grid items-center gap-6 lg:mt-12 lg:grid-cols-2 lg:gap-10">
           <div className="relative mx-auto w-full max-w-[420px] lg:order-2">
             <div aria-hidden className="grid-wash absolute -inset-8 rounded-[2rem] [mask-image:radial-gradient(closest-side,black,transparent)]" />
             <ReportDocument className="relative w-[78%] rotate-[-2.5deg] rounded-sm" />
@@ -39,7 +39,7 @@ export default function Visibility() {
               Every completed assessment auto-generates a PDF report with your brand name and logo in colour. The doctor
               receives it on WhatsApp, and the patient opens it from a QR code or download link.
             </p>
-            <ul className="mt-8 space-y-5">
+            <ul className="mt-5 space-y-3">
               {[
                 { icon: Palette, t: 'In your brand colours', d: 'Brand name and logo on every report, program by program.' },
                 { icon: Send, t: 'Shared with the doctor', d: 'Delivered instantly to the doctor on WhatsApp.' },
@@ -61,9 +61,9 @@ export default function Visibility() {
         </div>
 
         {/* Head Office */}
-        <div className="surface-night grain relative mt-28 overflow-hidden rounded-[2rem] px-5 pb-12 pt-14 text-haze sm:mt-36 sm:rounded-[2.75rem] sm:px-12 sm:pb-16 sm:pt-20 lg:px-16">
+        <div className="surface-night grain relative mt-12 overflow-hidden rounded-[2rem] px-4 pb-8 pt-8 text-haze sm:mt-16 sm:rounded-[2.75rem] sm:px-8 sm:pb-10 sm:pt-10 lg:px-10">
           <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_70%_50%_at_50%_30%,black,transparent)]" />
-          <div className="relative grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-end lg:gap-20">
+          <div className="relative grid gap-4 lg:grid-cols-[1fr_1fr] lg:items-end lg:gap-10">
             <h3 className="display-md text-sheen max-w-[16em] !text-[clamp(1.7rem,3vw,2.5rem)]">
               One Head Office view of every program, doctor and territory
             </h3>
@@ -74,7 +74,7 @@ export default function Visibility() {
             </p>
           </div>
 
-          <div role="tablist" aria-label="Dashboard view" className="relative mx-auto mt-6 flex w-full max-w-[34rem] gap-1 rounded-full bg-white/[0.06] p-1 ring-1 ring-inset ring-white/10 sm:mt-14 sm:w-fit sm:gap-1.5">
+          <div role="tablist" aria-label="Dashboard view" className="relative mx-auto mt-4 flex w-full max-w-[34rem] gap-1 rounded-full bg-white/[0.06] p-1 ring-1 ring-inset ring-white/10 sm:mt-8 sm:w-fit sm:gap-1.5">
             {DASH_VIEWS.map(([id, label]) => (
               <button
                 key={id}
@@ -91,12 +91,12 @@ export default function Visibility() {
             ))}
           </div>
 
-          <div className="relative mt-8 sm:mt-10">
+          <div className="relative mt-5 sm:mt-6">
             <div aria-hidden className="absolute inset-x-[10%] bottom-[5%] top-[10%] rounded-full bg-[radial-gradient(ellipse_at_center,rgb(0_156_109/0.35),transparent_65%)] blur-2xl" />
             <LaptopDashboard className="relative mx-auto max-w-[980px]" view={view} />
           </div>
 
-          <ul className="relative mx-auto mt-14 grid max-w-[980px] gap-x-10 gap-y-8 sm:grid-cols-3">
+          <ul className="relative mx-auto mt-8 grid max-w-[980px] gap-x-8 gap-y-5 sm:grid-cols-3">
             {[
               { icon: Activity, t: 'Every test, live', d: 'Assessments, outcomes and reports as they happen.' },
               { icon: Users, t: 'Every doctor', d: 'Consent sent, approved and pending, doctor by doctor.' },
@@ -113,7 +113,7 @@ export default function Visibility() {
               </li>
             ))}
           </ul>
-          <p className="relative mx-auto mt-10 max-w-[980px] text-[0.82rem] text-haze/70">
+          <p className="relative mx-auto mt-5 max-w-[980px] text-[0.82rem] text-haze/70">
             Sample data for illustration. No client data is shown.
           </p>
         </div>
