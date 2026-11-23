@@ -28,7 +28,7 @@ export default function Hero() {
       </div>
       <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_60%_60%_at_25%_40%,black,transparent)]" />
 
-      <div className="container-x relative grid items-center gap-14 pb-24 pt-12 sm:pt-16 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:pb-32 lg:pt-20">
+      <div className="container-x relative grid items-center gap-8 pb-16 pt-8 sm:gap-14 sm:pb-24 sm:pt-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:pb-32 lg:pt-20">
         <div className="contents lg:block">
           <motion.p
             {...rise(0)}
@@ -48,15 +48,14 @@ export default function Hero() {
             The convenience of WhatsApp. The power of an application.
           </motion.p>
 
-          {/* This element is placed after the product on phones; desktop keeps it in the copy column. */}
           <motion.p {...rise(0.22)} className="lede order-5 mt-5 max-w-[34em] text-haze lg:order-none">
             A patient assessment app, built to live on WhatsApp. Doctor-approved programs run from sign-in to branded
             report without leaving the WhatsApp, and Head Office follows every test, doctor and MR in real time.
           </motion.p>
 
           <motion.div {...rise(0.3)} className="order-6 mt-6 flex flex-row gap-2 sm:mt-10 sm:gap-3 lg:order-none">
-            <Button href="#demo" className="min-w-0 flex-1 !px-3 !shadow-[0_14px_40px_-10px_rgb(0_156_109/0.8)] sm:flex-none sm:!px-6">Request demo</Button>
-            <Button href="#how" variant="ghostDark" className="min-w-0 flex-1 !px-3 sm:flex-none sm:!px-6">See how it works</Button>
+            <Button href="#demo" className="!min-h-11 min-w-0 flex-1 !whitespace-normal !px-2 text-[0.82rem] leading-tight sm:flex-none sm:!min-h-12 sm:!whitespace-nowrap sm:!px-6 sm:text-[0.98rem]">Request demo</Button>
+            <Button href="#how" variant="ghostDark" className="!min-h-11 min-w-0 flex-1 !whitespace-normal !px-2 text-[0.82rem] leading-tight sm:flex-none sm:!min-h-12 sm:!whitespace-nowrap sm:!px-6 sm:text-[0.98rem]">See how it works</Button>
           </motion.div>
 
           <motion.ul {...rise(0.38)} className="order-7 mt-8 grid gap-x-7 gap-y-2.5 border-t border-white/10 pt-6 text-[0.93rem] text-white/75 sm:mt-11 sm:flex sm:flex-wrap sm:pt-7 lg:order-none" aria-label="What you don't need">
