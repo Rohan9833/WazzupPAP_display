@@ -34,7 +34,7 @@ export default function MobileCta() {
       aria-hidden={!show}
     >
       <Button href="#demo" className="w-full" tabIndex={show ? 0 : -1}>
-        Request a private demo
+        Request demo
       </Button>
     </div>
   );

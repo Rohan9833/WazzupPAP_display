@@ -50,11 +50,11 @@ export default function Hero() {
 
           <motion.p {...rise(0.22)} className="lede mt-5 max-w-[34em] text-haze">
             A patient assessment app, built to live on WhatsApp. Doctor-approved programs run from sign-in to branded
-            report without leaving the chat, and Head Office tracks every test, doctor and MR in real time.
+            report without leaving the WhatsApp, and Head Office follows every test, doctor and MR in real time.
           </motion.p>
 
           <motion.div {...rise(0.3)} className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <Button href="#demo" className="!shadow-[0_14px_40px_-10px_rgb(0_156_109/0.8)]">Request a private demo</Button>
+            <Button href="#demo" className="!shadow-[0_14px_40px_-10px_rgb(0_156_109/0.8)]">Request demo</Button>
             <Button href="#how" variant="ghostDark">See how it works</Button>
           </motion.div>
 

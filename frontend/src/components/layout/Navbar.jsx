@@ -120,7 +120,7 @@ export default function Navbar() {
             </ul>
             <div className="px-6 pb-7 pt-6">
               <Button href="#demo" onClick={() => setOpen(false)} className="w-full">
-                Request a private demo
+                Request demo
               </Button>
               <p className="mt-4 text-center text-sm text-slate">A digiLATERAL product</p>
             </div>

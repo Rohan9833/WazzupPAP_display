@@ -140,7 +140,7 @@ export default function DemoRequest() {
                 transition={{ duration: 0.25 }}
                 aria-describedby="form-status"
               >
-                <h3 className="font-display text-[1.5rem] font-semibold tracking-[-0.015em]">Request a private demo</h3>
+                <h3 className="font-display text-[1.5rem] font-semibold tracking-[-0.015em]">Request demo</h3>
                 <p className="mt-1 text-[0.95rem]">All fields are required unless marked optional.</p>
 
                 <div className="mt-8 grid gap-5 sm:grid-cols-2">
