@@ -77,9 +77,9 @@ export default function DemoRequest() {
   });
 
   return (
-    <section id="demo" className="surface-night grain relative overflow-hidden py-24 text-haze sm:py-32" aria-labelledby="demo-title">
+    <section id="demo" className="surface-night grain relative overflow-hidden py-12 text-haze sm:py-16" aria-labelledby="demo-title">
       <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_60%_70%_at_15%_30%,black,transparent)]" />
-      <div className="container-x relative grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+      <div className="container-x relative grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
         <div className="lg:pt-4">
           <h2 id="demo-title" className="display-lg text-sheen pb-1 !text-[clamp(1.65rem,5.5vw,3rem)] leading-[1.05]">
             See WazzupPAP in a private demonstration
@@ -88,7 +88,7 @@ export default function DemoRequest() {
             We’ll walk your team through the application experience, the branded reports and the Head Office portal,
             in the context of your therapy area.
           </p>
-          <ul className="mt-6 space-y-3">
+          <ul className="mt-4 space-y-2.5">
             {[
               { icon: Presentation, t: 'The full flow on WhatsApp, from sign-in to branded report' },
               { icon: Layers, t: 'An assessment tailored to your therapy area and brand' },
@@ -104,7 +104,7 @@ export default function DemoRequest() {
           </ul>
         </div>
 
-        <div className="relative rounded-[1.35rem] bg-white p-4 text-slate shadow-[0_35px_70px_-35px_rgb(0_0_0/0.65),0_0_0_1px_rgb(255_255_255/0.1)] sm:p-6">
+        <div className="relative rounded-[1.35rem] bg-white p-3 text-slate shadow-[0_35px_70px_-35px_rgb(0_0_0/0.65),0_0_0_1px_rgb(255_255_255/0.1)] sm:p-4">
           <AnimatePresence mode="wait" initial={false}>
             {status === 'success' ? (
               <motion.div
@@ -143,7 +143,7 @@ export default function DemoRequest() {
                 <h3 className="font-display text-[1.3rem] font-semibold leading-tight tracking-[-0.015em]">Request demo</h3>
                 <p className="mt-0.5 text-[0.85rem] leading-snug">All fields are required unless marked optional.</p>
 
-                <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                <div className="mt-3 grid gap-2.5 sm:grid-cols-2">
                   <Field {...fieldProps('fullName')} label="Full name" autoComplete="name" maxLength={LIMITS.fullName} />
                   <Field {...fieldProps('company')} label="Pharmaceutical company" autoComplete="organization" maxLength={LIMITS.company} />
                   <Field {...fieldProps('designation')} label="Designation" autoComplete="organization-title" maxLength={LIMITS.designation} placeholder="e.g. Brand Manager" />
@@ -176,7 +176,7 @@ export default function DemoRequest() {
                   )}
                 </div>
 
-                <div className="mt-5 flex flex-col items-stretch gap-2.5 sm:flex-row sm:items-center sm:justify-between">
+                <div className="mt-3 flex flex-col items-stretch gap-2.5 sm:flex-row sm:items-center sm:justify-between">
                   <p className="text-[0.82rem] leading-snug text-slate sm:max-w-[22em]">
                     We use these details only to arrange your demo. We don’t share them.
                   </p>
