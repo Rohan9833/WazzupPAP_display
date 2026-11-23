@@ -1,7 +1,7 @@
 {
   "name": "wazzuppap-backend",
   "version": "1.0.0",
-  "description": "WazzupPAP microsite API — demo request intake",
+  "description": "WazzupPAP microsite API — email-only demo request intake",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
