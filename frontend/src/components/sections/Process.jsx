@@ -79,10 +79,10 @@ export default function Process() {
   };
 
   return (
-    <section id="how" className="surface-night grain relative overflow-hidden py-12 text-haze sm:py-32" aria-labelledby="how-title">
+    <section id="how" className="surface-night grain relative overflow-hidden py-12 text-haze sm:py-16 lg:py-20" aria-labelledby="how-title">
       <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_60%_60%_at_75%_50%,black,transparent)]" />
       <div className="container-x relative">
-        <div className="grid gap-3 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-16">
+        <div className="grid gap-3 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-8">
           <h2 id="how-title" className="display-lg text-sheen pb-1">
             Initiated to completed. All on WhatsApp.
           </h2>
@@ -91,7 +91,7 @@ export default function Process() {
           </p>
         </div>
 
-        <div className="mt-8 grid items-start gap-3 lg:mt-20 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-center lg:gap-16">
+        <div className="mt-8 grid items-start gap-3 lg:mt-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-center lg:gap-8">
           <div role="tablist" aria-orientation="vertical" aria-label="WazzupPAP process" className="flex flex-col gap-2">
             {STEPS.map((s, i) => {
               const selected = i === active;
@@ -153,7 +153,7 @@ export default function Process() {
             id={`${baseId}-panel`}
             role="tabpanel"
             aria-labelledby={`${baseId}-tab-${active}`}
-            className="hidden lg:relative lg:flex lg:min-h-[640px] lg:items-center lg:justify-center"
+            className="hidden lg:relative lg:flex lg:min-h-[500px] lg:items-center lg:justify-center"
           >
             <div aria-hidden className="absolute inset-[5%] rounded-full bg-[radial-gradient(circle,rgb(0_156_109/0.32),transparent_62%)] blur-2xl" />
             <AnimatePresence mode="wait" initial={false}>
@@ -170,7 +170,7 @@ export default function Process() {
             </AnimatePresence>
           </div>
         </div>
-        <p className="mt-4 text-center text-[0.72rem] text-haze/70 sm:mt-8 sm:text-[0.82rem] lg:text-right">
+        <p className="mt-4 text-center text-[0.72rem] text-haze/70 sm:mt-6 sm:text-[0.82rem] lg:mt-4 lg:text-right">
           Sample screens. Brand, doctor and MR are illustrative.
         </p>
       </div>
