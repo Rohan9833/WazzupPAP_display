@@ -12,13 +12,6 @@ export const LIMITS = {
   message: { max: 1000 },
 };
 
-// Personal mailbox domains — the form asks for a work email.
-const PERSONAL_EMAIL_DOMAINS = new Set([
-  'gmail.com', 'googlemail.com', 'yahoo.com', 'yahoo.co.in', 'yahoo.in', 'hotmail.com',
-  'outlook.com', 'live.com', 'msn.com', 'icloud.com', 'me.com', 'aol.com', 'rediffmail.com',
-  'proton.me', 'protonmail.com', 'ymail.com', 'gmx.com', 'zoho.com', 'mail.com',
-]);
-
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const NAME_RE = /^[\p{L}\p{M}][\p{L}\p{M}\s.'-]*$/u;
 const PHONE_ALLOWED_RE = /^\+?[\d\s()-]+$/;
@@ -76,11 +69,9 @@ export function validateDemoRequest(body = {}) {
   lengthCheck(errors, 'designation', data.designation, 'designation', LIMITS.designation);
 
   if (!data.email) {
-    errors.email = 'Enter your work email.';
+    errors.email = 'Enter your email address.';
   } else if (data.email.length > LIMITS.email.max || !EMAIL_RE.test(data.email)) {
     errors.email = 'Enter a valid email address, like name@company.com.';
-  } else if (PERSONAL_EMAIL_DOMAINS.has(data.email.split('@')[1])) {
-    errors.email = 'Use your company email address rather than a personal one.';
   }
 
   const digits = data.phone.replace(/\D/g, '');
