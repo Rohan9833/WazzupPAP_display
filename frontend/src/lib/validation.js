@@ -12,12 +12,6 @@ export const LIMITS = {
   message: 1000,
 };
 
-const PERSONAL_EMAIL_DOMAINS = new Set([
-  'gmail.com', 'googlemail.com', 'yahoo.com', 'yahoo.co.in', 'yahoo.in', 'hotmail.com',
-  'outlook.com', 'live.com', 'msn.com', 'icloud.com', 'me.com', 'aol.com', 'rediffmail.com',
-  'proton.me', 'protonmail.com', 'ymail.com', 'gmx.com', 'zoho.com', 'mail.com',
-]);
-
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const NAME_RE = /^[\p{L}\p{M}][\p{L}\p{M}\s.'-]*$/u;
 const PHONE_ALLOWED_RE = /^\+?[\d\s()-]+$/;
@@ -55,9 +49,8 @@ export function validateField(name, raw) {
       return '';
     case 'email': {
       const v = value.toLowerCase();
-      if (!v) return 'Enter your work email.';
+      if (!v) return 'Enter your email address.';
       if (v.length > LIMITS.email || !EMAIL_RE.test(v)) return 'Enter a valid email address, like name@company.com.';
-      if (PERSONAL_EMAIL_DOMAINS.has(v.split('@')[1])) return 'Use your company email address rather than a personal one.';
       return '';
     }
     case 'phone': {
