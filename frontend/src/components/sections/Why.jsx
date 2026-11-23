@@ -20,11 +20,11 @@ export default function Why() {
           </p>
         </div>
 
-        <ul className="mt-5 grid gap-2.5 sm:mt-16 sm:grid-cols-3 sm:gap-6">
+        <ul className="mt-5 grid gap-2.5 sm:mt-8 sm:grid-cols-3 sm:gap-4">
           {pillars.map(({ word, icon: Icon, line }) => (
             <li
               key={word}
-              className="edge-card group relative flex items-start gap-3 overflow-hidden rounded-2xl p-3 shadow-[0_30px_60px_-40px_rgb(1_21_73/0.45)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_40px_70px_-40px_rgb(1_21_73/0.55)] sm:flex-col sm:gap-8 sm:rounded-[1.75rem] sm:p-9"
+              className="edge-card group relative flex items-start gap-3 overflow-hidden rounded-2xl p-3 shadow-[0_30px_60px_-40px_rgb(1_21_73/0.45)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_40px_70px_-40px_rgb(1_21_73/0.55)] sm:flex-col sm:gap-5 sm:rounded-[1.5rem] sm:p-5"
             >
               <span aria-hidden className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[radial-gradient(circle,rgb(0_156_109/0.12),transparent_70%)]" />
               <span className="icon-gem relative grid h-11 w-11 shrink-0 place-items-center rounded-xl sm:h-[4.25rem] sm:w-[4.25rem]">
@@ -34,7 +34,7 @@ export default function Why() {
                 <span className="block font-display text-[1.25rem] font-semibold leading-tight tracking-[-0.03em] text-ink sm:text-[2.2rem]">
                   {word}
                 </span>
-                <span className="mt-1 block text-[0.82rem] leading-snug sm:mt-3.5 sm:text-[1.05rem]">{line}</span>
+                <span className="mt-1 block text-[0.82rem] leading-snug sm:mt-2 sm:text-[1.05rem]">{line}</span>
               </span>
             </li>
           ))}
