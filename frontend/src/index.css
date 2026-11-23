@@ -39,7 +39,7 @@
     overflow-x: hidden;
   }
   h1, h2, h3 {
-    @apply font-display text-ink;
+    @apply font-sans text-ink;
     font-optical-sizing: auto;
     text-wrap: balance;
   }
