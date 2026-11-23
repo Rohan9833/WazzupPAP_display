@@ -12,7 +12,7 @@ wazzuppap/
 
 ## Requirements
 
-- Node.js 18.18 or later
+- Node.js 20.19 or later
 - SMTP credentials for the mailbox used to send notifications
 
 ## Run locally
