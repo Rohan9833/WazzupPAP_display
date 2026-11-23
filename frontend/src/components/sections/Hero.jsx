@@ -1,0 +1,132 @@
+import { motion, useReducedMotion } from 'motion/react';
+import { ShieldCheck, FileText, Check } from 'lucide-react';
+import Button from '../ui/Button.jsx';
+import PhoneFrame from '../mockups/PhoneFrame.jsx';
+import { AppInChat } from '../mockups/AppScreens.jsx';
+import QrGlyph from '../mockups/QrGlyph.jsx';
+
+const freeOf = ['No devices', 'No printers', 'No mobile app required'];
+
+export default function Hero() {
+  const reduce = useReducedMotion();
+  const rise = (delay) =>
+    reduce
+      ? {}
+      : {
+          initial: { opacity: 0, y: 18 },
+          animate: { opacity: 1, y: 0 },
+          transition: { delay, duration: 0.9, ease: [0.22, 1, 0.36, 1] },
+        };
+
+  return (
+    <section id="top" className="surface-night grain relative overflow-hidden pt-[92px] text-haze sm:pt-[104px]" aria-labelledby="hero-title">
+      {/* Orbit lines behind the product */}
+      <div aria-hidden className="pointer-events-none absolute right-[-12%] top-1/2 hidden aspect-square w-[62%] -translate-y-1/2 lg:block">
+        <div className="absolute inset-0 rounded-full border border-white/[0.06]" />
+        <div className="absolute inset-[12%] rounded-full border border-white/[0.08]" />
+        <div className="absolute inset-[24%] rounded-full border border-[#5fe0b4]/[0.14]" />
+      </div>
+      <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_60%_60%_at_25%_40%,black,transparent)]" />
+
+      <div className="container-x relative grid items-center gap-14 pb-24 pt-12 sm:pt-16 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:pb-32 lg:pt-20">
+        <div className="max-w-[680px]">
+          <motion.p
+            {...rise(0)}
+            className="inline-flex items-center gap-2 rounded-full bg-white/[0.06] py-1.5 pl-2 pr-4 text-[0.9rem] font-medium text-white/90 ring-1 ring-inset ring-white/15 backdrop-blur"
+          >
+            <span className="grid h-6 w-6 place-items-center rounded-full bg-leaf">
+              <ShieldCheck className="h-3.5 w-3.5 text-white" aria-hidden />
+            </span>
+            Verified Patient Assessment Programs
+          </motion.p>
+
+          <motion.h1 {...rise(0.08)} id="hero-title" className="display-xl text-sheen mt-7 pb-1">
+            Patient Assessment Programs. Reimagined.
+          </motion.h1>
+
+          <motion.p {...rise(0.16)} className="mt-6 font-display text-[clamp(1.3rem,2.3vw,1.75rem)] font-medium leading-snug tracking-[-0.015em] text-[#8ff0cc]">
+            The convenience of WhatsApp. The power of an application.
+          </motion.p>
+
+          <motion.p {...rise(0.22)} className="lede mt-5 max-w-[34em] text-haze">
+            A patient assessment app, built to live on WhatsApp. Doctor-approved programs run from sign-in to branded
+            report without leaving the chat, and Head Office tracks every test, doctor and MR in real time.
+          </motion.p>
+
+          <motion.div {...rise(0.3)} className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <Button href="#demo" className="!shadow-[0_14px_40px_-10px_rgb(0_156_109/0.8)]">Request a private demo</Button>
+            <Button href="#how" variant="ghostDark">See how it works</Button>
+          </motion.div>
+
+          <motion.ul {...rise(0.38)} className="mt-11 grid gap-x-7 gap-y-2.5 border-t border-white/10 pt-7 text-[0.93rem] text-white/75 sm:flex sm:flex-wrap" aria-label="What you don't need">
+            {freeOf.map((item) => (
+              <li key={item} className="flex items-center gap-2">
+                <Check className="h-4 w-4 text-[#5fe0b4]" strokeWidth={2.4} aria-hidden />
+                {item}
+              </li>
+            ))}
+          </motion.ul>
+
+          <motion.ul {...rise(0.44)} className="mt-6 flex flex-wrap gap-2 text-[0.8rem] text-white/70" aria-label="Platform">
+            {['Official WhatsApp Business API', 'UCPMP-aligned doctor consent', 'No patient mobile numbers', 'Month-to-month subscription'].map((t) => (
+              <li key={t} className="rounded-full bg-white/[0.05] px-3 py-1 ring-1 ring-inset ring-white/10">{t}</li>
+            ))}
+          </motion.ul>
+        </div>
+
+        {/* Product composition */}
+        <div className="relative mx-auto w-full max-w-[460px] lg:max-w-none">
+          <div aria-hidden className="absolute left-1/2 top-1/2 aspect-square w-[105%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgb(0_156_109/0.42),transparent_60%)] blur-2xl" />
+          <motion.div
+            className="relative mx-auto w-[64%] max-w-[300px] sm:w-[58%] lg:ml-auto lg:mr-[8%]"
+            initial={reduce ? false : { opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <PhoneFrame
+              className="!shadow-[0_60px_120px_-30px_rgb(0_0_0/0.75),0_0_0_1px_rgb(255_255_255/0.08)]"
+              label="WazzupPAP shown as an application screen opened inside a WhatsApp chat"
+            >
+              <AppInChat sheet="assessment" animateIn={!reduce} />
+            </PhoneFrame>
+          </motion.div>
+
+          <motion.div
+            aria-hidden
+            className="absolute left-0 top-[36%] z-10 w-[42%] max-w-[200px] rounded-2xl bg-white/95 p-3.5 shadow-[0_30px_60px_-20px_rgb(0_0_0/0.6)] ring-1 ring-white/40 backdrop-blur sm:p-4 lg:left-[2%]"
+            initial={reduce ? false : { opacity: 0, x: -16 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 1.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <span className="flex items-center gap-2 text-[0.8rem] font-semibold text-ink sm:text-[0.88rem]">
+              <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-leaf">
+                <ShieldCheck className="h-4 w-4 text-white" />
+              </span>
+              Doctor approved
+            </span>
+            <span className="mt-2 block text-[0.72rem] leading-snug text-slate sm:text-[0.78rem]">Program consent in place before it begins</span>
+          </motion.div>
+
+          <motion.div
+            aria-hidden
+            className="absolute bottom-[5%] right-0 z-10 flex w-[46%] max-w-[225px] items-center gap-3 rounded-2xl bg-[#0a1f5c] p-3.5 text-white shadow-[0_30px_60px_-20px_rgb(0_0_0/0.7)] ring-1 ring-inset ring-white/15 sm:p-4"
+            initial={reduce ? false : { opacity: 0, x: 16 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 1.4, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <QrGlyph className="h-11 w-11 shrink-0 rounded sm:h-12 sm:w-12" seed={5} />
+            <span>
+              <span className="flex items-center gap-1.5 text-[0.8rem] font-semibold sm:text-[0.88rem]">
+                <FileText className="h-3.5 w-3.5 text-[#5fe0b4]" /> Branded report
+              </span>
+              <span className="mt-1 block text-[0.72rem] leading-snug text-white/70 sm:text-[0.78rem]">By QR code or download link</span>
+            </span>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Soft fade into the next section */}
+      <div aria-hidden className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+    </section>
+  );
+}

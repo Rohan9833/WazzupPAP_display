@@ -1,0 +1,24 @@
+{
+  "name": "wazzuppap-backend",
+  "version": "1.0.0",
+  "description": "WazzupPAP microsite API — demo request intake",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.5",
+    "helmet": "^8.3.0",
+    "mongoose": "^9.12.3"
+  },
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=18.18"
+  }
+}
