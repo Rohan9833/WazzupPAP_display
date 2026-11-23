@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 
+
 /*
   WazzupPAP design tokens
   Navy and green are sampled from the official logo.
@@ -141,6 +142,7 @@
   }
 }
 
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -149,5 +151,110 @@
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* Compact spacing throughout the mobile experience only. */
+@media (max-width: 639px) {
+  .container-x {
+    padding-inline: 1rem !important;
+  }
+
+  section:not(#top) {
+    padding-block: 3.5rem !important;
+  }
+
+  #top > .container-x {
+    padding-top: 1.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  section [class~="mt-14"],
+  section [class~="mt-16"] {
+    margin-top: 2rem !important;
+  }
+
+  section [class~="mt-12"] {
+    margin-top: 1.75rem !important;
+  }
+
+  section [class~="mt-10"] {
+    margin-top: 1.5rem !important;
+  }
+
+  section [class~="mt-8"] {
+    margin-top: 1.25rem !important;
+  }
+
+  section [class~="mt-6"] {
+    margin-top: 1rem !important;
+  }
+
+  section [class~="mt-5"] {
+    margin-top: 0.875rem !important;
+  }
+
+  section [class~="gap-12"] {
+    gap: 1.75rem !important;
+  }
+
+  section [class~="gap-8"] {
+    gap: 1.5rem !important;
+  }
+
+  section [class~="gap-6"] {
+    gap: 1.125rem !important;
+  }
+
+  section [class~="p-6"],
+  section [class~="p-7"],
+  section [class~="p-5"] {
+    padding: 1rem !important;
+  }
+
+  section [class~="px-5"] {
+    padding-inline: 1rem !important;
+  }
+
+  section [class~="pt-14"],
+  section [class~="pt-16"] {
+    padding-top: 2rem !important;
+  }
+
+  section [class~="pb-16"] {
+    padding-bottom: 2.5rem !important;
+  }
+
+  section [class~="space-y-6"] > :not(:first-child) {
+    margin-top: 1rem !important;
+  }
+
+  section [class~="space-y-5"] > :not(:first-child) {
+    margin-top: 0.875rem !important;
+  }
+
+  section [class~="space-y-8"] > :not(:first-child) {
+    margin-top: 1.5rem !important;
+  }
+
+  #visibility [class~="mt-28"] {
+    margin-top: 3rem !important;
+  }
+
+  footer {
+    padding-top: 2.5rem !important;
+    padding-bottom: 6rem !important;
+  }
+
+  footer [class~="gap-10"] {
+    gap: 1.5rem !important;
+  }
+
+  footer [class~="pb-10"] {
+    padding-bottom: 1.5rem !important;
+  }
+
+  footer [class~="pt-8"] {
+    padding-top: 1.5rem !important;
   }
 }
