@@ -118,11 +118,11 @@ export default function DemoRequest() {
               >
                 <CheckCircle2 className="h-12 w-12 text-leaf" strokeWidth={1.6} aria-hidden />
                 <h3 ref={successRef} tabIndex={-1} className="mt-6 font-display text-[1.9rem] font-semibold leading-tight tracking-[-0.02em] focus:outline-none">
-                  Demo request received
+                  Demo request sent
                 </h3>
                 <p className="mt-3 max-w-[28em]">
-                  {serverMessage || 'Thank you. Your demo request has been received.'} The digiLATERAL team will contact you
-                  on your email address to arrange a convenient time.
+                  {serverMessage || 'Your request email has been sent to our team.'} The digiLATERAL team will contact you
+                  using the email address you provided to arrange a convenient time.
                 </p>
                 <Button as="button" type="button" variant="ghost" className="mt-8" onClick={() => setStatus('idle')}>
                   Send another request
@@ -178,7 +178,7 @@ export default function DemoRequest() {
 
                 <div className="mt-3 flex flex-col items-stretch gap-2.5 sm:flex-row sm:items-center sm:justify-between">
                   <p className="text-[0.82rem] leading-snug text-slate sm:max-w-[22em]">
-                    We use these details only to arrange your demo. We don’t share them.
+                    Your details are emailed to our team and are not stored in a database.
                   </p>
                   <Button as="button" type="submit" disabled={status === 'submitting'} aria-busy={status === 'submitting'}>
                     {status === 'submitting' ? (
