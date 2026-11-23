@@ -82,16 +82,16 @@ export default function Process() {
     <section id="how" className="surface-night grain relative overflow-hidden py-8 text-haze sm:py-12 lg:py-6" aria-labelledby="how-title">
       <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_60%_60%_at_75%_50%,black,transparent)]" />
       <div className="container-x relative">
-        <div className="grid gap-2 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-6">
-          <h2 id="how-title" className="display-lg text-sheen pb-1">
+        <div className="grid gap-2 lg:grid-cols-1 lg:items-center lg:gap-3">
+          <h2 id="how-title" className="display-lg text-sheen pb-1 lg:text-center">
             Initiated to completed. All on WhatsApp.
           </h2>
-          <p className="lede max-w-[24em] text-[0.94rem] leading-snug sm:text-inherit lg:pb-2">
+          <p className="lede max-w-[24em] text-[0.94rem] leading-snug sm:text-inherit lg:mx-auto lg:pb-2 lg:text-center">
             Six steps from sign-in to Head Office insight, without a separate app, a printer or a single device to ship.
           </p>
         </div>
 
-        <div className="mt-5 grid items-start gap-2 lg:mt-2 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-center lg:gap-2">
+        <div className="mt-5 grid items-start gap-2 lg:mt-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center lg:gap-4">
           <div role="tablist" aria-orientation="vertical" aria-label="WazzupPAP process" className="flex flex-col gap-1.5">
             {STEPS.map((s, i) => {
               const selected = i === active;
@@ -153,13 +153,13 @@ export default function Process() {
             id={`${baseId}-panel`}
             role="tabpanel"
             aria-labelledby={`${baseId}-tab-${active}`}
-            className="hidden lg:relative lg:-mt-20 lg:flex lg:min-h-[360px] lg:items-center lg:justify-center"
+            className="hidden lg:relative lg:flex lg:w-full lg:min-h-[360px] lg:items-center lg:justify-center lg:justify-self-center"
           >
             <div aria-hidden className="absolute inset-[5%] rounded-full bg-[radial-gradient(circle,rgb(0_156_109/0.32),transparent_62%)] blur-2xl" />
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
                 key={active}
-                className="relative w-full lg:mx-auto lg:w-fit lg:max-h-[420px]"
+                className="relative w-full lg:flex lg:items-center lg:justify-center lg:max-h-[420px]"
                 initial={{ opacity: 0, y: 16, scale: 0.98 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -10, scale: 0.98 }}
