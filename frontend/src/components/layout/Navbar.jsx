@@ -45,7 +45,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4">
+    <header className="fixed inset-x-0 top-0 z-50 px-2 pt-2 sm:px-5 sm:pt-4">
       <a
         href="#main"
         className="sr-only rounded-full bg-ink px-4 py-2 text-sm font-semibold text-white focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-[60]"
@@ -54,14 +54,14 @@ export default function Navbar() {
       </a>
       <nav
         aria-label="Primary"
-        className={`mx-auto flex h-[60px] max-w-[1240px] items-center justify-between gap-6 rounded-full bg-white pl-5 pr-2 ring-1 ring-ink/5 transition-shadow duration-300 sm:h-[66px] sm:pl-7 ${
+        className={`mx-auto flex h-14 max-w-[1240px] min-w-0 items-center justify-between gap-2 rounded-full bg-white pl-3 pr-1.5 ring-1 ring-ink/5 transition-shadow duration-300 sm:h-[66px] sm:gap-6 sm:pl-7 sm:pr-2 ${
           scrolled || open
             ? 'shadow-[0_18px_50px_-18px_rgb(1_21_73/0.45)]'
             : 'shadow-[0_18px_50px_-24px_rgb(0_0_0/0.5)]'
         }`}
       >
         <a href="#top" aria-label="WazzupPAP home" className="shrink-0 rounded-md">
-          <Logo width={138} eager className="sm:!w-[156px]" />
+          <Logo width={124} eager className="sm:!w-[156px]" />
         </a>
 
         <ul className="hidden items-center gap-1 lg:flex">
@@ -83,7 +83,7 @@ export default function Navbar() {
           <button
             ref={toggleRef}
             type="button"
-            className="grid h-11 w-11 place-items-center rounded-full text-ink ring-1 ring-inset ring-ink/15 lg:hidden"
+            className="grid h-10 w-10 shrink-0 place-items-center rounded-full text-ink ring-1 ring-inset ring-ink/15 sm:h-11 sm:w-11 lg:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? 'Close menu' : 'Open menu'}
@@ -99,26 +99,26 @@ export default function Navbar() {
           <motion.div
             id="mobile-menu"
             ref={panelRef}
-            className="fixed inset-x-3 top-[80px] max-h-[calc(100dvh-96px)] overflow-y-auto rounded-[1.75rem] bg-white shadow-[0_30px_80px_-20px_rgb(1_21_73/0.55)] sm:inset-x-5 lg:hidden"
+            className="fixed inset-x-2 top-[72px] max-h-[calc(100dvh-84px)] overflow-y-auto rounded-[1.5rem] bg-white shadow-[0_30px_80px_-20px_rgb(1_21_73/0.55)] sm:inset-x-5 sm:top-[88px] sm:max-h-[calc(100dvh-104px)] lg:hidden"
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
           >
-            <ul className="flex flex-col px-6 pt-2">
+            <ul className="flex flex-col px-4 pt-1 sm:px-6 sm:pt-2">
               {NAV_LINKS.map((l) => (
                 <li key={l.href} className="border-b border-mist">
                   <a
                     href={l.href}
                     onClick={() => setOpen(false)}
-                    className="block py-5 font-display text-2xl font-semibold tracking-tight text-ink"
+                    className="block py-4 font-display text-xl font-semibold tracking-tight text-ink sm:py-5 sm:text-2xl"
                   >
                     {l.label}
                   </a>
                 </li>
               ))}
             </ul>
-            <div className="px-6 pb-7 pt-6">
+            <div className="px-4 pb-5 pt-4 sm:px-6 sm:pb-7 sm:pt-6">
               <Button href="#demo" onClick={() => setOpen(false)} className="w-full">
                 Request demo
               </Button>
