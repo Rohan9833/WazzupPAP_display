@@ -28,7 +28,7 @@ export default function Hero() {
       </div>
       <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_60%_60%_at_25%_40%,black,transparent)]" />
 
-      <div className="container-x relative grid items-center gap-8 pb-16 pt-8 sm:gap-14 sm:pb-24 sm:pt-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:pb-32 lg:pt-20">
+      <div className="container-x relative grid min-h-[calc(100svh-92px)] items-center gap-3 pb-4 pt-2 sm:min-h-0 sm:gap-14 sm:pb-24 sm:pt-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:pb-32 lg:pt-20">
         <div className="contents lg:block">
           <motion.p
             {...rise(0)}
@@ -95,7 +95,7 @@ export default function Hero() {
         <div className="relative order-4 mx-auto w-full max-w-[460px] lg:order-none lg:max-w-none">
           <div aria-hidden className="absolute left-1/2 top-1/2 aspect-square w-[105%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgb(0_156_109/0.42),transparent_60%)] blur-2xl" />
           <motion.div
-            className="relative mx-auto w-[64%] max-w-[300px] sm:w-[58%] lg:ml-auto lg:mr-[8%]"
+            className="relative mx-auto w-[50%] max-w-[220px] sm:w-[58%] sm:max-w-[300px] lg:ml-auto lg:mr-[8%]"
             initial={reduce ? false : { opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
