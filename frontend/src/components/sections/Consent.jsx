@@ -51,7 +51,7 @@ function ConsentRecord() {
 
 export default function Consent() {
   return (
-    <section id="consent" className="relative bg-paper py-24 sm:py-32" aria-labelledby="consent-title">
+    <section id="consent" className="relative bg-paper py-12 sm:py-16" aria-labelledby="consent-title">
       <div className="container-x">
         <div className="grid gap-3 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-8">
           <h2 id="consent-title" className="display-lg max-w-[18em] text-[clamp(1.35rem,4.8vw,2.25rem)] leading-tight">
@@ -62,16 +62,16 @@ export default function Consent() {
           </p>
         </div>
 
-        <div className="mt-6 grid gap-3 lg:mt-8 lg:grid-cols-[1.25fr_1fr]">
+        <div className="mt-4 grid gap-2.5 lg:mt-6 lg:grid-cols-[1.25fr_1fr]">
           {/* Doctor */}
-          <article className="edge-card relative overflow-hidden rounded-[1.5rem] p-3 shadow-[0_30px_60px_-40px_rgb(1_21_73/0.45)] sm:p-5">
+          <article className="edge-card relative overflow-hidden rounded-[1.5rem] p-2.5 shadow-[0_30px_60px_-40px_rgb(1_21_73/0.45)] sm:p-4">
             <div className="flex items-center gap-4">
               <span className="icon-gem grid h-12 w-12 place-items-center rounded-2xl">
                 <Stethoscope className="h-6 w-6 text-[#7beac3]" strokeWidth={1.7} aria-hidden />
               </span>
               <h3 className="display-md !text-[1.6rem]">Doctor consent</h3>
             </div>
-            <div className="mt-4 grid gap-3 md:grid-cols-[1fr_minmax(0,17rem)] md:items-start">
+            <div className="mt-3 grid gap-2.5 md:grid-cols-[1fr_minmax(0,17rem)] md:items-start">
               <ul className="space-y-2.5">
                 {doctorPoints.map((p) => (
                   <li key={p} className="flex gap-3 text-[1rem] leading-snug">
@@ -82,7 +82,7 @@ export default function Consent() {
               </ul>
               <ConsentRecord />
             </div>
-            <p className="mt-4 flex items-center gap-2 border-t border-mist pt-3 text-[0.75rem] font-medium text-ink whitespace-nowrap">
+            <p className="mt-3 flex items-center gap-2 border-t border-mist pt-3 text-[0.75rem] font-medium text-ink whitespace-nowrap">
               <Scale className="h-4 w-4 shrink-0 text-leaf-deep" strokeWidth={1.8} aria-hidden />
               Aligned with UCPMP and data privacy guidelines.
             </p>
@@ -97,7 +97,7 @@ export default function Consent() {
                 </span>
                 <h3 className="display-md !text-[1.6rem] !text-white">Patient privacy</h3>
               </div>
-              <ul className="mt-4 space-y-3">
+              <ul className="mt-3 space-y-2.5">
                 {privacyPoints.map(({ icon: Icon, t }) => (
                   <li key={t} className="flex gap-4">
                     <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-white/[0.07] text-[#7beac3] ring-1 ring-inset ring-white/15">
@@ -107,7 +107,7 @@ export default function Consent() {
                   </li>
                 ))}
               </ul>
-              <div className="mt-5 flex items-center gap-3 rounded-xl bg-white p-3 text-ink shadow-[0_24px_50px_-24px_rgb(0_0_0/0.6)] sm:p-4" aria-hidden>
+              <div className="mt-4 flex items-center gap-3 rounded-xl bg-white p-3 text-ink shadow-[0_24px_50px_-24px_rgb(0_0_0/0.6)] sm:p-4" aria-hidden>
                 <QrGlyph className="h-20 w-20 shrink-0 sm:h-24 sm:w-24" seed={9} />
                 <span>
                   <span className="block text-[0.95rem] font-semibold">GERD Self-Assessment report</span>
