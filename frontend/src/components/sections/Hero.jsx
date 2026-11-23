@@ -28,7 +28,7 @@ export default function Hero() {
       </div>
       <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_60%_60%_at_25%_40%,black,transparent)]" />
 
-      <div className="container-x relative grid min-h-[calc(100svh-92px)] items-center gap-3 pb-4 pt-2 sm:min-h-0 sm:gap-14 sm:pb-24 sm:pt-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:pb-32 lg:pt-20">
+      <div className="container-x relative grid min-h-[calc(100svh-92px)] items-center gap-3 pb-5 pt-3 sm:min-h-0 sm:gap-14 sm:pb-24 sm:pt-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:pb-32 lg:pt-20">
         <div className="contents lg:block">
           <motion.p
             {...rise(0)}
