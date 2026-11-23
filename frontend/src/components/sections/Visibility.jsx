@@ -12,7 +12,7 @@ const DASH_VIEWS = [
 export default function Visibility() {
   const [view, setView] = useState('overview');
   return (
-    <section id="visibility" className="relative overflow-x-clip bg-white py-12 sm:py-16" aria-labelledby="vis-title">
+    <section id="visibility" className="relative overflow-x-clip bg-white py-12 sm:py-16 lg:py-8" aria-labelledby="vis-title">
       <div className="container-x">
         <div className="max-w-[46rem]">
           <h2 id="vis-title" className="display-lg !text-[clamp(1.55rem,5.5vw,2.25rem)] leading-[1.08]">
@@ -21,7 +21,7 @@ export default function Visibility() {
         </div>
 
         {/* Reports */}
-        <div className="mt-8 grid items-center gap-6 lg:mt-12 lg:grid-cols-2 lg:gap-10">
+        <div className="mt-8 grid items-center gap-6 lg:mt-8 lg:grid-cols-2 lg:gap-6">
           <div className="relative mx-auto w-full max-w-[420px] lg:order-2">
             <div aria-hidden className="grid-wash absolute -inset-8 rounded-[2rem] [mask-image:radial-gradient(closest-side,black,transparent)]" />
             <ReportDocument className="relative w-[78%] rotate-[-2.5deg] rounded-sm" />
@@ -61,10 +61,10 @@ export default function Visibility() {
         </div>
 
         {/* Head Office */}
-        <div className="surface-night grain relative mt-12 overflow-hidden rounded-[2rem] px-4 pb-8 pt-8 text-haze sm:mt-16 sm:rounded-[2.75rem] sm:px-8 sm:pb-10 sm:pt-10 lg:px-10">
+        <div className="surface-night grain relative mt-12 overflow-hidden rounded-[2rem] px-4 pb-8 pt-8 text-haze sm:mt-16 sm:rounded-[2.75rem] sm:px-8 sm:pb-10 sm:pt-10 lg:mt-10 lg:px-8 lg:py-6">
           <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_70%_50%_at_50%_30%,black,transparent)]" />
           <div className="relative grid gap-4 lg:grid-cols-[1fr_1fr] lg:items-end lg:gap-10">
-            <h3 className="display-md text-sheen max-w-[16em] !text-[clamp(1.7rem,3vw,2.5rem)]">
+            <h3 className="display-md text-sheen max-w-[16em] !text-[clamp(1.55rem,2.5vw,2.15rem)]">
               One Head Office view of every program, doctor and territory
             </h3>
             <p className="max-w-[34em]">
@@ -91,12 +91,12 @@ export default function Visibility() {
             ))}
           </div>
 
-          <div className="relative mt-5 sm:mt-6 lg:mt-2">
+          <div className="relative mt-5 sm:mt-6 lg:mt-1">
             <div aria-hidden className="absolute inset-x-[10%] bottom-[5%] top-[10%] rounded-full bg-[radial-gradient(ellipse_at_center,rgb(0_156_109/0.35),transparent_65%)] blur-2xl" />
-            <LaptopDashboard className="relative mx-auto max-w-[980px]" view={view} />
+            <LaptopDashboard className="relative mx-auto max-w-[980px] lg:max-w-[800px]" view={view} />
           </div>
 
-          <ul className="relative mx-auto mt-8 grid max-w-[980px] gap-x-8 gap-y-5 sm:grid-cols-3">
+          <ul className="relative mx-auto mt-8 grid max-w-[980px] gap-x-6 gap-y-5 sm:grid-cols-3 lg:mt-5 lg:max-w-[800px]">
             {[
               { icon: Activity, t: 'Every test, live', d: 'Assessments, outcomes and reports as they happen.' },
               { icon: Users, t: 'Every doctor', d: 'Consent sent, approved and pending, doctor by doctor.' },
@@ -113,7 +113,7 @@ export default function Visibility() {
               </li>
             ))}
           </ul>
-          <p className="relative mx-auto mt-5 max-w-[980px] text-[0.82rem] text-haze/70">
+          <p className="relative mx-auto mt-5 max-w-[980px] text-[0.82rem] lg:mt-3 lg:max-w-[800px] text-haze/70">
             Sample data for illustration. No client data is shown.
           </p>
         </div>
