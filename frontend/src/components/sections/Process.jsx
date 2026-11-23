@@ -41,7 +41,7 @@ const STEPS = [
 function Visual({ visual }) {
   if (visual.kind === 'phone') {
     return (
-      <div className="mx-auto w-[64%] max-w-[300px] sm:w-[50%] lg:w-[300px]">
+      <div className="mx-auto w-[64%] max-w-[300px] sm:w-[50%] lg:w-[230px]">
         <PhoneFrame className="!shadow-[0_60px_120px_-30px_rgb(0_0_0/0.75),0_0_0_1px_rgb(255_255_255/0.08)]" label="Sample WhatsApp screen for this step">
           <AppInChat sheet={visual.screen} />
         </PhoneFrame>
@@ -153,13 +153,13 @@ export default function Process() {
             id={`${baseId}-panel`}
             role="tabpanel"
             aria-labelledby={`${baseId}-tab-${active}`}
-            className="hidden lg:relative lg:flex lg:min-h-[500px] lg:items-center lg:justify-center"
+            className="hidden lg:relative lg:flex lg:min-h-[360px] lg:items-center lg:justify-center"
           >
             <div aria-hidden className="absolute inset-[5%] rounded-full bg-[radial-gradient(circle,rgb(0_156_109/0.32),transparent_62%)] blur-2xl" />
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
                 key={active}
-                className="relative w-full"
+                className="relative w-full lg:max-h-[420px]"
                 initial={{ opacity: 0, y: 16, scale: 0.98 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -10, scale: 0.98 }}
