@@ -41,7 +41,7 @@ const STEPS = [
 function Visual({ visual }) {
   if (visual.kind === 'phone') {
     return (
-      <div className="mx-auto w-[64%] max-w-[300px] sm:w-[50%] lg:w-[190px] lg:translate-x-8">
+      <div className="mx-auto w-[64%] max-w-[300px] sm:w-[50%] lg:w-[190px] lg:translate-x-35">
         <PhoneFrame className="!shadow-[0_60px_120px_-30px_rgb(0_0_0/0.75),0_0_0_1px_rgb(255_255_255/0.08)]" label="Sample WhatsApp screen for this step">
           <AppInChat sheet={visual.screen} />
         </PhoneFrame>
@@ -91,7 +91,7 @@ export default function Process() {
           </p>
         </div>
 
-        <div className="mt-5 grid items-start gap-2 lg:mx-auto lg:mt-5 lg:max-w-[900px] lg:grid-cols-[minmax(0,0.9fr)_minmax(0,0.7fr)] lg:items-center lg:gap-5">
+        <div className="mt-5 grid items-start gap-2 lg:mx-auto lg:mt-5 lg:max-w-[900px] lg:grid-cols-[minmax(0,0.9fr)_minmax(0,0.7fr)] lg:items-center lg:gap-9">
           <div role="tablist" aria-orientation="vertical" aria-label="WazzupPAP process" className="flex flex-col gap-1.5 lg:gap-1">
             {STEPS.map((s, i) => {
               const selected = i === active;
