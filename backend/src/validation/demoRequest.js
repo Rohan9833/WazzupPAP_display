@@ -18,7 +18,6 @@ const PHONE_ALLOWED_RE = /^\+?[\d\s()-]+$/;
 
 function clean(value) {
   if (typeof value !== 'string') return '';
-  // Collapse whitespace and strip control characters.
   return value.replace(/[\u0000-\u001F\u007F]/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
