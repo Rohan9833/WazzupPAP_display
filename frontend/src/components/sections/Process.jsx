@@ -41,7 +41,7 @@ const STEPS = [
 function Visual({ visual }) {
   if (visual.kind === 'phone') {
     return (
-      <div className="mx-auto w-[64%] max-w-[300px] sm:w-[50%] lg:w-[190px]">
+      <div className="mx-auto w-[64%] max-w-[300px] sm:w-[50%] lg:w-[190px] lg:translate-x-8">
         <PhoneFrame className="!shadow-[0_60px_120px_-30px_rgb(0_0_0/0.75),0_0_0_1px_rgb(255_255_255/0.08)]" label="Sample WhatsApp screen for this step">
           <AppInChat sheet={visual.screen} />
         </PhoneFrame>
