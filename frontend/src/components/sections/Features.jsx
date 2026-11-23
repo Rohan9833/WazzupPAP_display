@@ -26,9 +26,9 @@ const FEATURES = [
 
 export default function Features() {
   return (
-    <section id="features" className="relative bg-paper py-24 sm:py-32" aria-labelledby="features-title">
+    <section id="features" className="relative bg-paper py-12 sm:py-16" aria-labelledby="features-title">
       <div className="container-x">
-        <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-16">
+        <div className="grid gap-3 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-8">
           <h2 id="features-title" className="display-lg">
             Built for pharma brand teams
           </h2>
@@ -37,11 +37,11 @@ export default function Features() {
           </p>
         </div>
 
-        <ul className="mt-14 grid gap-4 sm:mt-16 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+        <ul className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
           {FEATURES.map(({ icon: Icon, t, d }) => (
             <li
               key={t}
-              className="edge-card group relative overflow-hidden rounded-[1.25rem] p-3.5 shadow-[0_24px_50px_-40px_rgb(1_21_73/0.45)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_34px_60px_-38px_rgb(1_21_73/0.55)] sm:p-5"
+              className="edge-card group relative overflow-hidden rounded-[1.25rem] p-3 shadow-[0_24px_50px_-40px_rgb(1_21_73/0.45)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_34px_60px_-38px_rgb(1_21_73/0.55)] sm:p-4"
             >
               <span className="icon-gem grid h-10 w-10 place-items-center rounded-xl">
                 <Icon className="h-5 w-5 text-[#7beac3]" strokeWidth={1.7} aria-hidden />
