@@ -29,10 +29,10 @@ export default function Hero() {
       <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_60%_60%_at_25%_40%,black,transparent)]" />
 
       <div className="container-x relative grid items-center gap-14 pb-24 pt-12 sm:pt-16 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:pb-32 lg:pt-20">
-        <div className="max-w-[680px]">
+        <div className="contents lg:block">
           <motion.p
             {...rise(0)}
-            className="inline-flex items-center gap-2 rounded-full bg-white/[0.06] py-1.5 pl-2 pr-4 text-[0.9rem] font-medium text-white/90 ring-1 ring-inset ring-white/15 backdrop-blur"
+            className="order-1 inline-flex items-center gap-2 rounded-full bg-white/[0.06] py-1.5 pl-2 pr-4 text-[0.78rem] font-medium text-white/90 ring-1 ring-inset ring-white/15 backdrop-blur sm:text-[0.9rem] lg:order-none"
           >
             <span className="grid h-6 w-6 place-items-center rounded-full bg-leaf">
               <ShieldCheck className="h-3.5 w-3.5 text-white" aria-hidden />
@@ -40,25 +40,26 @@ export default function Hero() {
             Verified Patient Assessment Programs
           </motion.p>
 
-          <motion.h1 {...rise(0.08)} id="hero-title" className="display-xl text-sheen mt-7 pb-1">
+          <motion.h1 {...rise(0.08)} id="hero-title" className="display-xl text-sheen order-2 mt-5 pb-1 lg:order-none lg:mt-7">
             Patient Assessment Programs. Reimagined.
           </motion.h1>
 
-          <motion.p {...rise(0.16)} className="mt-6 font-display text-[clamp(1.3rem,2.3vw,1.75rem)] font-medium leading-snug tracking-[-0.015em] text-[#8ff0cc]">
+          <motion.p {...rise(0.16)} className="order-3 mt-4 font-display text-[clamp(1.3rem,2.3vw,1.75rem)] font-medium leading-snug tracking-[-0.015em] text-[#8ff0cc] sm:mt-6 lg:order-none">
             The convenience of WhatsApp. The power of an application.
           </motion.p>
 
-          <motion.p {...rise(0.22)} className="lede mt-5 max-w-[34em] text-haze">
+          {/* This element is placed after the product on phones; desktop keeps it in the copy column. */}
+          <motion.p {...rise(0.22)} className="lede order-5 mt-5 max-w-[34em] text-haze lg:order-none">
             A patient assessment app, built to live on WhatsApp. Doctor-approved programs run from sign-in to branded
             report without leaving the WhatsApp, and Head Office follows every test, doctor and MR in real time.
           </motion.p>
 
-          <motion.div {...rise(0.3)} className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <Button href="#demo" className="!shadow-[0_14px_40px_-10px_rgb(0_156_109/0.8)]">Request demo</Button>
-            <Button href="#how" variant="ghostDark">See how it works</Button>
+          <motion.div {...rise(0.3)} className="order-6 mt-6 flex flex-row gap-2 sm:mt-10 sm:gap-3 lg:order-none">
+            <Button href="#demo" className="min-w-0 flex-1 !px-3 !shadow-[0_14px_40px_-10px_rgb(0_156_109/0.8)] sm:flex-none sm:!px-6">Request demo</Button>
+            <Button href="#how" variant="ghostDark" className="min-w-0 flex-1 !px-3 sm:flex-none sm:!px-6">See how it works</Button>
           </motion.div>
 
-          <motion.ul {...rise(0.38)} className="mt-11 grid gap-x-7 gap-y-2.5 border-t border-white/10 pt-7 text-[0.93rem] text-white/75 sm:flex sm:flex-wrap" aria-label="What you don't need">
+          <motion.ul {...rise(0.38)} className="order-7 mt-8 grid gap-x-7 gap-y-2.5 border-t border-white/10 pt-6 text-[0.93rem] text-white/75 sm:mt-11 sm:flex sm:flex-wrap sm:pt-7 lg:order-none" aria-label="What you don't need">
             {freeOf.map((item) => (
               <li key={item} className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-[#5fe0b4]" strokeWidth={2.4} aria-hidden />
@@ -67,7 +68,7 @@ export default function Hero() {
             ))}
           </motion.ul>
 
-          <motion.ul {...rise(0.44)} className="mt-6 flex flex-wrap gap-2 text-[0.8rem] text-white/70" aria-label="Platform">
+          <motion.ul {...rise(0.44)} className="order-8 mt-5 flex flex-wrap gap-2 text-[0.8rem] text-white/70 sm:mt-6 lg:order-none" aria-label="Platform">
             {['Official WhatsApp Business API', 'UCPMP-aligned doctor consent', 'No patient mobile numbers', 'Month-to-month subscription'].map((t) => (
               <li key={t} className="rounded-full bg-white/[0.05] px-3 py-1 ring-1 ring-inset ring-white/10">{t}</li>
             ))}
@@ -75,7 +76,7 @@ export default function Hero() {
         </div>
 
         {/* Product composition */}
-        <div className="relative mx-auto w-full max-w-[460px] lg:max-w-none">
+        <div className="relative order-4 mx-auto w-full max-w-[460px] lg:order-none lg:max-w-none">
           <div aria-hidden className="absolute left-1/2 top-1/2 aspect-square w-[105%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgb(0_156_109/0.42),transparent_60%)] blur-2xl" />
           <motion.div
             className="relative mx-auto w-[64%] max-w-[300px] sm:w-[58%] lg:ml-auto lg:mr-[8%]"
