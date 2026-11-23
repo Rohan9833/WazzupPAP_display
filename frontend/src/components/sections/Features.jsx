@@ -26,7 +26,7 @@ const FEATURES = [
 
 export default function Features() {
   return (
-    <section id="features" className="relative bg-paper py-12 sm:py-16" aria-labelledby="features-title">
+    <section id="features" className="relative bg-paper py-12 sm:py-16 lg:py-8" aria-labelledby="features-title">
       <div className="container-x">
         <div className="grid gap-3 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-8">
           <h2 id="features-title" className="display-lg">
@@ -37,7 +37,7 @@ export default function Features() {
           </p>
         </div>
 
-        <ul className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
+        <ul className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-2 lg:mt-5 lg:grid-cols-4 lg:gap-3">
           {FEATURES.map(({ icon: Icon, t, d }) => (
             <li
               key={t}
