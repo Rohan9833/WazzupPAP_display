@@ -115,9 +115,9 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="flex items-center gap-2 text-[0.8rem] font-semibold text-ink sm:text-[0.88rem]">
-              <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-leaf">
-                <ShieldCheck className="h-4 w-4 text-white" />
+            <span className="flex items-center gap-2 text-[0.8rem] font-semibold leading-none text-ink sm:text-[0.88rem]">
+              <span className="grid h-8 w-8 shrink-0 place-items-center self-center rounded-full bg-leaf">
+                <ShieldCheck className="h-4.5 w-4.5 text-white" />
               </span>
               Doctor approved
             </span>
