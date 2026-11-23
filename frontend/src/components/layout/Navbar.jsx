@@ -9,7 +9,8 @@ import { NAV_LINKS } from '../../content/navigation.js';
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [hideOnScrollDown, setHideOnScrollDown] = useState(false);\n  const [inHowSection, setInHowSection] = useState(false);
+  const [hideOnScrollDown, setHideOnScrollDown] = useState(false);
+  const [inHowSection, setInHowSection] = useState(false);
   const toggleRef = useRef(null);
   const panelRef = useRef(null);
 
