@@ -44,11 +44,11 @@ export default function Hero() {
             Patient Assessment<br className="sm:hidden" /> Programs. Reimagined.
           </motion.h1>
 
-          <motion.p {...rise(0.16)} className="order-3 mt-4 font-display text-[clamp(1.3rem,2.3vw,1.75rem)] font-medium leading-snug tracking-[-0.015em] text-[#8ff0cc] sm:mt-6 lg:order-none">
+          <motion.p {...rise(0.16)} className="order-3 mt-2 font-display text-[clamp(0.7rem,3vw,0.82rem)] font-medium leading-tight tracking-[-0.015em] text-[#8ff0cc] whitespace-nowrap sm:mt-6 sm:text-[clamp(1.3rem,2.3vw,1.75rem)] sm:leading-snug lg:order-none">
             The convenience of WhatsApp. The power of an application.
           </motion.p>
 
-          <motion.p {...rise(0.22)} className="lede order-5 mt-5 max-w-[34em] text-haze lg:order-none">
+          <motion.p {...rise(0.22)} className="lede order-5 mt-3 max-w-[34em] text-[0.84rem] leading-[1.45] text-haze sm:mt-5 sm:text-[inherit] sm:leading-[inherit] lg:order-none">
             A patient assessment app, built to live on WhatsApp. Doctor-approved programs run from sign-in to branded
             report without leaving the WhatsApp, and Head Office follows every test, doctor and MR in real time.
           </motion.p>
