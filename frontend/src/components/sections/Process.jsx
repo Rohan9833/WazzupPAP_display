@@ -96,7 +96,7 @@ export default function Process() {
             {STEPS.map((s, i) => {
               const selected = i === active;
               return (
-                <div key={s.title} className="min-w-0">
+                <div key={s.title} role="presentation" className="min-w-0">
                 <button
                   ref={(el) => (tabRefs.current[i] = el)}
                   id={`${baseId}-tab-${i}`}
