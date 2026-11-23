@@ -13,7 +13,7 @@ const STEPS = [
   },
   {
     title: 'Doctor consent and test selection',
-    body: 'The MR requests the doctor’s consent on WhatsApp. One tap from the doctor records it, and the MR selects the assessment.',
+    body: 'The MR requests the doctor’s consent on WhatsApp. One tap from the doctor records the consent, and then MR selects the assessment.',
     visual: { kind: 'phone', screen: 'approval' },
   },
   {
