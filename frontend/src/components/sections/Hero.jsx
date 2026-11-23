@@ -19,7 +19,7 @@ export default function Hero() {
         };
 
   return (
-    <section id="top" className="surface-night grain relative overflow-hidden pt-[92px] text-haze sm:pt-[104px]" aria-labelledby="hero-title">
+    <section id="top" className="surface-night grain relative overflow-hidden pt-[88px] text-haze sm:pt-[104px]" aria-labelledby="hero-title">
       {/* Orbit lines behind the product */}
       <div aria-hidden className="pointer-events-none absolute right-[-12%] top-1/2 hidden aspect-square w-[62%] -translate-y-1/2 lg:block">
         <div className="absolute inset-0 rounded-full border border-white/[0.06]" />
@@ -28,7 +28,7 @@ export default function Hero() {
       </div>
       <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_60%_60%_at_25%_40%,black,transparent)]" />
 
-      <div className="container-x relative grid min-h-[calc(100svh-92px)] items-center gap-3 pb-5 pt-5 sm:min-h-0 sm:gap-14 sm:pb-24 sm:pt-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:pb-32 lg:pt-20">
+      <div className="container-x relative grid min-h-[calc(100svh-88px)] items-center gap-3 pb-5 pt-5 sm:min-h-0 sm:gap-14 sm:pb-24 sm:pt-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:pb-32 lg:pt-20">
         <div className="contents lg:block">
           <motion.p
             {...rise(0)}
