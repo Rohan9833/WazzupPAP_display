@@ -8,7 +8,7 @@ import { NAV_LINKS } from '../../content/navigation.js';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);\n  const [hideOnScrollDown, setHideOnScrollDown] = useState(false);\n  const [inHowSection, setInHowSection] = useState(false);
   const toggleRef = useRef(null);
   const panelRef = useRef(null);
 
@@ -45,7 +45,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-2 pt-2 sm:px-5 sm:pt-4">
+    <header className={`fixed inset-x-0 top-0 z-50 px-2 pt-2 sm:px-5 sm:pt-4 transition-[transform,opacity] duration-300 ${hideOnScrollDown || inHowSection ? "-translate-y-full opacity-0 pointer-events-none" : "translate-y-0 opacity-100"}`} aria-hidden={hideOnScrollDown || inHowSection}>
       <a
         href="#main"
         className="sr-only rounded-full bg-ink px-4 py-2 text-sm font-semibold text-white focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-[60]"
