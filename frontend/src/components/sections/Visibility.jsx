@@ -74,7 +74,7 @@ export default function Visibility() {
             </p>
           </div>
 
-          <div role="tablist" aria-label="Dashboard view" className="relative mx-auto mt-10 flex w-fit max-w-full gap-1 overflow-x-auto rounded-full bg-white/[0.06] p-1 ring-1 ring-inset ring-white/10 sm:mt-14">
+          <div role="tablist" aria-label="Dashboard view" className="relative mx-auto mt-6 flex w-full max-w-[34rem] gap-1 rounded-full bg-white/[0.06] p-1 ring-1 ring-inset ring-white/10 sm:mt-14 sm:w-fit sm:gap-1.5">
             {DASH_VIEWS.map(([id, label]) => (
               <button
                 key={id}
@@ -82,7 +82,7 @@ export default function Visibility() {
                 role="tab"
                 aria-selected={view === id}
                 onClick={() => setView(id)}
-                className={`whitespace-nowrap rounded-full px-4 py-2 text-[0.9rem] font-semibold transition-colors duration-200 sm:px-5 ${
+                className={`min-w-0 flex-1 whitespace-nowrap rounded-full px-[clamp(0.45rem,2.4vw,0.9rem)] py-[clamp(0.45rem,1.8vw,0.65rem)] text-[clamp(0.68rem,2.8vw,0.9rem)] font-semibold transition-colors duration-200 sm:flex-none sm:px-5 sm:text-[0.9rem] ${
                   view === id ? 'bg-white text-ink shadow' : 'text-white/70 hover:text-white'
                 }`}
               >
