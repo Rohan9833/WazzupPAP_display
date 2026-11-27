@@ -41,13 +41,15 @@ export default function Features() {
           {FEATURES.map(({ icon: Icon, t, d }) => (
             <li
               key={t}
-              className="edge-card group relative overflow-hidden rounded-[1.25rem] p-3 shadow-[0_24px_50px_-40px_rgb(1_21_73/0.45)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_34px_60px_-38px_rgb(1_21_73/0.55)] sm:p-4"
+              className="edge-card group relative flex items-center gap-3 overflow-hidden rounded-[1.25rem] p-3 shadow-[0_24px_50px_-40px_rgb(1_21_73/0.45)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_34px_60px_-38px_rgb(1_21_73/0.55)] sm:gap-4 sm:p-4"
             >
-              <span className="icon-gem grid h-10 w-10 place-items-center rounded-xl">
-                <Icon className="h-5 w-5 text-[#7beac3]" strokeWidth={1.7} aria-hidden />
+              <span className="icon-gem grid h-14 w-14 shrink-0 place-items-center rounded-xl sm:h-16 sm:w-16">
+                <Icon className="h-7 w-7 text-[#7beac3] sm:h-8 sm:w-8" strokeWidth={1.7} aria-hidden />
               </span>
-              <h3 className="mt-3 text-[1.05rem] font-semibold leading-snug tracking-[-0.01em]">{t}</h3>
-              <p className="mt-1.5 text-[0.9rem] leading-snug">{d}</p>
+              <div className="min-w-0">
+                <h3 className="text-[1rem] font-semibold leading-snug tracking-[-0.01em] sm:text-[1.05rem]">{t}</h3>
+                <p className="mt-1 text-[0.82rem] leading-snug sm:text-[0.9rem]">{d}</p>
+              </div>
             </li>
           ))}
 
