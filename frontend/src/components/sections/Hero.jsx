@@ -121,7 +121,7 @@ export default function Hero() {
               </span>
               Doctor Consent 
             </span>
-            <span className="mt-2 block text-[0.72rem] leading-snug text-slate sm:text-[0.78rem]">Doctor consent Activity place before it begins</span>
+            <span className="mt-2 block text-[0.72rem] leading-snug text-slate sm:text-[0.78rem]">Doctor consent in place before activity begins</span>
           </motion.div>
 
           <motion.div
