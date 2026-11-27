@@ -24,10 +24,10 @@ export default function App() {
         <Features />
         <DemoRequest />
       </main>
-      {/* Verified consent disclaimer moved directly below the hero content */}
-      <div className="container-x relative pb-6 sm:pb-10 lg:pb-2">
-        <div className="surface-night grain relative overflow-hidden rounded-[1.5rem] p-7 text-haze sm:p-8">
-          <div className="relative">
+      {/* Full-width verified consent disclaimer */}
+      <section className="surface-night grain relative w-full overflow-hidden pb-6 pt-6 sm:pb-10 sm:pt-8 lg:pb-2">
+        <div className="container-x relative">
+          <div className="relative py-2 text-haze sm:py-3">
             <span className="grid h-12 w-12 place-items-center rounded-2xl bg-leaf shadow-[0_12px_30px_-10px_rgb(0_156_109/0.8)]">
               <ShieldCheck className="h-6 w-6 text-white" strokeWidth={1.8} aria-hidden />
             </span>
@@ -38,7 +38,7 @@ export default function App() {
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
       <Footer />
       <MobileCta />
