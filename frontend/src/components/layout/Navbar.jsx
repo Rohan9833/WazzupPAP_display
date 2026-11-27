@@ -96,6 +96,11 @@ export default function Navbar() {
               Request a demo
             </Button>
           </span>
+          <img
+            src="/Productbydigilateral.png"
+            alt="Product by digiLATERAL"
+            className="mr-1 h-6 w-auto shrink-0 object-contain sm:h-7"
+          />
           <button
             ref={toggleRef}
             type="button"
