@@ -31,10 +31,10 @@ export default function Why() {
                 <Icon className="h-7 w-7 text-[#7beac3] sm:h-8 sm:w-8" strokeWidth={1.6} aria-hidden />
               </span>
               <span className="relative order-2 min-w-0 flex-1">
-                <span className="block font-display text-[1.25rem] font-semibold leading-tight tracking-[-0.03em] text-ink sm:text-[2.2rem]">
+                <span className="block font-display text-[1.15rem] font-semibold leading-tight tracking-[-0.03em] text-ink sm:text-[2rem]">
                   {word}
                 </span>
-                <span className="mt-1 block text-[0.82rem] leading-snug sm:mt-2 sm:text-[1.05rem]">{line}</span>
+                <span className="mt-1 block text-[0.78rem] leading-snug sm:mt-2 sm:text-[0.98rem]">{line}</span>
               </span>
             </li>
           ))}
