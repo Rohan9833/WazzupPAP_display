@@ -1,4 +1,5 @@
 import { MotionConfig } from 'motion/react';
+import { ShieldCheck } from 'lucide-react';
 import Navbar from './components/layout/Navbar.jsx';
 import Footer from './components/layout/Footer.jsx';
 import MobileCta from './components/layout/MobileCta.jsx';
