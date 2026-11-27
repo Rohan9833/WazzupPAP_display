@@ -40,7 +40,7 @@ export default function Hero() {
             Verified Patient Assessment Programs
           </motion.p>
 
-          <motion.h1 {...rise(0.08)} id="hero-title" className="display-xl text-sheen order-2 mt-3 pb-1 text-[clamp(1.45rem,6.5vw,1.9rem)] leading-[1.08] tracking-tight sm:mt-5 sm:text-[inherit] sm:leading-[inherit] sm:tracking-[inherit] lg:order-none lg:mt-7">
+          <motion.h1 {...rise(0.08)} id="hero-title" className="display-xl text-sheen order-2  pb-1 text-[clamp(1.45rem,6.5vw,1.9rem)] leading-[1.08] tracking-tight sm:mt-5 sm:text-[inherit] sm:leading-[inherit] sm:tracking-[inherit] lg:order-none lg:mt-7">
             Patient Assessment Programs<br className="sm:hidden" />  <span className="hero-reimagined-aurora">Reimagined.</span>
           </motion.h1>
 
