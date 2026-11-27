@@ -72,7 +72,7 @@ export default function Visibility() {
             <h3 className="display-md text-sheen max-w-[16em] !text-[clamp(1.9rem,2.5vw,2.15rem)]">
                Head Office View 
             </h3>
-            <p className="max-w-[34em]">
+            <p className="max-w-[34em] text-[0.9rem] leading-relaxed sm:text-[0.95rem]">
               The Head Office Admin Portal is a separate web application for your brand team. It is not the interface
               your field force uses. It brings assessment activity, doctor participation and field performance
               together in one place.
