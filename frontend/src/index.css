@@ -46,7 +46,6 @@
     @apply font-sans text-ink;
     font-optical-sizing: auto;
     text-wrap: balance;
-    font-size: 0.98em !important;
   }
   p {
     text-wrap: pretty;
