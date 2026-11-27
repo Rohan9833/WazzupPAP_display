@@ -79,101 +79,102 @@ export default function Process() {
   };
 
   return (
-    <section id="how" className="surface-night grain relative overflow-hidden py-8 text-haze sm:py-12 lg:py-6" aria-labelledby="how-title">
-      <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_60%_60%_at_75%_50%,black,transparent)]" />
-      <div className="container-x relative">
-        <div className="grid gap-2 lg:mx-auto lg:max-w-[900px] lg:grid-cols-1 lg:items-center lg:gap-3">
-          <h2 id="how-title" className="display-lg text-sheen pb-1 lg:mx-auto lg:max-w-[900px] lg:text-center lg:text-[clamp(1.8rem,2.5vw,2.5rem)]">
-            Initiated to completed. All on WhatsApp.
-          </h2>
-          <p className="lede max-w-[24em] text-[0.94rem] leading-snug sm:text-inherit lg:mx-auto lg:pb-2 lg:text-center">
-            Six steps from sign-in to Head Office insight, without a separate app, a printer or a single device to ship.
-          </p>
-        </div>
+    // <section id="how" className="surface-night grain relative overflow-hidden py-8 text-haze sm:py-12 lg:py-6" aria-labelledby="how-title">
+    //   <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_60%_60%_at_75%_50%,black,transparent)]" />
+    //   <div className="container-x relative">
+    //     <div className="grid gap-2 lg:mx-auto lg:max-w-[900px] lg:grid-cols-1 lg:items-center lg:gap-3">
+    //       <h2 id="how-title" className="display-lg text-sheen pb-1 lg:mx-auto lg:max-w-[900px] lg:text-center lg:text-[clamp(1.8rem,2.5vw,2.5rem)]">
+    //         Initiated to completed. All on WhatsApp.
+    //       </h2>
+    //       <p className="lede max-w-[24em] text-[0.94rem] leading-snug sm:text-inherit lg:mx-auto lg:pb-2 lg:text-center">
+    //         Six steps from sign-in to Head Office insight, without a separate app, a printer or a single device to ship.
+    //       </p>
+    //     </div>
 
-        <div className="mt-5 grid items-start gap-2 lg:mx-auto lg:mt-5 lg:max-w-[900px] lg:grid-cols-[minmax(0,0.9fr)_minmax(0,0.7fr)] lg:items-center lg:gap-9">
-          <div role="tablist" aria-orientation="vertical" aria-label="WazzupPAP process" className="flex flex-col gap-1.5 lg:gap-1">
-            {STEPS.map((s, i) => {
-              const selected = i === active;
-              return (
-                <div key={s.title} role="presentation" className="min-w-0">
-                <button
-                  ref={(el) => (tabRefs.current[i] = el)}
-                  id={`${baseId}-tab-${i}`}
-                  role="tab"
-                  type="button"
-                  aria-selected={selected}
-                  aria-controls={`${baseId}-panel`}
-                  tabIndex={selected ? 0 : -1}
-                  onClick={() => setActive(i)}
-                  onKeyDown={(e) => onKeyDown(e, i)}
-                  className={`group grid grid-cols-[auto_1fr] gap-x-3 rounded-xl px-2.5 py-2 text-left transition-colors duration-300 sm:gap-x-3 sm:px-3 sm:py-2.5 lg:gap-x-2 lg:px-2 lg:py-1.5 ${
-                    selected ? 'bg-white/[0.07] ring-1 ring-inset ring-white/15' : 'hover:bg-white/[0.03]'
-                  }`}
-                >
-                  <span
-                    className={`grid h-10 w-10 place-items-center rounded-full font-display text-[1rem] font-semibold transition-colors duration-300 lg:h-8 lg:w-8 lg:text-[0.85rem] ${
-                      selected ? 'bg-leaf text-white shadow-[0_10px_24px_-8px_rgb(0_156_109/0.9)]' : 'bg-white/[0.06] text-white/60 ring-1 ring-inset ring-white/10'
-                    }`}
-                  >
-                    {i + 1}
-                  </span>
-                  <span className="self-center">
-                    <span className={`block font-display text-[1.15rem] font-semibold leading-snug tracking-[-0.01em] sm:text-[1.25rem] lg:text-[1rem] ${selected ? 'text-white' : 'text-white/70'}`}>
-                      {s.title}
-                    </span>
-                    <span className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${selected ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
-                      <span className="overflow-hidden">
-                        <span className="block pt-1 text-[0.92rem] leading-snug lg:text-[0.78rem]">{s.body}</span>
-                      </span>
-                    </span>
-                  </span>
-                </button>
-                {selected && (
-                  <div className="mt-3 lg:hidden">
-                    <AnimatePresence mode="wait" initial={false}>
-                      <motion.div
-                        key={i}
-                        initial={{ opacity: 0, y: 12 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -8 }}
-                        transition={{ duration: 0.25 }}
-                      >
-                        <Visual visual={s.visual} />
-                      </motion.div>
-                    </AnimatePresence>
-                  </div>
-                )}
-                </div>
-              );
-            })}
-          </div>
+    //     <div className="mt-5 grid items-start gap-2 lg:mx-auto lg:mt-5 lg:max-w-[900px] lg:grid-cols-[minmax(0,0.9fr)_minmax(0,0.7fr)] lg:items-center lg:gap-9">
+    //       <div role="tablist" aria-orientation="vertical" aria-label="WazzupPAP process" className="flex flex-col gap-1.5 lg:gap-1">
+    //         {STEPS.map((s, i) => {
+    //           const selected = i === active;
+    //           return (
+    //             <div key={s.title} role="presentation" className="min-w-0">
+    //             <button
+    //               ref={(el) => (tabRefs.current[i] = el)}
+    //               id={`${baseId}-tab-${i}`}
+    //               role="tab"
+    //               type="button"
+    //               aria-selected={selected}
+    //               aria-controls={`${baseId}-panel`}
+    //               tabIndex={selected ? 0 : -1}
+    //               onClick={() => setActive(i)}
+    //               onKeyDown={(e) => onKeyDown(e, i)}
+    //               className={`group grid grid-cols-[auto_1fr] gap-x-3 rounded-xl px-2.5 py-2 text-left transition-colors duration-300 sm:gap-x-3 sm:px-3 sm:py-2.5 lg:gap-x-2 lg:px-2 lg:py-1.5 ${
+    //                 selected ? 'bg-white/[0.07] ring-1 ring-inset ring-white/15' : 'hover:bg-white/[0.03]'
+    //               }`}
+    //             >
+    //               <span
+    //                 className={`grid h-10 w-10 place-items-center rounded-full font-display text-[1rem] font-semibold transition-colors duration-300 lg:h-8 lg:w-8 lg:text-[0.85rem] ${
+    //                   selected ? 'bg-leaf text-white shadow-[0_10px_24px_-8px_rgb(0_156_109/0.9)]' : 'bg-white/[0.06] text-white/60 ring-1 ring-inset ring-white/10'
+    //                 }`}
+    //               >
+    //                 {i + 1}
+    //               </span>
+    //               <span className="self-center">
+    //                 <span className={`block font-display text-[1.15rem] font-semibold leading-snug tracking-[-0.01em] sm:text-[1.25rem] lg:text-[1rem] ${selected ? 'text-white' : 'text-white/70'}`}>
+    //                   {s.title}
+    //                 </span>
+    //                 <span className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${selected ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+    //                   <span className="overflow-hidden">
+    //                     <span className="block pt-1 text-[0.92rem] leading-snug lg:text-[0.78rem]">{s.body}</span>
+    //                   </span>
+    //                 </span>
+    //               </span>
+    //             </button>
+    //             {selected && (
+    //               <div className="mt-3 lg:hidden">
+    //                 <AnimatePresence mode="wait" initial={false}>
+    //                   <motion.div
+    //                     key={i}
+    //                     initial={{ opacity: 0, y: 12 }}
+    //                     animate={{ opacity: 1, y: 0 }}
+    //                     exit={{ opacity: 0, y: -8 }}
+    //                     transition={{ duration: 0.25 }}
+    //                   >
+    //                     <Visual visual={s.visual} />
+    //                   </motion.div>
+    //                 </AnimatePresence>
+    //               </div>
+    //             )}
+    //             </div>
+    //           );
+    //         })}
+    //       </div>
 
-          <div
-            id={`${baseId}-panel`}
-            role="tabpanel"
-            aria-labelledby={`${baseId}-tab-${active}`}
-            className="hidden lg:relative lg:flex lg:w-full lg:min-h-[320px] lg:items-center lg:justify-center lg:justify-self-center"
-          >
-            <div aria-hidden className="absolute inset-[5%] rounded-full bg-[radial-gradient(circle,rgb(0_156_109/0.32),transparent_62%)] blur-2xl" />
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.div
-                key={active}
-                className="relative w-full lg:flex lg:items-center lg:justify-center lg:max-h-[360px]"
-                initial={{ opacity: 0, y: 16, scale: 0.98 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -10, scale: 0.98 }}
-                transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              >
-                <Visual visual={STEPS[active].visual} />
-              </motion.div>
-            </AnimatePresence>
-          </div>
-        </div>
-        <p className="mt-4 text-center text-[0.72rem] text-haze/70 sm:mt-6 sm:text-[0.82rem] lg:mt-4 lg:text-right">
-          Sample screens. Brand, doctor and MR are illustrative.
-        </p>
-      </div>
-    </section>
+    //       <div
+    //         id={`${baseId}-panel`}
+    //         role="tabpanel"
+    //         aria-labelledby={`${baseId}-tab-${active}`}
+    //         className="hidden lg:relative lg:flex lg:w-full lg:min-h-[320px] lg:items-center lg:justify-center lg:justify-self-center"
+    //       >
+    //         <div aria-hidden className="absolute inset-[5%] rounded-full bg-[radial-gradient(circle,rgb(0_156_109/0.32),transparent_62%)] blur-2xl" />
+    //         <AnimatePresence mode="wait" initial={false}>
+    //           <motion.div
+    //             key={active}
+    //             className="relative w-full lg:flex lg:items-center lg:justify-center lg:max-h-[360px]"
+    //             initial={{ opacity: 0, y: 16, scale: 0.98 }}
+    //             animate={{ opacity: 1, y: 0, scale: 1 }}
+    //             exit={{ opacity: 0, y: -10, scale: 0.98 }}
+    //             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+    //           >
+    //             <Visual visual={STEPS[active].visual} />
+    //           </motion.div>
+    //         </AnimatePresence>
+    //       </div>
+    //     </div>
+    //     <p className="mt-4 text-center text-[0.72rem] text-haze/70 sm:mt-6 sm:text-[0.82rem] lg:mt-4 lg:text-right">
+    //       Sample screens. Brand, doctor and MR are illustrative.
+    //     </p>
+    //   </div>
+    // </section>
+    <></>
   );
 }

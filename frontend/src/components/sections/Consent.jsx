@@ -12,7 +12,7 @@ const doctorPoints = [
 const privacyPoints = [
   { icon: Smartphone, t: 'No patient mobile numbers are collected' },
   { icon: MessageCircleOff, t: 'Nothing is sent to the patient’s WhatsApp' },
-  { icon: QrCode, t: 'Patients open their branded report from a QR code or download link' },
+  { icon: QrCode, t: 'Patients open the report from a QR code or download link' },
 ];
 
 function ConsentRecord() {
@@ -44,7 +44,7 @@ function ConsentRecord() {
         “Doctor consent successfully recorded.”
         <span className="mt-0.5 block text-[0.72rem] text-haze/70">Auto-reply sent on WhatsApp</span>
       </div>
-      <p className="mt-3 text-[0.72rem] text-haze/60">Sample record. Fictitious details.</p>
+      <p className="mt-3 text-[0.72rem] text-haze/60">Sample record for Illustration purpose only</p>
     </div>
   );
 }
@@ -112,7 +112,7 @@ export default function Consent() {
                 <span>
                   <span className="block text-[0.95rem] font-semibold">GERD Self-Assessment report</span>
                   <span className="mt-0.5 block text-[0.85rem] text-slate">BRAND-X. Participant 0008</span>
-                  <span className="mt-2.5 inline-flex rounded-full bg-glass px-3 py-1 text-[0.78rem] font-semibold text-leaf-deep">Scan to open report</span>
+                  {/* <span className="mt-2.5 inline-flex rounded-full bg-glass px-3 py-1 text-[0.78rem] font-semibold text-leaf-deep">Scan to open report</span> */}
                 </span>
               </div>
             </div>

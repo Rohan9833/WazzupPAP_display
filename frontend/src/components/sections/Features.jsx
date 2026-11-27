@@ -13,7 +13,7 @@ import {
 
 const FEATURES = [
   { icon: MessageCircle, t: '100% WhatsApp-based', d: 'No separate app, printer or hardware. Instantly accessible to every MR and doctor.' },
-  { icon: BadgeCheck, t: 'Official WhatsApp Business API', d: 'Reliable message delivery, analytics and enterprise-level security on a trusted, compliant platform.' },
+  // { icon: BadgeCheck, t: 'Official WhatsApp Business API', d: 'Reliable message delivery, analytics and enterprise-level security on a trusted, compliant platform.' },
   { icon: ShieldCheck, t: 'Doctor consent, built in', d: 'Captured digitally inside WhatsApp, with one tap, before any assessment begins.' },
   { icon: FileText, t: 'Instant branded reports', d: 'Auto-generated PDFs with your brand name and logo in colour, shared instantly with the doctor and accessible to patients by QR code or link.' },
   { icon: FlaskConical, t: 'Customizable assessments', d: 'Any therapy- or brand-specific test: diabetes, respiratory, cardio, obesity and more.' },

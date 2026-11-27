@@ -27,7 +27,7 @@ export default function Why() {
               className="edge-card group relative flex items-center justify-between gap-3 overflow-hidden rounded-2xl p-3 shadow-[0_30px_60px_-40px_rgb(1_21_73/0.45)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_40px_70px_-40px_rgb(1_21_73/0.55)] sm:gap-4 sm:rounded-[1.5rem] sm:p-5"
             >
               <span aria-hidden className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[radial-gradient(circle,rgb(0_156_109/0.12),transparent_70%)]" />
-              <span className="icon-gem relative order-1 grid h-11 w-11 shrink-0 place-items-center rounded-xl sm:h-[4.25rem] sm:w-[4.25rem]">
+              <span className="icon-gem relative order-1 grid h-15 w-15 shrink-0 place-items-center rounded-xl sm:h-[4.25rem] sm:w-[4.25rem]">
                 <Icon className="h-7 w-7 text-[#7beac3] sm:h-8 sm:w-8" strokeWidth={1.6} aria-hidden />
               </span>
               <span className="relative order-2 min-w-0 flex-1">
