@@ -82,13 +82,13 @@ export default function DemoRequest() {
       <div className="container-x relative grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
         <div className="lg:pt-4">
           <h2 id="demo-title" className="display-lg text-sheen pb-1 !text-[clamp(1.65rem,5.5vw,3rem)] leading-[1.05]">
-            See WazzupPAP in a private demonstration
+            See WazzupPAP in Action
           </h2>
-          <p className="lede mt-3 max-w-[30em] !text-[clamp(0.95rem,2.5vw,1.08rem)] leading-[1.4]">
+          {/* <p className="lede mt-3 max-w-[30em] !text-[clamp(0.95rem,2.5vw,1.08rem)] leading-[1.4]">
             We’ll walk your team through the application experience, the branded reports and the Head Office portal,
             in the context of your therapy area.
-          </p>
-          <ul className="mt-4 space-y-2.5">
+          </p> */}
+          {/* <ul className="mt-4 space-y-2.5">
             {[
               { icon: Presentation, t: 'The full flow on WhatsApp, from sign-in to branded report' },
               { icon: Layers, t: 'An assessment tailored to your therapy area and brand' },
@@ -101,7 +101,7 @@ export default function DemoRequest() {
                 <span className="text-[0.92rem] leading-snug text-white/85">{t}</span>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
 
         <div className="relative rounded-[1.35rem] bg-white p-3 text-slate shadow-[0_35px_70px_-35px_rgb(0_0_0/0.65),0_0_0_1px_rgb(255_255_255/0.1)] sm:p-4">
@@ -145,7 +145,7 @@ export default function DemoRequest() {
 
                 <div className="mt-3 grid gap-2.5 sm:grid-cols-2">
                   <Field {...fieldProps('fullName')} label="Full name" autoComplete="name" maxLength={LIMITS.fullName} />
-                  <Field {...fieldProps('company')} label="Pharmaceutical company" autoComplete="organization" maxLength={LIMITS.company} />
+                  <Field {...fieldProps('company')} label=" company" autoComplete="organization" maxLength={LIMITS.company} />
                   <Field {...fieldProps('designation')} label="Designation" autoComplete="organization-title" maxLength={LIMITS.designation} placeholder="e.g. Brand Manager" />
                   <Field {...fieldProps('email')} label="Email address" type="email" autoComplete="email" inputMode="email" maxLength={LIMITS.email} placeholder="name@example.com" />
                   <Field {...fieldProps('phone')} label="Contact number" type="tel" autoComplete="tel" inputMode="tel" maxLength={24} placeholder="+91 98XXX XXXXX" className="sm:col-span-2" />
@@ -177,9 +177,9 @@ export default function DemoRequest() {
                 </div>
 
                 <div className="mt-3 flex flex-col items-stretch gap-2.5 sm:flex-row sm:items-center sm:justify-between">
-                  <p className="text-[0.82rem] leading-snug text-slate sm:max-w-[22em]">
+                  {/* <p className="text-[0.82rem] leading-snug text-slate sm:max-w-[22em]">
                     Your details are emailed to our team and are not stored in a database.
-                  </p>
+                  </p> */}
                   <Button as="button" type="submit" disabled={status === 'submitting'} aria-busy={status === 'submitting'}>
                     {status === 'submitting' ? (
                       <>
