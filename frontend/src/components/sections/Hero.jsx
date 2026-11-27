@@ -132,6 +132,15 @@ export default function Hero() {
         </div>
       </div>
 
+      <div className="container-x relative pb-5 sm:pb-7">
+        <div className="inline-flex items-center gap-1.5 rounded-full bg-white/[0.06] py-1 pl-1.5 pr-2.5 text-[0.65rem] font-medium text-white/90 ring-1 ring-inset ring-white/15 backdrop-blur sm:gap-2 sm:py-1.5 sm:pl-2 sm:pr-4 sm:text-[0.9rem]">
+          <span className="grid h-5 w-5 place-items-center rounded-full bg-leaf sm:h-6 sm:w-6">
+            <ShieldCheck className="h-3 w-3 text-white sm:h-3.5 sm:w-3.5" aria-hidden />
+          </span>
+          Verified Patient Assessment Programs
+        </div>
+      </div>
+
       {/* Verified consent disclaimer moved directly below the hero content */}
       <div className="container-x relative pb-6 sm:pb-10 lg:pb-2">
         <div className="surface-night grain relative overflow-hidden rounded-[1.5rem] p-7 text-haze sm:p-8">
