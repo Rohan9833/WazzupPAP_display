@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { QrCode, Send, Palette, Megaphone, Map, Users, Activity } from 'lucide-react';
 import ReportDocument from '../mockups/ReportDocument.jsx';
@@ -8,6 +8,7 @@ const DASH_VIEWS = ['overview', 'consent', 'assessments'];
 
 export default function Visibility() {
   const [activeSlide, setActiveSlide] = useState(0);
+  const touchStartX = useRef(null);
   const view = DASH_VIEWS[activeSlide];
 
   useEffect(() => {
@@ -79,7 +80,23 @@ export default function Visibility() {
             </p>
           </div>
 
-          <div className="relative mt-4 sm:mt-6 lg:mt-1">
+          <div
+            className="relative mt-4 touch-pan-y sm:mt-6 lg:mt-1"
+            onTouchStart={(event) => {
+              touchStartX.current = event.changedTouches[0]?.clientX ?? null;
+            }}
+            onTouchEnd={(event) => {
+              if (touchStartX.current === null) return;
+              const deltaX = event.changedTouches[0]?.clientX - touchStartX.current;
+              touchStartX.current = null;
+              if (Math.abs(deltaX) < 45) return;
+              setActiveSlide((current) =>
+                deltaX < 0
+                  ? (current + 1) % DASH_VIEWS.length
+                  : (current - 1 + DASH_VIEWS.length) % DASH_VIEWS.length
+              );
+            }}
+          >
             <div aria-hidden className="absolute inset-x-[10%] bottom-[5%] top-[10%] rounded-full bg-[radial-gradient(ellipse_at_center,rgb(0_156_109/0.35),transparent_65%)] blur-2xl" />
             <AnimatePresence mode="wait">
               <motion.div
