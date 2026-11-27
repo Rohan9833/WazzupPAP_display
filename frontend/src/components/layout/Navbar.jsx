@@ -141,7 +141,7 @@ export default function Navbar() {
             </ul>
             <div className="px-4 pb-5 pt-4 sm:px-6 sm:pb-7 sm:pt-6">
               <Button href="#demo" onClick={() => setOpen(false)} className="w-full">
-                Request demo
+                Request Demo
               </Button>
               <p className="mt-4 text-center text-sm text-slate">A digiLATERAL product</p>
             </div>
