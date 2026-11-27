@@ -93,7 +93,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <span className="hidden sm:block">
             <Button href="#demo" className="!min-h-11 !px-5">
-              Request a demo
+              Request  demo
             </Button>
           </span>
           <img

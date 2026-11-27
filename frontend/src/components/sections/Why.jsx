@@ -13,10 +13,10 @@ export default function Why() {
       <div className="container-x relative">
         <div className="grid min-w-0 gap-2 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:gap-16">
           <h2 id="why-title" className="display-lg max-w-[16em] text-[clamp(1.35rem,5vw,1.65rem)] leading-[1.08] sm:text-inherit">
-            Everything a patient assessment program needs. <span className="hero-mobile-aurora">Nothing it doesn’t.</span>
+            Everything a patient assessment program needs. <span className="hero-mobile-aurora !block">Nothing it doesn’t.</span>
           </h2>
-          <p className="lede max-w-[24em] text-[clamp(0.64rem,2.5vw,0.74rem)] leading-tight sm:max-w-[26em] sm:text-inherit lg:pb-2">
-            One familiar app for the field force. One clear view for the brand team.
+          <p className="lede  text-[clamp(0.64rem,2.5vw,0.74rem)] leading-tight sm:max-w-[26em] sm:text-inherit lg:pb-2">
+            a familiar app for the field force. a clear view for the brand team.
           </p>
         </div>
 

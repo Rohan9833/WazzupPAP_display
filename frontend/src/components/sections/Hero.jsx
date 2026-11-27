@@ -107,7 +107,7 @@ export default function Hero() {
 
           <motion.div
             aria-hidden
-            className="absolute left-0 top-[25%] z-10 w-[42%] max-w-[200px] rounded-2xl bg-white/95 p-3.5 shadow-[0_30px_60px_-20px_rgb(0_0_0/0.6)] ring-1 ring-white/40 backdrop-blur sm:p-4 lg:left-[2%]"
+            className="absolute left-0 top-[8%] z-10 w-[42%] max-w-[200px] rounded-2xl bg-white/95 p-3.5 shadow-[0_30px_60px_-20px_rgb(0_0_0/0.6)] ring-1 ring-white/40 backdrop-blur sm:p-4 lg:left-[2%]"
             initial={reduce ? false : { opacity: 0, x: -16 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}

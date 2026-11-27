@@ -42,7 +42,7 @@ function ConsentRecord() {
       </dl>
       <div className="mt-5 rounded-xl bg-white/[0.06] px-4 py-3 text-[0.85rem] text-white ring-1 ring-inset ring-white/10">
         “Doctor consent successfully recorded.”
-        <span className="mt-0.5 block text-[0.72rem] text-haze/70">Auto-reply sent on WhatsApp</span>
+        {/* <span className="mt-0.5 block text-[0.72rem] text-haze/70">Auto-reply sent on WhatsApp</span> */}
       </div>
       <p className="mt-3 text-[0.72rem] text-haze/60">Sample record for Illustration purpose only</p>
     </div>

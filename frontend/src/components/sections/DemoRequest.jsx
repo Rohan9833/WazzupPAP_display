@@ -186,7 +186,7 @@ export default function DemoRequest() {
                         <Loader2 className="h-4 w-4 animate-spin" aria-hidden /> Sending request
                       </>
                     ) : (
-                      'Request a demo'
+                      'Request  demo'
                     )}
                   </Button>
                 </div>
