@@ -1,16 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'motion/react';
 import { QrCode, Send, Palette, Megaphone, Map, Users, Activity } from 'lucide-react';
 import ReportDocument from '../mockups/ReportDocument.jsx';
 import LaptopDashboard from '../mockups/LaptopDashboard.jsx';
 
-const DASH_VIEWS = [
-  ['overview', 'Overview'],
-  ['consent', 'Doctor consent'],
-  ['assessments', 'Assessments'],
-];
+const DASH_VIEWS = ['overview', 'consent', 'assessments'];
 
 export default function Visibility() {
-  const [view, setView] = useState('overview');
+  const [activeSlide, setActiveSlide] = useState(0);
+  const view = DASH_VIEWS[activeSlide];
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveSlide((current) => (current + 1) % DASH_VIEWS.length);
+    }, 4500);
+    return () => window.clearInterval(interval);
+  }, []);
   return (
     <section id="visibility" className="relative overflow-x-clip bg-white py-12 sm:py-16 lg:py-8" aria-labelledby="vis-title">
       <div className="container-x">
@@ -74,26 +79,32 @@ export default function Visibility() {
             </p>
           </div>
 
-          <div role="tablist" aria-label="Dashboard view" className="relative mx-auto mt-4 flex w-full max-w-[34rem] gap-1 rounded-full bg-white/[0.06] p-1 ring-1 ring-inset ring-white/10 sm:mt-8 sm:w-fit sm:gap-1.5">
-            {DASH_VIEWS.map(([id, label]) => (
-              <button
-                key={id}
-                type="button"
-                role="tab"
-                aria-selected={view === id}
-                onClick={() => setView(id)}
-                className={`min-w-0 flex-1 whitespace-nowrap rounded-full px-[clamp(0.45rem,2.4vw,0.9rem)] py-[clamp(0.45rem,1.8vw,0.65rem)] text-[clamp(0.68rem,2.8vw,0.9rem)] font-semibold transition-colors duration-200 sm:flex-none sm:px-5 sm:text-[0.9rem] ${
-                  view === id ? 'bg-white text-ink shadow' : 'text-white/70 hover:text-white'
-                }`}
+          <div className="relative mt-4 sm:mt-6 lg:mt-1">
+            <div aria-hidden className="absolute inset-x-[10%] bottom-[5%] top-[10%] rounded-full bg-[radial-gradient(ellipse_at_center,rgb(0_156_109/0.35),transparent_65%)] blur-2xl" />
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={view}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.35 }}
               >
-                {label}
-              </button>
-            ))}
+                <LaptopDashboard className="relative mx-auto max-w-[980px] lg:max-w-[800px]" view={view} />
+              </motion.div>
+            </AnimatePresence>
           </div>
 
-          <div className="relative mt-5 sm:mt-6 lg:mt-1">
-            <div aria-hidden className="absolute inset-x-[10%] bottom-[5%] top-[10%] rounded-full bg-[radial-gradient(ellipse_at_center,rgb(0_156_109/0.35),transparent_65%)] blur-2xl" />
-            <LaptopDashboard className="relative mx-auto max-w-[980px] lg:max-w-[800px]" view={view} />
+          <div className="relative mt-3 flex items-center justify-center gap-2" role="group" aria-label="Dashboard carousel slides">
+            {DASH_VIEWS.map((slide, index) => (
+              <button
+                key={slide}
+                type="button"
+                aria-label={`Show dashboard slide ${index + 1}`}
+                aria-pressed={activeSlide === index}
+                onClick={() => setActiveSlide(index)}
+                className={`h-2.5 rounded-full transition-all duration-300 ${activeSlide === index ? 'w-7 bg-[#5fe0b4]' : 'w-2.5 bg-white/35 hover:bg-white/60'}`}
+              />
+            ))}
           </div>
 
           <ul className="relative mx-auto mt-8 grid max-w-[980px] gap-x-6 gap-y-5 sm:grid-cols-3 lg:mt-5 lg:max-w-[800px]">
