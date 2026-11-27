@@ -28,7 +28,7 @@ export default function Footer() {
               ))}
               <li>
                 <a href="#demo" className="font-semibold text-leaf-deep hover:text-ink">
-                  Request a demo
+                  Request  demo
                 </a>
               </li>
             </ul>

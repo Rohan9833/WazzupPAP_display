@@ -6,7 +6,7 @@ const doctorPoints = [
   'Given once, with a single tap. The tap itself is the digital confirmation',
   'Covers conducting patient assessments and receiving reports and related communication on WhatsApp',
   'Stored automatically with timestamp, mobile number and consent text',
-  'Confirmed instantly by auto-reply',
+  
 ];
 
 const privacyPoints = [
@@ -82,10 +82,10 @@ export default function Consent() {
               </ul>
               <ConsentRecord />
             </div>
-            <p className="mt-3 flex items-center gap-2 border-t border-mist pt-3 text-[0.75rem] font-medium text-ink whitespace-nowrap">
+            {/* <p className="mt-3 flex items-center gap-2 border-t border-mist pt-3 text-[0.75rem] font-medium text-ink whitespace-nowrap">
               <Scale className="h-4 w-4 shrink-0 text-leaf-deep" strokeWidth={1.8} aria-hidden />
               Aligned with UCPMP and data privacy guidelines.
-            </p>
+            </p> */}
           </article>
 
           {/* Patient privacy */}

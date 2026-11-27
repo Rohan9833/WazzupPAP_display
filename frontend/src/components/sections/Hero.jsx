@@ -28,7 +28,7 @@ export default function Hero() {
       </div>
       <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_60%_60%_at_25%_40%,black,transparent)]" />
 
-      <div className="container-x relative grid min-h-[calc(100svh-88px)] items-center gap-3 pb-5 pt-5 sm:min-h-0 sm:gap-14 sm:pb-24 sm:pt-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-8 lg:pb-8 lg:pt-4">
+      <div className="container-x relative grid min-h-[calc(100svh-88px)] items-center gap-1.5 pb-5 pt-5 sm:min-h-0 sm:gap-14 sm:pb-24 sm:pt-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-8 lg:pb-8 lg:pt-4">
         <div className="contents lg:block">
           <motion.p
             {...rise(0)}
@@ -41,17 +41,17 @@ export default function Hero() {
           </motion.p>
 
           <motion.h1 {...rise(0.08)} id="hero-title" className="display-xl text-sheen order-2 mt-3 pb-1 text-[clamp(1.45rem,6.8vw,1.9rem)] leading-[1.08] tracking-tight sm:mt-5 sm:text-[inherit] sm:leading-[inherit] sm:tracking-[inherit] lg:order-none lg:mt-7">
-            Patient Assessment<br className="sm:hidden" /> Programs. Reimagined.
+            Patient Assessment Programs<br className="sm:hidden" />  Reimagined.
           </motion.h1>
 
           <motion.p {...rise(0.16)} className="order-3 mt-2 max-w-full font-display text-[clamp(0.7rem,3vw,0.82rem)] font-medium leading-tight tracking-[-0.015em] text-[#8ff0cc] whitespace-normal sm:mt-6 sm:text-[clamp(1.3rem,2.3vw,1.75rem)] sm:leading-snug lg:whitespace-nowrap lg:order-none">
             The convenience of WhatsApp. The power of an application.
           </motion.p>
 
-          <motion.p {...rise(0.22)} className="lede order-7 mt-2 max-w-[34em] text-[0.78rem] leading-[1.4] text-haze sm:order-5 sm:mt-5 sm:text-[inherit] sm:leading-[inherit] lg:order-none">
+          {/* <motion.p {...rise(0.22)} className="lede order-7 mt-2 max-w-[34em] text-[0.78rem] leading-[1.4] text-haze sm:order-5 sm:mt-5 sm:text-[inherit] sm:leading-[inherit] lg:order-none">
             A patient assessment app, built to live on WhatsApp. Doctor-approved programs run from sign-in to branded
             report without leaving the WhatsApp, and Head Office follows every test, doctor and MR in real time.
-          </motion.p>
+          </motion.p> */}
 
           <motion.div {...rise(0.3)} className="order-6 mt-3 flex flex-row gap-2 sm:mt-10 sm:gap-3 lg:order-none">
             <Button href="#demo" className="!min-h-11 min-w-0 flex-1 !whitespace-normal !px-2 text-[0.82rem] leading-tight sm:flex-none sm:!min-h-12 sm:!whitespace-nowrap sm:!px-6 sm:text-[0.98rem]">Request demo</Button>
@@ -59,7 +59,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Compact mobile trust strip: replaces the tall list of pills */}
-          <motion.div {...rise(0.38)} className="order-8 mt-3 rounded-xl border border-white/10 bg-white/[0.035] px-2.5 py-2 sm:hidden">
+          {/* <motion.div {...rise(0.38)} className="order-8 mt-3 rounded-xl border border-white/10 bg-white/[0.035] px-2.5 py-2 sm:hidden">
             <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[0.72rem] leading-tight text-white/75">
               {freeOf.map((item) => (
                 <span key={item} className="inline-flex items-center gap-1.5 whitespace-nowrap">
@@ -72,7 +72,7 @@ export default function Hero() {
               <p>Official WhatsApp API · Doctor consent aligned</p>
               <p>No patient numbers · Monthly subscription</p>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Existing larger-screen list is unchanged */}
           <motion.ul {...rise(0.38)} className="order-7 hidden gap-x-7 gap-y-2.5 border-t border-white/10 pt-6 text-[0.93rem] text-white/75 sm:mt-11 sm:flex sm:flex-wrap sm:pt-7 lg:order-none" aria-label="What you don't need">
@@ -119,9 +119,9 @@ export default function Hero() {
               <span className="grid h-8 w-8 shrink-0 place-items-center self-center rounded-full bg-leaf">
                 <ShieldCheck className="h-4.5 w-4.5 text-white" />
               </span>
-              Doctor approved
+              Doctor Consent 
             </span>
-            <span className="mt-2 block text-[0.72rem] leading-snug text-slate sm:text-[0.78rem]">Program consent in place before it begins</span>
+            <span className="mt-2 block text-[0.72rem] leading-snug text-slate sm:text-[0.78rem]">Doctor consent Activity place before it begins</span>
           </motion.div>
 
           <motion.div
@@ -134,7 +134,7 @@ export default function Hero() {
             <QrGlyph className="h-12 w-12 shrink-0 self-center rounded sm:h-14 sm:w-14" seed={5} />
             <span>
               <span className="flex items-center gap-1 text-[0.72rem] font-semibold leading-tight sm:text-[0.8rem]">
-                <FileText className="h-5 w-5 shrink-0 text-[#5fe0b4]" /> Branded report
+                <FileText className="h-5 w-5 shrink-0 text-[#5fe0b4]" /> Branded Report
               </span>
               <span className="mt-0.5 block text-[0.66rem] leading-tight text-white/70 sm:text-[0.72rem]">By QR code or download link</span>
             </span>

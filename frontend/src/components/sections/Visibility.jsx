@@ -14,14 +14,14 @@ export default function Visibility() {
   return (
     <section id="visibility" className="relative overflow-x-clip bg-white py-12 sm:py-16 lg:py-8" aria-labelledby="vis-title">
       <div className="container-x">
-        <div className="max-w-[46rem]">
+        {/* <div className="max-w-[46rem]">
           <h2 id="vis-title" className="display-lg !text-[clamp(1.55rem,5.5vw,2.25rem)] leading-[1.08]">
             Every assessment ends in a report. Every report adds to the picture.
           </h2>
-        </div>
+        </div> */}
 
         {/* Reports */}
-        <div className="mt-8 grid items-center gap-6 lg:mt-8 lg:grid-cols-2 lg:gap-6">
+        {/* <div className="mt-8 grid items-center gap-6 lg:mt-8 lg:grid-cols-2 lg:gap-6">
           <div className="relative mx-auto w-full max-w-[420px] lg:order-2">
             <div aria-hidden className="grid-wash absolute -inset-8 rounded-[2rem] [mask-image:radial-gradient(closest-side,black,transparent)]" />
             <ReportDocument className="relative w-[78%] rotate-[-2.5deg] rounded-sm" />
@@ -58,7 +58,7 @@ export default function Visibility() {
               ))}
             </ul>
           </div>
-        </div>
+        </div> */}
 
         {/* Head Office */}
         <div className="surface-night grain relative mt-12 overflow-hidden rounded-[2rem] px-4 pb-8 pt-8 text-haze sm:mt-16 sm:rounded-[2.75rem] sm:px-8 sm:pb-10 sm:pt-10 lg:mt-10 lg:px-8 lg:py-6">
