@@ -43,6 +43,15 @@ export default function Hero() {
             report without leaving the WhatsApp, and Head Office follows every test, doctor and MR in real time.
           </motion.p> */}
 
+          <motion.div {...rise(0.26)} className="order-5 mt-3 sm:mt-5 lg:order-none">
+            <div className="inline-flex items-center gap-1.5 rounded-full bg-white/[0.06] py-1 pl-1.5 pr-2.5 text-[0.65rem] font-medium text-white/90 ring-1 ring-inset ring-white/15 backdrop-blur sm:gap-2 sm:py-1.5 sm:pl-2 sm:pr-4 sm:text-[0.9rem]">
+              <span className="grid h-5 w-5 place-items-center rounded-full bg-leaf sm:h-6 sm:w-6">
+                <ShieldCheck className="h-3 w-3 text-white sm:h-3.5 sm:w-3.5" aria-hidden />
+              </span>
+              Verified Patient Assessment Programs
+            </div>
+          </motion.div>
+
           <motion.div {...rise(0.3)} className="order-6 mt-3 flex flex-row gap-2 sm:mt-10 sm:gap-3 lg:order-none">
             <Button href="#demo" className="!min-h-11 min-w-0 flex-1 !whitespace-normal !px-2 text-[0.82rem] leading-tight sm:flex-none sm:!min-h-12 sm:!whitespace-nowrap sm:!px-6 sm:text-[0.98rem]">Request demo</Button>
             <Button href="#how" variant="ghostDark" className="!min-h-11 min-w-0 flex-1 !whitespace-normal !px-2 text-[0.82rem] leading-tight sm:flex-none sm:!min-h-12 sm:!whitespace-nowrap sm:!px-6 sm:text-[0.98rem]">See how it works</Button>
@@ -129,15 +138,6 @@ export default function Hero() {
               <span className="mt-0.5 block text-[0.66rem] leading-tight text-white/70 sm:text-[0.72rem]">By QR code or download link</span>
             </span>
           </motion.div>
-        </div>
-      </div>
-
-      <div className="container-x relative pb-5 sm:pb-7">
-        <div className="inline-flex items-center gap-1.5 rounded-full bg-white/[0.06] py-1 pl-1.5 pr-2.5 text-[0.65rem] font-medium text-white/90 ring-1 ring-inset ring-white/15 backdrop-blur sm:gap-2 sm:py-1.5 sm:pl-2 sm:pr-4 sm:text-[0.9rem]">
-          <span className="grid h-5 w-5 place-items-center rounded-full bg-leaf sm:h-6 sm:w-6">
-            <ShieldCheck className="h-3 w-3 text-white sm:h-3.5 sm:w-3.5" aria-hidden />
-          </span>
-          Verified Patient Assessment Programs
         </div>
       </div>
 
