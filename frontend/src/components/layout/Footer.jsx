@@ -38,7 +38,17 @@ export default function Footer() {
           <p>
             WazzupPAP is a product of <span className="font-semibold text-ink">digiLATERAL</span>.
           </p>
-          <p>© {YEAR} digiLATERAL. All rights reserved.</p>
+          <p className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <span>© {YEAR} digiLATERAL. All rights reserved.</span>
+            <a
+              href="https://digilateral.com/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-ink/75 underline underline-offset-2 hover:text-ink"
+            >
+              Privacy Policy
+            </a>
+          </p>
         </div>
         <p className="mt-4 max-w-[60em] text-[0.78rem] leading-relaxed text-slate/80">
           WhatsApp is a trademark of its respective owner. WazzupPAP is an independent product and is not affiliated
