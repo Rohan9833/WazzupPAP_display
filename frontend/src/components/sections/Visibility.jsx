@@ -66,7 +66,7 @@ export default function Visibility() {
         </div> */}
 
         {/* Head Office */}
-        <div className="surface-night grain relative mt-12 overflow-hidden rounded-[2rem] px-4 pb-8 pt-8 text-haze sm:mt-16 sm:rounded-[2.75rem] sm:px-8 sm:pb-10 sm:pt-10 lg:mt-10 lg:px-8 lg:py-6">
+        <div className="surface-night grain relative mt-12 overflow-hidden rounded-[2rem] px-4 pb-4 pt-8 text-haze sm:mt-16 sm:rounded-[2.75rem] sm:px-8 sm:pb-10 sm:pt-10 lg:mt-10 lg:px-8 lg:py-6">
           <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_70%_50%_at_50%_30%,black,transparent)]" />
           <div className="relative grid gap-4 lg:grid-cols-[1fr_1fr] lg:items-end lg:gap-10">
             <h3 className="display-md text-sheen max-w-[16em] !text-[clamp(1.9rem,2.5vw,2.15rem)]">
@@ -124,7 +124,7 @@ export default function Visibility() {
               </li>
             ))}
           </ul>
-          <p className="relative mx-auto mt-5 max-w-[980px] text-[0.82rem] lg:mt-3 lg:max-w-[800px] text-haze/70">
+          <p className="relative mx-auto text-center mt-5 max-w-[980px] text-[0.6rem] lg:mt-3 lg:max-w-[800px] text-haze/70">
             Sample data for illustration. No client data is shown.
           </p>
         </div>
