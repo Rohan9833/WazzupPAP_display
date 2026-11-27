@@ -32,7 +32,7 @@ export default function Hero() {
         <div className="contents lg:block">
           <motion.p
             {...rise(0)}
-            className="order-1 inline-flex items-center gap-1.5 rounded-full bg-white/[0.06] py-1 pl-1.5 pr-2.5 text-[0.65rem] font-medium text-white/90 ring-1 ring-inset ring-white/15 backdrop-blur sm:gap-2 sm:py-1.5 sm:pl-2 sm:pr-4 sm:text-[0.9rem] lg:order-none"
+            className="order-5 inline-flex items-center gap-1.5 rounded-full bg-white/[0.06] py-1 pl-1.5 pr-2.5 text-[0.65rem] font-medium text-white/90 ring-1 ring-inset ring-white/15 backdrop-blur sm:gap-2 sm:py-1.5 sm:pl-2 sm:pr-4 sm:text-[0.9rem] lg:order-none"
           >
             <span className="grid h-5 w-5 place-items-center rounded-full bg-leaf sm:h-6 sm:w-6">
               <ShieldCheck className="h-3 w-3 text-white sm:h-3.5 sm:w-3.5" aria-hidden />
@@ -40,11 +40,11 @@ export default function Hero() {
             Verified Patient Assessment Programs
           </motion.p>
 
-          <motion.h1 {...rise(0.08)} id="hero-title" className="display-xl text-sheen order-2 mt-3 pb-1 text-[clamp(1.45rem,6.8vw,1.9rem)] leading-[1.08] tracking-tight sm:mt-5 sm:text-[inherit] sm:leading-[inherit] sm:tracking-[inherit] lg:order-none lg:mt-7">
+          <motion.h1 {...rise(0.08)} id="hero-title" className="display-xl text-sheen order-6 mt-3 pb-1 text-[clamp(1.45rem,6.8vw,1.9rem)] leading-[1.08] tracking-tight sm:mt-5 sm:text-[inherit] sm:leading-[inherit] sm:tracking-[inherit] lg:order-none lg:mt-7">
             Patient Assessment Programs<br className="sm:hidden" />  <span className="hero-reimagined-aurora">Reimagined.</span>
           </motion.h1>
 
-          <motion.p {...rise(0.16)} className="order-3 mt-2 max-w-full font-display text-[clamp(0.7rem,3vw,0.82rem)] font-medium leading-tight tracking-[-0.015em] text-[#8ff0cc] whitespace-normal sm:mt-6 sm:text-[clamp(1.3rem,2.3vw,1.75rem)] sm:leading-snug lg:whitespace-nowrap lg:order-none">
+          <motion.p {...rise(0.16)} className="order-7 mt-2 max-w-full font-display text-[clamp(0.7rem,3vw,0.82rem)] font-medium leading-tight tracking-[-0.015em] text-[#8ff0cc] whitespace-normal sm:mt-6 sm:text-[clamp(1.3rem,2.3vw,1.75rem)] sm:leading-snug lg:whitespace-nowrap lg:order-none">
             The convenience of WhatsApp. The power of an application.
           </motion.p>
 
@@ -53,7 +53,7 @@ export default function Hero() {
             report without leaving the WhatsApp, and Head Office follows every test, doctor and MR in real time.
           </motion.p> */}
 
-          <motion.div {...rise(0.3)} className="order-6 mt-3 flex flex-row gap-2 sm:mt-10 sm:gap-3 lg:order-none">
+          <motion.div {...rise(0.3)} className="order-8 mt-3 flex flex-row gap-2 sm:mt-10 sm:gap-3 lg:order-none">
             <Button href="#demo" className="!min-h-11 min-w-0 flex-1 !whitespace-normal !px-2 text-[0.82rem] leading-tight sm:flex-none sm:!min-h-12 sm:!whitespace-nowrap sm:!px-6 sm:text-[0.98rem]">Request demo</Button>
             <Button href="#how" variant="ghostDark" className="!min-h-11 min-w-0 flex-1 !whitespace-normal !px-2 text-[0.82rem] leading-tight sm:flex-none sm:!min-h-12 sm:!whitespace-nowrap sm:!px-6 sm:text-[0.98rem]">See how it works</Button>
           </motion.div>
@@ -75,7 +75,7 @@ export default function Hero() {
           </motion.div> */}
 
           {/* Existing larger-screen list is unchanged */}
-          <motion.ul {...rise(0.38)} className="order-7 hidden gap-x-7 gap-y-2.5 border-t border-white/10 pt-6 text-[0.93rem] text-white/75 sm:mt-11 sm:flex sm:flex-wrap sm:pt-7 lg:order-none" aria-label="What you don't need">
+          <motion.ul {...rise(0.38)} className="order-9 hidden gap-x-7 gap-y-2.5 border-t border-white/10 pt-6 text-[0.93rem] text-white/75 sm:mt-11 sm:flex sm:flex-wrap sm:pt-7 lg:order-none" aria-label="What you don't need">
             {freeOf.map((item) => (
               <li key={item} className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-[#5fe0b4]" strokeWidth={2.4} aria-hidden />
@@ -84,7 +84,7 @@ export default function Hero() {
             ))}
           </motion.ul>
 
-          <motion.ul {...rise(0.44)} className="order-8 mt-5 hidden flex-wrap gap-2 text-[0.8rem] text-white/70 sm:mt-6 sm:flex lg:order-none" aria-label="Platform">
+          <motion.ul {...rise(0.44)} className="order-10 mt-5 hidden flex-wrap gap-2 text-[0.8rem] text-white/70 sm:mt-6 sm:flex lg:order-none" aria-label="Platform">
             {['Official WhatsApp Business API', 'UCPMP-aligned doctor consent', 'No patient mobile numbers', 'Month-to-month subscription'].map((t) => (
               <li key={t} className="rounded-full bg-white/[0.05] px-3 py-1 ring-1 ring-inset ring-white/10">{t}</li>
             ))}
@@ -92,7 +92,7 @@ export default function Hero() {
         </div>
 
         {/* Product composition */}
-        <div className="relative order-4 mx-auto w-full max-w-[460px] lg:order-none lg:w-[115%] lg:max-w-none lg:-ml-[7.5%]">
+        <div className="relative order-1 mx-auto w-full max-w-[460px] lg:order-none lg:w-[115%] lg:max-w-none lg:-ml-[7.5%]">
           <div aria-hidden className="absolute left-1/2 top-1/2 aspect-square w-[105%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgb(0_156_109/0.42),transparent_60%)] blur-2xl" />
           <motion.div
             className="relative mx-auto w-[46%] max-w-[200px] sm:w-[58%] sm:max-w-[300px] lg:ml-auto lg:mr-[8%] lg:w-[48%] lg:max-w-[260px]"
