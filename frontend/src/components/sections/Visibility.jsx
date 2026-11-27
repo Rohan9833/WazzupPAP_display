@@ -69,8 +69,8 @@ export default function Visibility() {
         <div className="surface-night grain relative mt-12 overflow-hidden rounded-[2rem] px-4 pb-8 pt-8 text-haze sm:mt-16 sm:rounded-[2.75rem] sm:px-8 sm:pb-10 sm:pt-10 lg:mt-10 lg:px-8 lg:py-6">
           <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_70%_50%_at_50%_30%,black,transparent)]" />
           <div className="relative grid gap-4 lg:grid-cols-[1fr_1fr] lg:items-end lg:gap-10">
-            <h3 className="display-md text-sheen max-w-[16em] !text-[clamp(1.43rem,2.5vw,2.15rem)]">
-              One Head Office view of every program, doctor and territory
+            <h3 className="display-md text-sheen max-w-[16em] !text-[clamp(1.9rem,2.5vw,2.15rem)]">
+               Head Office View 
             </h3>
             <p className="max-w-[34em]">
               The Head Office Admin Portal is a separate web application for your brand team. It is not the interface
@@ -102,7 +102,7 @@ export default function Visibility() {
                 aria-label={`Show dashboard slide ${index + 1}`}
                 aria-pressed={activeSlide === index}
                 onClick={() => setActiveSlide(index)}
-                className={`h-2.5 rounded-full transition-all duration-300 ${activeSlide === index ? 'w-7 bg-[#5fe0b4]' : 'w-2.5 bg-white/35 hover:bg-white/60'}`}
+                className={`h-2 rounded-full transition-all duration-300 ${activeSlide === index ? 'w-7 bg-[#5fe0b4]' : 'w-2 bg-white/35 hover:bg-white/60'}`}
               />
             ))}
           </div>
