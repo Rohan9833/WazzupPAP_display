@@ -99,7 +99,7 @@ export default function Navbar() {
           <img
             src="/Productbydigilateral.png"
             alt="Product by digiLATERAL"
-            className="mr-1 h-6 w-auto shrink-0 object-contain sm:h-7"
+            className="mr-1 h-9 w-auto shrink-0 object-contain sm:h-7"
           />
           <button
             ref={toggleRef}
