@@ -30,6 +30,16 @@ export default function Hero() {
 
       <div className="container-x relative grid min-h-[calc(100svh-88px)] items-center gap-1.5 pb-5 pt-5 sm:min-h-0 sm:gap-14 sm:pb-24 sm:pt-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-8 lg:pb-8 lg:pt-4">
         <div className="contents lg:block">
+          <motion.p
+            {...rise(0)}
+            className="order-1 inline-flex items-center gap-1.5 rounded-full bg-white/[0.06] py-1 pl-1.5 pr-2.5 text-[0.65rem] font-medium text-white/90 ring-1 ring-inset ring-white/15 backdrop-blur sm:gap-2 sm:py-1.5 sm:pl-2 sm:pr-4 sm:text-[0.9rem] lg:order-none"
+          >
+            <span className="grid h-5 w-5 place-items-center rounded-full bg-leaf sm:h-6 sm:w-6">
+              <ShieldCheck className="h-3 w-3 text-white sm:h-3.5 sm:w-3.5" aria-hidden />
+            </span>
+            Verified Patient Assessment Programs
+          </motion.p>
+
           <motion.h1 {...rise(0.08)} id="hero-title" className="display-xl text-sheen order-2 mt-3 pb-1 text-[clamp(1.45rem,6.8vw,1.9rem)] leading-[1.08] tracking-tight sm:mt-5 sm:text-[inherit] sm:leading-[inherit] sm:tracking-[inherit] lg:order-none lg:mt-7">
             Patient Assessment Programs<br className="sm:hidden" />  <span className="hero-reimagined-aurora">Reimagined.</span>
           </motion.h1>
@@ -42,15 +52,6 @@ export default function Hero() {
             A patient assessment app, built to live on WhatsApp. Doctor-approved programs run from sign-in to branded
             report without leaving the WhatsApp, and Head Office follows every test, doctor and MR in real time.
           </motion.p> */}
-
-          <motion.div {...rise(0.26)} className="order-5 mt-3 sm:mt-5 lg:order-none">
-            <div className="inline-flex items-center gap-1.5 rounded-full bg-white/[0.06] py-1 pl-1.5 pr-2.5 text-[0.65rem] font-medium text-white/90 ring-1 ring-inset ring-white/15 backdrop-blur sm:gap-2 sm:py-1.5 sm:pl-2 sm:pr-4 sm:text-[0.9rem]">
-              <span className="grid h-5 w-5 place-items-center rounded-full bg-leaf sm:h-6 sm:w-6">
-                <ShieldCheck className="h-3 w-3 text-white sm:h-3.5 sm:w-3.5" aria-hidden />
-              </span>
-              Verified Patient Assessment Programs
-            </div>
-          </motion.div>
 
           <motion.div {...rise(0.3)} className="order-6 mt-3 flex flex-row gap-2 sm:mt-10 sm:gap-3 lg:order-none">
             <Button href="#demo" className="!min-h-11 min-w-0 flex-1 !whitespace-normal !px-2 text-[0.82rem] leading-tight sm:flex-none sm:!min-h-12 sm:!whitespace-nowrap sm:!px-6 sm:text-[0.98rem]">Request demo</Button>
