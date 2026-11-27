@@ -1,26 +1,28 @@
-@import 'tailwindcss';
-
+@import "tailwindcss";
 
 /*
   WazzupPAP design tokens
   Navy and green are sampled from the official logo.
 */
 @theme {
-  --color-ink: #011549;          /* logo navy: headlines, dark surfaces */
-  --color-ink-2: #0b2466;        /* raised navy surface */
-  --color-ink-3: #1a3478;        /* navy lines on dark */
-  --color-leaf: #009c6d;         /* logo green: action, confirmation */
-  --color-leaf-deep: #007a55;    /* green text on light backgrounds (AA) */
-  --color-glass: #d8f1e6;        /* pale green wash */
-  --color-paper: #f4f7fb;        /* cool page background */
-  --color-mist: #dde4ef;         /* hairlines on light */
-  --color-slate: #4a5677;        /* body copy */
-  --color-haze: #a9b6d3;         /* secondary text on navy */
-  --color-chat: #0f5c4c;         /* messenger chrome in mockups */
-  --color-chat-bg: #ece6dd;      /* messenger wallpaper in mockups */
+  --color-ink: #011549; /* logo navy: headlines, dark surfaces */
+  --color-ink-2: #0b2466; /* raised navy surface */
+  --color-ink-3: #1a3478; /* navy lines on dark */
+  --color-leaf: #009c6d; /* logo green: action, confirmation */
+  --color-leaf-deep: #007a55; /* green text on light backgrounds (AA) */
+  --color-glass: #d8f1e6; /* pale green wash */
+  --color-paper: #f4f7fb; /* cool page background */
+  --color-mist: #dde4ef; /* hairlines on light */
+  --color-slate: #4a5677; /* body copy */
+  --color-haze: #a9b6d3; /* secondary text on navy */
+  --color-chat: #0f5c4c; /* messenger chrome in mockups */
+  --color-chat-bg: #ece6dd; /* messenger wallpaper in mockups */
 
-  --font-display: 'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif;
-  --font-sans: 'Figtree Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display:
+    "Bricolage Grotesque Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans:
+    "Figtree Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    sans-serif;
 
   --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -38,7 +40,9 @@
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
   }
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     @apply font-sans text-ink;
     font-optical-sizing: auto;
     text-wrap: balance;
@@ -100,14 +104,22 @@
   .surface-night {
     background-color: #010f38;
     background-image:
-      radial-gradient(60% 55% at 78% 38%, rgb(0 156 109 / 0.32), transparent 70%),
+      radial-gradient(
+        60% 55% at 78% 38%,
+        rgb(0 156 109 / 0.32),
+        transparent 70%
+      ),
       radial-gradient(50% 60% at 8% 0%, rgb(46 84 196 / 0.38), transparent 70%),
-      radial-gradient(70% 60% at 50% 120%, rgb(0 156 109 / 0.16), transparent 70%),
+      radial-gradient(
+        70% 60% at 50% 120%,
+        rgb(0 156 109 / 0.16),
+        transparent 70%
+      ),
       linear-gradient(180deg, #011549 0%, #010f38 100%);
   }
   /* Fine film grain for depth on dark surfaces */
   .grain::after {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     pointer-events: none;
@@ -127,7 +139,13 @@
     border: 1px solid transparent;
     background:
       linear-gradient(#fff, #fff) padding-box,
-      linear-gradient(140deg, rgb(0 156 109 / 0.55), rgb(1 21 73 / 0.12) 45%, rgb(1 21 73 / 0.06)) border-box;
+      linear-gradient(
+          140deg,
+          rgb(0 156 109 / 0.55),
+          rgb(1 21 73 / 0.12) 45%,
+          rgb(1 21 73 / 0.06)
+        )
+        border-box;
   }
   .icon-gem {
     background: linear-gradient(145deg, #0b2a7a 0%, #011549 55%, #006b4b 130%);
@@ -137,17 +155,21 @@
   }
   .chat-wallpaper {
     background-color: var(--color-chat-bg);
-    background-image: radial-gradient(rgb(15 92 76 / 0.09) 1px, transparent 1.4px);
+    background-image: radial-gradient(
+      rgb(15 92 76 / 0.09) 1px,
+      transparent 1.4px
+    );
     background-size: 12px 12px;
   }
 }
-
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
