@@ -1,8 +1,6 @@
 import { motion, useReducedMotion } from 'motion/react';
 import { ShieldCheck, FileText, Check } from 'lucide-react';
 import Button from '../ui/Button.jsx';
-import PhoneFrame from '../mockups/PhoneFrame.jsx';
-import { AppInChat } from '../mockups/AppScreens.jsx';
 import QrGlyph from '../mockups/QrGlyph.jsx';
 
 const freeOf = ['No devices', 'No printers', 'No mobile app required'];
@@ -100,12 +98,11 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <PhoneFrame
-              className="!shadow-[0_60px_120px_-30px_rgb(0_0_0/0.75),0_0_0_1px_rgb(255_255_255/0.08)]"
-              label="WazzupPAP shown as an application screen opened inside a WhatsApp chat"
-            >
-              <AppInChat sheet="assessment" animateIn={!reduce} />
-            </PhoneFrame>
+            <img
+              src="/iPhoneisolatedontransparentbackground.png"
+              alt="WazzupPAP displayed on an iPhone"
+              className="block h-auto w-full object-contain drop-shadow-[0_60px_60px_rgb(0_0_0/0.45)]"
+            />
           </motion.div>
 
           <motion.div
