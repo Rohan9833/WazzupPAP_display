@@ -43,7 +43,8 @@
   h1,
   h2,
   h3 {
-    @apply font-sans text-ink;
+    @apply text-ink;
+    font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
     font-optical-sizing: auto;
     text-wrap: balance;
   }
