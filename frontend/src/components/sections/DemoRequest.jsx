@@ -145,7 +145,7 @@ export default function DemoRequest() {
 
                 <div className="mt-3 grid gap-2.5 sm:grid-cols-2">
                   <Field {...fieldProps('fullName')} label="Full name" autoComplete="name" maxLength={LIMITS.fullName} />
-                  <Field {...fieldProps('company')} label=" company" autoComplete="organization" maxLength={LIMITS.company} />
+                  <Field {...fieldProps('company')} label="Company" autoComplete="organization" maxLength={LIMITS.company} />
                   <Field {...fieldProps('designation')} label="Designation" autoComplete="organization-title" maxLength={LIMITS.designation} placeholder="e.g. Brand Manager" />
                   <Field {...fieldProps('email')} label="Email address" type="email" autoComplete="email" inputMode="email" maxLength={LIMITS.email} placeholder="name@example.com" />
                   <Field {...fieldProps('phone')} label="Contact number" type="tel" autoComplete="tel" inputMode="tel" maxLength={24} placeholder="+91 98XXX XXXXX" className="sm:col-span-2" />
