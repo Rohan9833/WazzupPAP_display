@@ -93,7 +93,7 @@ export default function Hero() {
         <div className="relative order-4 mx-auto w-full max-w-[460px] lg:order-none lg:w-[115%] lg:max-w-none lg:-ml-[7.5%]">
           <div aria-hidden className="absolute left-1/2 top-1/2 aspect-square w-[105%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgb(0_156_109/0.42),transparent_60%)] blur-2xl" />
           <motion.div
-            className="relative mx-auto w-[64%] max-w-[280px] sm:w-[66%] sm:max-w-[340px] lg:ml-auto lg:mr-[8%] lg:w-[52%] lg:max-w-[290px]"
+            className="relative mx-auto w-[64%] max-w-[280px] sm:w-[66%] sm:max-w-[340px] lg:ml-auto lg:mr-[8%] lg:w-[68%] lg:max-w-[360px]"
             initial={reduce ? false : { opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
@@ -107,33 +107,33 @@ export default function Hero() {
 
           <motion.div
             aria-hidden
-            className="absolute left-0 top-[8%] z-10 w-[42%] max-w-[200px] rounded-2xl bg-white/95 p-3.5 shadow-[0_30px_60px_-20px_rgb(0_0_0/0.6)] ring-1 ring-white/40 backdrop-blur sm:p-4 lg:left-[2%]"
+            className="absolute left-0 top-[8%] z-10 w-[42%] max-w-[200px] rounded-2xl bg-white/95 p-3.5 shadow-[0_30px_60px_-20px_rgb(0_0_0/0.6)] ring-1 ring-white/40 backdrop-blur sm:p-4 lg:left-[2%] lg:max-w-[250px] lg:p-5"
             initial={reduce ? false : { opacity: 0, x: -16 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="flex items-center gap-2 text-[0.8rem] font-semibold leading-none text-ink sm:text-[0.88rem]">
-              <span className="grid h-8 w-8 shrink-0 place-items-center self-center rounded-full bg-leaf">
-                <ShieldCheck className="h-4.5 w-4.5 text-white" />
+            <span className="flex items-center gap-2 text-[0.8rem] font-semibold leading-none text-ink sm:text-[0.88rem] lg:gap-3 lg:text-[1rem]">
+              <span className="grid h-8 w-8 shrink-0 place-items-center self-center rounded-full bg-leaf lg:h-10 lg:w-10">
+                <ShieldCheck className="h-4.5 w-4.5 text-white lg:h-5 lg:w-5" />
               </span>
               Doctor Consent 
             </span>
-            <span className="mt-2 block text-[0.72rem] leading-snug text-slate sm:text-[0.78rem]">Doctor consent in place before activity begins</span>
+            <span className="mt-2 block text-[0.72rem] leading-snug text-slate sm:text-[0.78rem] lg:mt-3 lg:text-[0.9rem]">Doctor consent in place before activity begins</span>
           </motion.div>
 
           <motion.div
             aria-hidden
-            className="absolute bottom-[5%] right-0 z-10 flex w-[46%] max-w-[225px] items-center gap-2.5 rounded-2xl bg-[#0a1f5c] p-3 text-white shadow-[0_30px_60px_-20px_rgb(0_0_0/0.7)] ring-1 ring-inset ring-white/15 sm:p-3.5"
+            className="absolute bottom-[5%] right-0 z-10 flex w-[46%] max-w-[225px] items-center gap-2.5 rounded-2xl bg-[#0a1f5c] p-3 text-white shadow-[0_30px_60px_-20px_rgb(0_0_0/0.7)] ring-1 ring-inset ring-white/15 sm:p-3.5 lg:max-w-[270px] lg:gap-3 lg:p-4"
             initial={reduce ? false : { opacity: 0, x: 16 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.4, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <QrGlyph className="h-12 w-12 shrink-0 self-center rounded sm:h-14 sm:w-14" seed={5} />
+            <QrGlyph className="h-12 w-12 shrink-0 self-center rounded sm:h-14 sm:w-14 lg:h-16 lg:w-16" seed={5} />
             <span>
-              <span className="flex items-center gap-1 text-[0.72rem] font-semibold leading-tight sm:text-[0.8rem]">
-                <FileText className="h-5 w-5 shrink-0 text-[#5fe0b4]" /> Branded Report
+              <span className="flex items-center gap-1 text-[0.72rem] font-semibold leading-tight sm:text-[0.8rem] lg:gap-1.5 lg:text-[0.95rem]">
+                <FileText className="h-5 w-5 shrink-0 text-[#5fe0b4] lg:h-6 lg:w-6" /> Branded Report
               </span>
-              <span className="mt-0.5 block text-[0.66rem] leading-tight text-white/70 sm:text-[0.72rem]">By QR code or download link</span>
+              <span className="mt-0.5 block text-[0.66rem] leading-tight text-white/70 sm:text-[0.72rem] lg:mt-1 lg:text-[0.84rem]">By QR code or download link</span>
             </span>
           </motion.div>
         </div>
