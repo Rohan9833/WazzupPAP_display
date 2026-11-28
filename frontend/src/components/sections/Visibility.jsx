@@ -69,59 +69,63 @@ export default function Visibility() {
         {/* Head Office */}
         <div className="surface-night grain relative mt-12 overflow-hidden rounded-[2rem] px-4 pb-4 pt-8 text-haze sm:mt-16 sm:rounded-[2.75rem] sm:px-8 sm:pb-10 sm:pt-10 lg:mt-10 lg:px-8 lg:py-6">
           <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_70%_50%_at_50%_30%,black,transparent)]" />
-          <div className="relative grid gap-4 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-x-10 lg:gap-y-2">
-            <h3 className="display-md text-sheen max-w-[16em] !text-[clamp(1.9rem,2.5vw,2.15rem)] lg:col-start-1 lg:row-start-1">
-               Head Office View 
-            </h3>
-            <p className="max-w-[34em] text-[0.9rem] leading-relaxed sm:text-[0.95rem] lg:col-start-1 lg:row-start-2">
-              The Head Office Admin Portal is a separate web application for your brand team.  It brings assessment activity, doctor participation and field performance
-              together in one place.
-            </p>
-          
+          <div className="relative grid gap-4 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-x-10">
+            {/* Left column: heading and description grouped closely */}
+            <div className="relative flex flex-col gap-2 lg:col-start-1 lg:row-start-1">
+              <h3 className="display-md text-sheen max-w-[16em] !text-[clamp(1.9rem,2.5vw,2.15rem)]">
+                Head Office View
+              </h3>
+              <p className="max-w-[34em] text-[0.9rem] leading-relaxed sm:text-[0.95rem]">
+                The Head Office Admin Portal is a separate web application for your brand team. It brings assessment activity, doctor participation and field performance together in one place.
+              </p>
+            </div>
 
-          <div
-            className="relative mt-4 touch-pan-y sm:mt-6 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:mt-0"
-            onTouchStart={(event) => {
-              touchStartX.current = event.changedTouches[0]?.clientX ?? null;
-            }}
-            onTouchEnd={(event) => {
-              if (touchStartX.current === null) return;
-              const deltaX = event.changedTouches[0]?.clientX - touchStartX.current;
-              touchStartX.current = null;
-              if (Math.abs(deltaX) < 45) return;
-              setActiveSlide((current) =>
-                deltaX < 0
-                  ? (current + 1) % DASH_VIEWS.length
-                  : (current - 1 + DASH_VIEWS.length) % DASH_VIEWS.length
-              );
-            }}
-          >
-            <div aria-hidden className="absolute inset-x-[10%] bottom-[5%] top-[10%] rounded-full bg-[radial-gradient(ellipse_at_center,rgb(0_156_109/0.35),transparent_65%)] blur-2xl" />
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={view}
-                initial={{ opacity: 0, x: 36 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -36 }}
-                transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+            {/* Right column: dashboard and slide indicators grouped together */}
+            <div className="relative lg:col-start-2 lg:row-start-1">
+              <div
+                className="relative mt-4 touch-pan-y sm:mt-6 lg:mt-0"
+                onTouchStart={(event) => {
+                  touchStartX.current = event.changedTouches[0]?.clientX ?? null;
+                }}
+                onTouchEnd={(event) => {
+                  if (touchStartX.current === null) return;
+                  const deltaX = event.changedTouches[0]?.clientX - touchStartX.current;
+                  touchStartX.current = null;
+                  if (Math.abs(deltaX) < 45) return;
+                  setActiveSlide((current) =>
+                    deltaX < 0
+                      ? (current + 1) % DASH_VIEWS.length
+                      : (current - 1 + DASH_VIEWS.length) % DASH_VIEWS.length
+                  );
+                }}
               >
-                <LaptopDashboard className="relative mx-auto max-w-[980px] lg:max-w-[800px] desktop-dashboard-compact" view={view} />
-              </motion.div>
-            </AnimatePresence>
-          </div>
-          </div>
+                <div aria-hidden className="absolute inset-x-[10%] bottom-[5%] top-[10%] rounded-full bg-[radial-gradient(ellipse_at_center,rgb(0_156_109/0.35),transparent_65%)] blur-2xl" />
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={view}
+                    initial={{ opacity: 0, x: 36 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -36 }}
+                    transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                  >
+                    <LaptopDashboard className="relative mx-auto max-w-[980px] lg:max-w-[800px] desktop-dashboard-compact" view={view} />
+                  </motion.div>
+                </AnimatePresence>
+              </div>
 
-          <div className="relative mt-3 flex items-center justify-center gap-2 lg:col-start-2 lg:row-start-3 lg:mt-0" role="group" aria-label="Dashboard carousel slides">
-            {DASH_VIEWS.map((slide, index) => (
-              <button
-                key={slide}
-                type="button"
-                aria-label={`Show dashboard slide ${index + 1}`}
-                aria-pressed={activeSlide === index}
-                onClick={() => setActiveSlide(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${activeSlide === index ? 'w-7 bg-[#5fe0b4]' : 'w-2 bg-white/35 hover:bg-white/60'}`}
-              />
-            ))}
+              <div className="relative mt-3 flex items-center justify-center gap-2 lg:mt-0" role="group" aria-label="Dashboard carousel slides">
+                {DASH_VIEWS.map((slide, index) => (
+                  <button
+                    key={slide}
+                    type="button"
+                    aria-label={`Show dashboard slide ${index + 1}`}
+                    aria-pressed={activeSlide === index}
+                    onClick={() => setActiveSlide(index)}
+                    className={`h-2 rounded-full transition-all duration-300 ${activeSlide === index ? 'w-7 bg-[#5fe0b4]' : 'w-2 bg-white/35 hover:bg-white/60'}`}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
 
           <ul className="relative mx-auto mt-8 grid max-w-[980px] gap-x-6 gap-y-5 sm:grid-cols-3 lg:mt-5 lg:max-w-[800px]">
