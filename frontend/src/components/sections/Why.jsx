@@ -11,11 +11,11 @@ export default function Why() {
     <section id="why" className="relative bg-white pt-1 pb-3 sm:py-12" aria-labelledby="why-title">
       <div aria-hidden className="absolute inset-x-0 top-0 h-[60%] bg-gradient-to-b from-paper to-white" />
       <div className="container-x relative">
-        <div className="grid min-w-0 gap-2 lg:grid-cols-1 lg:items-end lg:gap-16">
+        <div className="grid min-w-0  lg:grid-cols-1 lg:items-end lg:gap-2">
           <h2 id="why-title" className="display-lg max-w-[16em] text-[clamp(1.35rem,5vw,1.65rem)] leading-[1.08] sm:text-inherit lg:max-w-[100%]">
             Everything a patient assessment program needs. <span className="hero-mobile-aurora !block">Nothing it doesn’t.</span>
           </h2>
-          <p className="lede  text-[clamp(0.64rem,2.5vw,0.74rem)] leading-tight sm:max-w-[26em] sm:text-inherit lg:pb-2">
+          <p className="lede  text-[clamp(0.64rem,2.5vw,0.74rem)] leading-tight sm:max-w-[26em] sm:text-inherit lg:pb-2 lg:max-w-[100%]">
             a familiar app for the field force. a clear view for the brand team.
           </p>
         </div>
