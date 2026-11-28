@@ -37,7 +37,7 @@ export default function Features() {
           </p>
         </div>
 
-        <ul className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-2 lg:mt-4 lg:grid-cols-4 lg:gap-2">
+        <ul className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-2 lg:mt-4 lg:grid-cols-3 lg:gap-2">
           {FEATURES.map(({ icon: Icon, t, d }) => (
             <li
               key={t}
