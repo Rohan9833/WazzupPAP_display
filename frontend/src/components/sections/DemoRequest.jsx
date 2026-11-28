@@ -140,7 +140,7 @@ export default function DemoRequest() {
                 transition={{ duration: 0.25 }}
                 aria-describedby="form-status"
               >
-                <h3 className="font-display text-[1.3rem] font-semibold leading-tight tracking-[-0.015em]">Request demo</h3>
+                <h3 className="font-display text-[1.3rem] font-semibold leading-tight tracking-[-0.015em]">Request Demo</h3>
                 <p className="mt-0.5 text-[0.85rem] leading-snug">All fields are required unless marked optional.</p>
 
                 <div className="mt-3 grid gap-2.5 sm:grid-cols-2">
@@ -186,7 +186,7 @@ export default function DemoRequest() {
                         <Loader2 className="h-4 w-4 animate-spin" aria-hidden /> Sending request
                       </>
                     ) : (
-                      'Request  demo'
+                      'Request  Demo'
                     )}
                   </Button>
                 </div>

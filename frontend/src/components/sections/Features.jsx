@@ -28,11 +28,11 @@ export default function Features() {
   return (
     <section id="features" className="relative bg-paper py-12 sm:py-16 lg:py-6" aria-labelledby="features-title">
       <div className="container-x">
-        <div className="grid gap-3 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-8">
+        <div className="grid gap-3 lg:grid-cols-1 lg:items-end lg:gap-4">
           <h2 id="features-title" className="display-lg">
             Built for pharma brand teams
           </h2>
-          <p className="lede max-w-[28em] lg:pb-2">
+          <p className="lede max-w-[28em] lg:pb-2 lg:max-w-[100%]">
             Everything you need to launch, scale and measure a patient assessment program across your field force.
           </p>
         </div>

@@ -15,9 +15,9 @@ export default function Why() {
           <h2 id="why-title" className="display-lg max-w-[16em] text-[clamp(1.35rem,5vw,1.65rem)] leading-[1.08] sm:text-inherit lg:max-w-[100%]">
             Everything a patient assessment program needs. <span className="hero-mobile-aurora !block">Nothing it doesn’t.</span>
           </h2>
-          <p className="lede  text-[clamp(0.64rem,2.5vw,0.74rem)] leading-tight sm:max-w-[26em] sm:text-inherit lg:pb-2 lg:max-w-[100%]">
+          {/* <p className="lede  text-[clamp(0.64rem,2.5vw,0.74rem)] leading-tight sm:max-w-[26em] sm:text-inherit lg:pb-2 lg:max-w-[100%]">
             a familiar app for the field force. a clear view for the brand team.
-          </p>
+          </p> */}
         </div>
 
         <ul className="mt-5 grid gap-2.5 sm:mt-8 sm:grid-cols-3 sm:gap-4">
