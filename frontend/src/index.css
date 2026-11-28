@@ -211,6 +211,26 @@
   }
 }
 
+
+/* Desktop version of the mobile aurora headline effect. */
+@media (min-width: 640px) {
+  .hero-mobile-aurora {
+    background-image:
+      radial-gradient(ellipse at 10% 20%, #00c2ff 0%, #00c2ff 24%, transparent 62%),
+      radial-gradient(ellipse at 85% 15%, #ffc640 0%, #ff9f1c 22%, transparent 60%),
+      radial-gradient(ellipse at 20% 85%, #33ff8c 0%, #00c878 26%, transparent 64%),
+      radial-gradient(ellipse at 90% 80%, #e54cff 0%, #bd36ff 24%, transparent 62%),
+      linear-gradient(180deg, #011549 5%, #2346a0 48%, #006b58 100%);
+    background-size: 220% 220%, 220% 220%, 220% 220%, 220% 220%, 100% 100%;
+    background-position: 0% 50%, 100% 0%, 0% 100%, 100% 100%, center;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: hero-reimagined-aurora 5s ease-in-out infinite alternate;
+  }
+}
+
 /* Compact spacing throughout the mobile experience only. */
 @media (max-width: 639px) {
   .hero-reimagined-aurora {
