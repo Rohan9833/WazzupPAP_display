@@ -39,7 +39,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.h1 {...rise(0.08)} id="hero-title" className="display-xl text-sheen order-2  pb-1 text-[clamp(1.45rem,6.5vw,1.9rem)] leading-[1.08] tracking-tight sm:mt-5 sm:text-[inherit] sm:leading-[inherit] sm:tracking-[inherit] lg:order-none lg:mt-7">
-            Patient Assessment Programs<br className="sm:hidden" />  <span className="hero-mobile-aurora lg:!block">Reimagined.</span>
+            Patient Assessment Programs<br className="sm:hidden" />  <span className="hero-mobile-aurora lg:!block lg:leading-none">Reimagined.</span>
           </motion.h1>
 
           <motion.p {...rise(0.16)} className="order-3 mt-2 max-w-full font-display text-[clamp(0.7rem,3vw,0.82rem)] font-medium leading-tight tracking-[-0.015em] text-[#8ff0cc] whitespace-normal sm:mt-6 sm:text-[clamp(1.3rem,2.3vw,1.75rem)] sm:leading-snug lg:whitespace-nowrap lg:order-none">
@@ -73,20 +73,20 @@ export default function Hero() {
           </motion.div> */}
 
           {/* Existing larger-screen list is unchanged */}
-          <motion.ul {...rise(0.38)} className="order-7 hidden gap-x-7 gap-y-2.5 border-t border-white/10 pt-6 text-[0.93rem] text-white/75 sm:mt-11 sm:flex sm:flex-wrap sm:pt-7 lg:order-none" aria-label="What you don't need">
+          {/* <motion.ul {...rise(0.38)} className="order-7 hidden gap-x-7 gap-y-2.5 border-t border-white/10 pt-6 text-[0.93rem] text-white/75 sm:mt-11 sm:flex sm:flex-wrap sm:pt-7 lg:order-none" aria-label="What you don't need">
             {freeOf.map((item) => (
               <li key={item} className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-[#5fe0b4]" strokeWidth={2.4} aria-hidden />
                 {item}
               </li>
             ))}
-          </motion.ul>
+          </motion.ul> */}
 
-          <motion.ul {...rise(0.44)} className="order-8 mt-5 hidden flex-wrap gap-2 text-[0.8rem] text-white/70 sm:mt-6 sm:flex lg:order-none" aria-label="Platform">
+          {/* <motion.ul {...rise(0.44)} className="order-8 mt-5 hidden flex-wrap gap-2 text-[0.8rem] text-white/70 sm:mt-6 sm:flex lg:order-none" aria-label="Platform">
             {['Official WhatsApp Business API', 'UCPMP-aligned doctor consent', 'No patient mobile numbers', 'Month-to-month subscription'].map((t) => (
               <li key={t} className="rounded-full bg-white/[0.05] px-3 py-1 ring-1 ring-inset ring-white/10">{t}</li>
             ))}
-          </motion.ul>
+          </motion.ul> */}
         </div>
 
         {/* Product composition */}
