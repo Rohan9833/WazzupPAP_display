@@ -389,8 +389,8 @@
   #why ul li { padding: 12px 14px !important; gap: 12px !important; border-radius: 16px !important; }
   #why ul li > span.icon-gem { width: 48px !important; height: 48px !important; border-radius: 12px !important; }
   #why ul li > span.icon-gem svg { width: 23px !important; height: 23px !important; }
-  #why ul li h3 { font-size: 1.12rem !important; line-height: 1.1 !important; }
-  #why ul li p { margin-top: 3px !important; font-size: 0.78rem !important; line-height: 1.25 !important; }
+  #why ul li > span.relative.order-2 > span:first-child { font-size: 1.12rem !important; line-height: 1.1 !important; }
+  #why ul li > span.relative.order-2 > span:last-child { margin-top: 3px !important; font-size: 0.78rem !important; line-height: 1.25 !important; }
 
   /* Consent section: tighter, aligned two-panel layout */
   #consent h2 { font-size: 1.65rem !important; line-height: 1.12 !important; margin: 0 !important; }
@@ -425,7 +425,7 @@
   #visibility .container-x > div.surface-night h3 { font-size: 1.55rem !important; line-height: 1.08 !important; }
   #visibility .container-x > div.surface-night p:not(.text-center) { font-size: 0.76rem !important; line-height: 1.35 !important; }
   #visibility .container-x > div.surface-night > div:nth-child(3) { margin-top: 4px !important; }
-  #visibility .container-x > div.surface-night > div:nth-child(3) > div > div { max-width: 700px !important; }
+  #visibility .desktop-dashboard-compact { max-width: 700px !important; width: 100% !important; }
   #visibility .container-x > div.surface-night > div[role="group"] { margin-top: 8px !important; }
   #visibility .container-x > div.surface-night ul { margin-top: 12px !important; max-width: 760px !important; gap: 16px !important; }
   #visibility .container-x > div.surface-night ul li { padding-top: 10px !important; display: grid !important; grid-template-columns: 34px 1fr !important; gap: 8px !important; align-items: start !important; }
