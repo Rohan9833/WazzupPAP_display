@@ -57,9 +57,9 @@ export default function Consent() {
           <h2 id="consent-title" className="display-lg max-w-[18em] text-[clamp(1.35rem,4.8vw,2.25rem)] leading-tight">
             Doctor consent, captured inside WhatsApp
           </h2>
-          <p className="lede max-w-[28em] lg:pb-2">
+          {/* <p className="lede max-w-[28em] lg:pb-2">
             Every program is verified by the doctor’s prior consent. Patient details stay out of it.
-          </p>
+          </p> */}
         </div>
 
         <div className="mt-4 grid gap-2.5 lg:mt-6 lg:grid-cols-[1.25fr_1fr]">

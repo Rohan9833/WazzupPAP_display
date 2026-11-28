@@ -125,9 +125,9 @@ export default function Visibility() {
 
           <ul className="relative mx-auto mt-8 grid max-w-[980px] gap-x-6 gap-y-5 sm:grid-cols-3 lg:mt-5 lg:max-w-[800px]">
             {[
-              { icon: Activity, t: 'Every test, live', d: 'Assessments, outcomes and reports as they happen.' },
-              { icon: Users, t: 'Every doctor', d: 'Consent sent, approved and pending, doctor by doctor.' },
-              { icon: Map, t: 'Every MR and territory', d: 'Field-force activity by MR, HQ and region.' },
+              { icon: Activity, t: 'Every Test, Live', d: 'Assessments, Outcomes and Reports as they happen.' },
+              { icon: Users, t: 'Every Doctor', d: 'Consent sent, approved and pending, doctor by doctor.' },
+              { icon: Map, t: 'Every MR and Territory', d: 'Field-force activity by MR, HQ and region.' },
             ].map(({ icon: Icon, t, d }) => (
               <li key={t} className="flex items-center gap-3 border-t border-white/15 pt-3 sm:block sm:pt-5">
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-white/[0.07] ring-1 ring-inset ring-white/15 sm:h-10 sm:w-10">
