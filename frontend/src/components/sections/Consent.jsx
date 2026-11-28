@@ -51,7 +51,7 @@ function ConsentRecord() {
 
 export default function Consent() {
   return (
-    <section id="consent" className="relative bg-paper py-12 sm:py-16" aria-labelledby="consent-title">
+    <section id="consent" className="relative bg-paper py-12 sm:py-16 lg:py-0" aria-labelledby="consent-title">
       <div className="container-x">
         <div className="grid gap-3 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-8">
           <h2 id="consent-title" className="display-lg max-w-[18em] text-[clamp(1.35rem,4.8vw,2.25rem)] leading-tight">

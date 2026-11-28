@@ -27,7 +27,7 @@ export default function Hero() {
       <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_60%_60%_at_25%_40%,black,transparent)]" />
 
       <div className="container-x relative grid min-h-[calc(100svh-88px)] items-center gap-1.5 pb-5 pt-5 sm:min-h-0 sm:gap-14 sm:pb-24 sm:pt-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-8 lg:pb-8 lg:pt-4 lg:min-h-[calc(100vh-104px)]">
-        <div className="contents lg:block">
+        <div className="contents lg:block lg:pb-[32px]">
           <motion.p
             {...rise(0)}
             className="order-5 inline-flex items-center gap-1.5 py-1 text-[0.65rem] font-medium text-white/90 sm:gap-2 sm:py-1.5 sm:text-[0.9rem] lg:order-none"
@@ -90,7 +90,7 @@ export default function Hero() {
         </div>
 
         {/* Product composition */}
-        <div className="relative order-4 mx-auto w-full max-w-[460px] lg:order-none lg:w-[130%] lg:max-w-none lg:-ml-[15%]">
+        <div className="relative order-4 mx-auto w-full max-w-[460px] lg:order-none lg:w-[130%] lg:max-w-none lg:-ml-[1%]">
           <div aria-hidden className="absolute left-1/2 top-1/2 aspect-square w-[105%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgb(0_156_109/0.42),transparent_60%)] blur-2xl" />
           <motion.div
             className="relative mx-auto w-[64%] max-w-[280px] sm:w-[66%] sm:max-w-[340px] lg:ml-auto lg:mr-[8%] lg:w-[78%] lg:max-w-[430px]"
@@ -107,7 +107,7 @@ export default function Hero() {
 
           <motion.div
             aria-hidden
-            className="absolute left-0 top-[8%] z-10 w-[42%] max-w-[200px] rounded-2xl bg-white/95 p-3.5 shadow-[0_30px_60px_-20px_rgb(0_0_0/0.6)] ring-1 ring-white/40 backdrop-blur sm:p-4 lg:left-[2%] lg:max-w-[285px] lg:p-5"
+            className="absolute left-0 top-[8%] z-10 w-[42%] max-w-[200px] rounded-2xl bg-white/95 p-3.5 shadow-[0_30px_60px_-20px_rgb(0_0_0/0.6)] ring-1 ring-white/40 backdrop-blur sm:p-4 lg:left-[1%] lg:max-w-[285px] lg:p-2 lg:w-[52%] lg:top-[15%]"
             initial={reduce ? false : { opacity: 0, x: -16 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
@@ -123,7 +123,7 @@ export default function Hero() {
 
           <motion.div
             aria-hidden
-            className="absolute bottom-[5%] right-0 z-10 flex w-[46%] max-w-[225px] items-center gap-2.5 rounded-2xl bg-[#0a1f5c] p-3 text-white shadow-[0_30px_60px_-20px_rgb(0_0_0/0.7)] ring-1 ring-inset ring-white/15 sm:p-3.5 lg:max-w-[310px] lg:gap-3 lg:p-4"
+            className="absolute bottom-[5%] right-0 z-10 flex w-[46%] max-w-[225px] items-center gap-2.5 rounded-2xl bg-[#0a1f5c] p-3 text-white shadow-[0_30px_60px_-20px_rgb(0_0_0/0.7)] ring-1 ring-inset ring-white/15 sm:p-3.5 lg:max-w-[310px] lg:gap-3 lg:p-4 lg:w-[50%]"
             initial={reduce ? false : { opacity: 0, x: 16 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.4, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
