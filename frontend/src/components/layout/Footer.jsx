@@ -18,7 +18,7 @@ export default function Footer() {
             </p>
           </div>
           <nav aria-label="Footer">
-            <ul className="grid grid-cols-2 gap-x-10 gap-y-3 text-[0.95rem] sm:flex sm:gap-8 lg:flex-nowrap lg:items-center lg:whitespace-nowrap">
+            <ul className="grid grid-cols-2 gap-x-10 gap-y-3 text-[0.95rem] sm:flex sm:gap-8 lg:flex-col lg:items-start lg:gap-3 lg:whitespace-nowrap">
               {NAV_LINKS.map((l) => (
                 <li key={l.href}>
                   <a href={l.href} className="text-ink/75 hover:text-ink">
