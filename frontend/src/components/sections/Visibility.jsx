@@ -69,18 +69,18 @@ export default function Visibility() {
         {/* Head Office */}
         <div className="surface-night grain relative mt-12 overflow-hidden rounded-[2rem] px-4 pb-4 pt-8 text-haze sm:mt-16 sm:rounded-[2.75rem] sm:px-8 sm:pb-10 sm:pt-10 lg:mt-10 lg:px-8 lg:py-6">
           <div aria-hidden className="grid-wash-dark absolute inset-0 [mask-image:radial-gradient(ellipse_70%_50%_at_50%_30%,black,transparent)]" />
-          <div className="relative grid gap-4 lg:grid-cols-[1fr_1fr] lg:items-end lg:gap-10">
-            <h3 className="display-md text-sheen max-w-[16em] !text-[clamp(1.9rem,2.5vw,2.15rem)]">
+          <div className="relative grid gap-4 lg:grid-cols-[0.7fr_1.3fr] lg:items-center lg:gap-x-10 lg:gap-y-2">
+            <h3 className="display-md text-sheen max-w-[16em] !text-[clamp(1.9rem,2.5vw,2.15rem)] lg:col-start-1 lg:row-start-1">
                Head Office View 
             </h3>
-            <p className="max-w-[34em] text-[0.9rem] leading-relaxed sm:text-[0.95rem]">
+            <p className="max-w-[34em] text-[0.9rem] leading-relaxed sm:text-[0.95rem] lg:col-start-1 lg:row-start-2">
               The Head Office Admin Portal is a separate web application for your brand team.  It brings assessment activity, doctor participation and field performance
               together in one place.
             </p>
           </div>
 
           <div
-            className="relative mt-4 touch-pan-y sm:mt-6 lg:mt-1"
+            className="relative mt-4 touch-pan-y sm:mt-6 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:mt-0"
             onTouchStart={(event) => {
               touchStartX.current = event.changedTouches[0]?.clientX ?? null;
             }}
@@ -110,7 +110,7 @@ export default function Visibility() {
             </AnimatePresence>
           </div>
 
-          <div className="relative mt-3 flex items-center justify-center gap-2" role="group" aria-label="Dashboard carousel slides">
+          <div className="relative mt-3 flex items-center justify-center gap-2 lg:col-start-2 lg:row-start-3 lg:mt-0" role="group" aria-label="Dashboard carousel slides">
             {DASH_VIEWS.map((slide, index) => (
               <button
                 key={slide}
@@ -123,7 +123,7 @@ export default function Visibility() {
             ))}
           </div>
 
-          <ul className="relative mx-auto mt-8 grid max-w-[980px] gap-x-6 gap-y-5 sm:grid-cols-3 lg:mt-5 lg:max-w-[800px]">
+          <ul className="relative mx-auto mt-8 grid max-w-[980px] gap-x-6 gap-y-5 sm:grid-cols-3 lg:col-span-2 lg:row-start-4 lg:mt-5 lg:max-w-[800px]">
             {[
               { icon: Activity, t: 'Every Test, Live', d: 'Assessments, Outcomes and Reports as they happen.' },
               { icon: Users, t: 'Every Doctor', d: 'Consent sent, approved and pending, doctor by doctor.' },
@@ -140,7 +140,7 @@ export default function Visibility() {
               </li>
             ))}
           </ul>
-          <p className="relative mx-auto text-center mt-5 max-w-[980px] text-[0.6rem] lg:mt-3 lg:max-w-[800px] text-haze/70">
+          <p className="relative mx-auto text-center mt-5 max-w-[980px] text-[0.6rem] lg:col-span-2 lg:row-start-5 lg:mt-3 lg:max-w-[800px] text-haze/70">
             Sample data for illustration. No client data is shown.
           </p>
         </div>
