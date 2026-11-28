@@ -39,7 +39,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.h1 {...rise(0.08)} id="hero-title" className="display-xl text-sheen order-2  pb-1 text-[clamp(1.45rem,6.5vw,1.9rem)] leading-[1.08] tracking-tight sm:mt-5 sm:text-[inherit] sm:leading-[inherit] sm:tracking-[inherit] lg:order-none lg:mt-7">
-            Patient Assessment Programs<br className="sm:hidden" />  <span className="hero-reimagined-aurora">Reimagined.</span>
+            Patient Assessment Programs<br className="sm:hidden" />  <span className="hero-mobile-aurora lg:!block">Reimagined.</span>
           </motion.h1>
 
           <motion.p {...rise(0.16)} className="order-3 mt-2 max-w-full font-display text-[clamp(0.7rem,3vw,0.82rem)] font-medium leading-tight tracking-[-0.015em] text-[#8ff0cc] whitespace-normal sm:mt-6 sm:text-[clamp(1.3rem,2.3vw,1.75rem)] sm:leading-snug lg:whitespace-nowrap lg:order-none">
