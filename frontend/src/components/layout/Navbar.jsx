@@ -91,7 +91,7 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
-          <span className="hidden sm:block">
+          <span className="hidden sm:block lg:order-2">
             <Button href="#demo" className="!min-h-11 !px-5">
               Request  demo
             </Button>
@@ -99,7 +99,7 @@ export default function Navbar() {
           <img
             src="/Productbydigilateral.png"
             alt="Product by digiLATERAL"
-            className="mr-1 h-9 w-auto shrink-0 object-contain sm:h-7"
+            className="mr-1 h-9 w-auto shrink-0 object-contain sm:h-7 lg:order-1"
           />
           <button
             ref={toggleRef}
